@@ -1,92 +1,84 @@
-header {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: center;
-    background-color: #fed100;
-  }
+    header {
+        display: flex;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+        background-color: #fed100;
+    }
   
-  .container {
-    display: flex;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    min-height: 40.625rem;
-    width: 82rem;
-    position: relative;
-  }
+    .container {
+        display: flex;
+        flex-direction: column;
+        font-family: "Montserrat", sans-serif;
+        min-height: 40.625rem;
+        width: 82rem;
+        position: relative;
+    }
   
-  .wrapper-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 2%;
-    margin: 2% 0%;
-    /*width: 68%;*/
-  }
+    .wrapper-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 2%;
+        margin: 2% 0%;
+    }
   
-  .logo {
-    margin: 0rem;
-    font-size: 1.875rem;
-    font-weight: 600;
-  }
+    .logo {
+        margin: 0rem;
+        font-size: 1.875rem;
+        font-weight: 600;
+    }
   
-  .head-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 40%;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 0rem;
-  }
+    .head-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin: 0rem;
+    }
   
-  li {
-    list-style-type: none;
-  }
+    li {
+        list-style-type: none;
+    }
   
-  .head-menu a {
-    text-decoration: none;
-    color: black;
-  }
+    .head-menu a {
+        text-decoration: none;
+        color: #000;
+    }
   
-  .b-menu,
-  .pict-man-mob {
-    display: none;
-  }
+    .b-menu,
+    .pict-man-mob {
+        display: none;
+    }
   
-  .phone {
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: underline;
-    font-weight: 600;
-    margin: 0rem;
-  }
+    .phone {
+        color: #000;
+        font-size: 1.5rem;
+        text-decoration: underline;
+        font-weight: 600;
+        margin: 0rem;
+    }
   
-  .wrapper-mid {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /*min-height: 70%;*/
-    width: 30%;
-    margin: 3% 0%;
-  }
+    .wrapper-mid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30%;
+        margin: 3% 0%;
+    }
   
-  .wrapper-mid-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /*margin: 7% 0% 10% 53%;*/
-  }
+    .wrapper-mid-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
   
-  .wrapper-mid-left-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+    .wrapper-mid-left-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
   
     .wrapper-mid-left-title h1 {
         font-size: 4.375rem;
@@ -109,7 +101,7 @@ header {
         text-decoration: none;
         margin: 0% 0% 15%;
         width: 26%;
-        box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem white;
+        box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
     }
   
     .wrapper-mid-left-button:hover {
@@ -169,7 +161,7 @@ header {
         display: flex;
         justify-content: space-between;
         width: 90%;
-        margin: 3% 3%;
+        margin: 3% 5%;
     }
   
     .logo {
@@ -180,7 +172,6 @@ header {
     .b-menu {
         display: flex;
         position: relative;
-        display: block;
         width: 2.75rem;
         height: 1.1875rem;
         margin: 0.5rem;
@@ -228,7 +219,9 @@ header {
   
     .wrapper-mid-left-button {
         padding: 6% 40%;
+        display: flex;
         position: relative;
+        justify-content: center;
         right: 10%;
         top: 27%;
         width: 45%;
@@ -254,9 +247,8 @@ header {
         display: block;
         align-self: top;
         position: absolute;
-        left: 10%;
         top: 23%;
-        margin: 0rem auto;
+        /*width: auto;*/
     }
 }
   
