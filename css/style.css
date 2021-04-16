@@ -62,56 +62,52 @@
   
     .wrapper-mid {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 40%;
-        margin: 3% 0%;
-    }
-  
-    .wrapper-mid-left {
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 2.5rem 0rem;
     }
-  
-    .wrapper-mid-left-title {
+
+    .wrapper-mid-title {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
   
-    .wrapper-mid-left-title h1 {
+    .wrapper-mid-title h1 {
         font-size: 4.375rem;
         line-height: 0.95;
         font-weight: 700;
-        margin: 0rem;
     }
   
-    .wrapper-mid-left-title h3 {
+    .wrapper-mid-title h3 {
         font-size: 1.875rem;
         font-weight: 600;
+        line-height: 3;
     }
   
-    .wrapper-mid-left-button {
-        background-color: #ff352b;
+    .wrapper-mid-button {
+        background: #ff352b;
         color: #fff;
-        font-size: 1.5rem;
-        padding: 3% 19%;
+        text-align: center;
         text-decoration: none;
-        margin: 0% 0% 15%;
-        width: 20%;
+        font-size: 1.5rem;
+        padding: 1.15%;
+        width: 21%;
+        margin: 0% 0% 5%;       
         box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
     }
   
-    .wrapper-mid-left-button:hover {
+    .wrapper-mid-button:hover {
         background-color: #ff772b;
     }
   
-    .wrapper-mid-left-icons {
+    .wrapper-mid-icons {
         display: flex;
+        flex-direction: row;
         font-size: 1rem;
         font-weight: 400;
-        margin-top: 5%;
+        width: 40%;
+        margin-top: 4%;
     }
   
     .icon-text {
@@ -121,8 +117,6 @@
   
     .pict-man {
         width: 23.8125rem;
-        margin: 0px;
-        padding: 3.9% 0% 0% 21%;
         z-index: 1;
         position: absolute;
         right: 25%;
@@ -146,7 +140,7 @@
         content: url(/img/phone_hover.png);
     }
   
-  @media (max-width: 768px) {
+  @media (max-width: 320px) {
 
     .container{
         width: 20rem;
@@ -157,12 +151,13 @@
         display: flex;
         justify-content: space-between;
         width: 90%;
-        margin: 3% 5%;
+        margin: 1rem;
     }
   
     .logo {
         font-size: 1rem;
         font-weight: 600;
+        line-height: 3;
     }
 
     .b-menu {
@@ -184,55 +179,46 @@
     }
   
     .wrapper-mid {
-        width: 80%;
-        min-height: 72%;
-        margin: 0% 10%;
-    }
-  
-    .wrapper-mid-left {
-        width: 95%;
-        height: 95%;
+        min-height: 30rem;
         margin: 0%;
     }
-  
-    .wrapper-mid-left-title {
+
+    .wrapper-mid-title {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         text-align: center;
     }
   
-    .wrapper-mid-left-title h1 {
+    .wrapper-mid-title h1 {
         font-size: 1.75rem;
         font-weight: 700;
     }
   
-    .wrapper-mid-left-title h3 {
+    .wrapper-mid-title h3 {
         height: 4rem;
         font-size: 1.125rem;
         font-weight: 600;
     }
   
-    .wrapper-mid-left-button {
-        padding: 6% 40%;
+    .wrapper-mid-button {
+        padding: 5% 38%;
         display: flex;
         position: relative;
         justify-content: center;
-        right: 10%;
-        top: 27%;
-        width: 45%;
-        margin: 130% 0% 0%;
+        left: .3rem;
+        margin: 0rem;
         box-shadow: none;
         z-index: 1;
     }
   
-    .wrapper-mid-left-button:hover {
+    .wrapper-mid-button:hover {
         background-color: #ff772b;
     }
   
     .head-menu,
     .phone,
-    .wrapper-mid-left-icons,
+    .wrapper-mid-icons,
     .pict-man,
     .pict-car,
     .phone-call {
@@ -240,10 +226,10 @@
     }
   
     .pict-man-mob {
-        display: block;
-        align-self: top;
+        display: flex;
         position: absolute;
-        top: 9rem;
+        margin: auto;
+        top: 11%; left: 0%; bottom: 0%; right: 0%;
     }
 }
   
