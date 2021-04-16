@@ -64,7 +64,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 30%;
+        width: 40%;
         margin: 3% 0%;
     }
   
@@ -93,14 +93,13 @@
     }
   
     .wrapper-mid-left-button {
-        display: inline-block;
-        background: #ff352b;
+        background-color: #ff352b;
         color: #fff;
         font-size: 1.5rem;
         padding: 3% 19%;
         text-decoration: none;
         margin: 0% 0% 15%;
-        width: 26%;
+        width: 20%;
         box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
     }
   
@@ -110,11 +109,8 @@
   
     .wrapper-mid-left-icons {
         display: flex;
-        flex-direction: row;
         font-size: 1rem;
         font-weight: 400;
-        width: 110%;
-        height: 10%;
         margin-top: 5%;
     }
   
@@ -124,7 +120,7 @@
     }
   
     .pict-man {
-        width: 381px;
+        width: 23.8125rem;
         margin: 0px;
         padding: 3.9% 0% 0% 21%;
         z-index: 1;
@@ -150,7 +146,7 @@
         content: url(/img/phone_hover.png);
     }
   
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
 
     .container{
         width: 20rem;
@@ -247,8 +243,7 @@
         display: block;
         align-self: top;
         position: absolute;
-        top: 23%;
-        /*width: auto;*/
+        top: 9rem;
     }
 }
   
