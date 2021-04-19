@@ -86,7 +86,7 @@
     }
   
     .wrapper-mid-button {
-        background: #ff352b;
+        background-color: #ff352b;
         color: #fff;
         text-align: center;
         text-decoration: none;
@@ -103,7 +103,6 @@
   
     .wrapper-mid-icons {
         display: flex;
-        flex-direction: row;
         font-size: 1rem;
         font-weight: 400;
         width: 40%;
@@ -210,10 +209,6 @@
         margin: 0rem;
         box-shadow: none;
         z-index: 1;
-    }
-  
-    .wrapper-mid-button:hover {
-        background-color: #ff772b;
     }
   
     .head-menu,
