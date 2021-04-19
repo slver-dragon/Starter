@@ -1,0 +1,232 @@
+    header {
+        display: flex;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+        background-color: #fed100;
+    }
+  
+    .container {
+        display: flex;
+        flex-direction: column;
+        font-family: "Montserrat", sans-serif;
+        min-height: 40.625rem;
+        width: 82rem;
+        position: relative;
+    }
+  
+    .wrapper-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 2%;
+        margin: 2% 0%;
+    }
+  
+    .logo {
+        margin: 0rem;
+        font-size: 1.875rem;
+        font-weight: 600;
+    }
+  
+    .head-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin: 0rem;
+    }
+  
+    li {
+        list-style-type: none;
+    }
+  
+    .head-menu a {
+        text-decoration: none;
+        color: #000;
+    }
+  
+    .b-menu,
+    .pict-man-mob {
+        display: none;
+    }
+  
+    .phone {
+        color: #000;
+        font-size: 1.5rem;
+        text-decoration: underline;
+        font-weight: 600;
+        margin: 0rem;
+    }
+  
+    .wrapper-mid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2.5rem 0rem;
+    }
+
+    .wrapper-mid-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+  
+    .wrapper-mid-title h1 {
+        font-size: 4.375rem;
+        line-height: 0.95;
+        font-weight: 700;
+    }
+  
+    .wrapper-mid-title h3 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        line-height: 3;
+    }
+  
+    .wrapper-mid-button {
+        background-color: #ff352b;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 1.15%;
+        width: 21%;
+        margin: 0% 0% 5%;       
+        box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
+    }
+  
+    .wrapper-mid-button:hover {
+        background-color: #ff772b;
+        box-shadow: 0.75rem 0.75rem #fff;
+    }
+  
+    .wrapper-mid-icons {
+        display: flex;
+        font-size: 1rem;
+        font-weight: 400;
+        width: 40%;
+        margin-top: 4%;
+    }
+  
+    .icon-text {
+        width: 25%;
+        margin-left: 1rem;
+    }
+  
+    .pict-man {
+        width: 23.8125rem;
+        z-index: 1;
+        position: absolute;
+        right: 25%;
+        bottom: 0%;
+    }
+  
+    .pict-car {
+        align-self: top;
+        position: absolute;
+        right: -8%;
+        top: 26%;
+    }
+  
+    .phone-call {    
+        position: absolute;
+        right: 2%;
+        top: 72%;
+    }
+  
+    .phone-call:hover {
+        content: url(/img/phone_hover.png);
+    }
+  
+  @media (max-width: 320px) {
+
+    .container{
+        width: 20rem;
+        min-height: 37.4375rem;
+    }
+  
+    .wrapper-top {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 1rem;
+    }
+  
+    .logo {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 3;
+    }
+
+    .b-menu {
+        display: flex;
+        position: relative;
+        width: 2.75rem;
+        height: 1.1875rem;
+        margin: 0.5rem;
+        border-top: 0.125rem solid #000;
+        border-bottom: 0.125rem solid #000;
+    }
+
+    .b-menu:before {
+        content: "";
+        position: absolute;
+        top: 0.5625rem;
+        width: 100%;
+        border-top: 0.125rem solid #000;
+    }
+  
+    .wrapper-mid {
+        min-height: 30rem;
+        margin: 0%;
+    }
+
+    .wrapper-mid-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+  
+    .wrapper-mid-title h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+  
+    .wrapper-mid-title h3 {
+        height: 4rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+  
+    .wrapper-mid-button {
+        padding: 5% 38%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        left: .3rem;
+        margin: 0rem;
+        box-shadow: none;
+        z-index: 1;
+    }
+  
+    .head-menu,
+    .phone,
+    .wrapper-mid-icons,
+    .pict-man,
+    .pict-car,
+    .phone-call {
+        display: none;
+    }
+  
+    .pict-man-mob {
+        display: flex;
+        position: absolute;
+        margin: auto;
+        top:55%; left:50%;
+        transform:translate(-50%, -50%);
+    }
+}
+  
