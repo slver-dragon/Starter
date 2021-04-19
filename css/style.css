@@ -99,6 +99,7 @@
   
     .wrapper-mid-button:hover {
         background-color: #ff772b;
+        box-shadow: 0.75rem 0.75rem #fff;
     }
   
     .wrapper-mid-icons {
@@ -224,7 +225,8 @@
         display: flex;
         position: absolute;
         margin: auto;
-        top: 11%; left: 0%; bottom: 0%; right: 0%;
+        top:50%; left:50%;
+        transform:translate(-50%, -50%);
     }
 }
   
