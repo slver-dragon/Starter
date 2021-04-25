@@ -140,36 +140,36 @@
         content: url(/img/phone_hover.png);
     }
 
-    main{               
+    main{
+        display: flex;
+        flex-direction: column;               
         font-family: "Montserrat", sans-serif;
     }
 
     .main-first{
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto; 
-        width: 69.125rem;
-        min-height: 21.375rem;
+        margin: auto;
+        width: 60%;
     }
 
-    .main-first h1{
+    .main-first h2{
         font-size: 1.875rem;
         font-weight: 600;
         text-align: center;
-        margin: 5.9375rem 0rem 0rem 0rem;
+        margin-top: 5.9375rem;
     }
 
     .main-first-block{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        text-align: left;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .main-first-element{
         display: flex;
-        width: 46%;
+        width: 40%;
         margin-top: 3.8125rem;
     }
 
@@ -177,7 +177,6 @@
         display: flex;
         font-size: 3.125rem;
         font-weight: 300;
-        width: 5.625rem;
         margin-right: 2rem;
     }
 
@@ -188,7 +187,9 @@
         font-weight: 400;
     }
 
-    .tab-text-mob{
+    .tab-text-mob,
+    .mid-text-mob,
+    .big-text-mob{
         display: none;
     }
 
@@ -202,14 +203,10 @@
     .main-second{        
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        width: 81.5625rem;
-        min-height: 44.8125rem;
         margin-top: 6.5rem;
     }
 
-    .main-second h1{
+    .big-text{
         font-size: 1.875rem;
         font-weight: 600;
         text-align: center;
@@ -218,12 +215,13 @@
     .main-second h2{
         font-size: 1.5rem;
         font-weight: 600;
+        margin: 0.9375rem auto;
         text-align: center;
-        margin-top: 0.9375rem;
     }
 
     .main-second-block{
-        display: flex;       
+        display: flex;
+        justify-content: center;       
         margin-top: 3.75rem;        
     }
 
@@ -232,23 +230,23 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        width: 26.3125rem;
-        min-height: 36.1875rem;
-        border: .0625rem solid #FED100;
-        margin: 0rem .5rem;
+        border: 0.0625rem solid #FED100;
+        margin: 0rem 0.5rem;
+    }
+
+    .main-second-element h2{
+        margin-top: 5.25rem;
     }
 
     .main-second-element-mob{
         display: none;
     }
 
-    .trans{
-       display: block;
-    }
-
-    .trans p{
-        text-align: center;
-        margin: 1.67rem 0rem;  
+    .main-second-element pre{
+        display: block;
+        margin: 0rem 7.25rem;
+        align-items: center;
+        line-height:3.5;
     }
 
     .main-second-button{
@@ -258,9 +256,8 @@
         text-decoration: none;
         font-size: 1.25rem;
         font-weight: 500;
-        padding: .495rem 4.8125rem;
-        width: 21%;
-        margin: 0% 0% 5%;
+        padding: 0.495rem 4.8125rem;
+        margin: 5rem auto;
     }
 
     .main-second-button:hover{
@@ -274,17 +271,7 @@
     .main-third{
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        width: 76.25rem;
-        min-height: 43.1875rem;
-        margin-top: 6.375rem;     
-    }
-
-    .main-third h1{
-        font-size: 1.875rem;
-        font-weight: 600;
-        text-align: center;
+        margin: 6.375rem auto 0rem;     
     }
 
     .main-third h2{
@@ -297,7 +284,6 @@
     .main-third-menu{
         display: flex;
         justify-content: space-between;
-        width: 33.3125rem;
         font-size: 1.25rem;
         font-weight: 500;
         margin: 4.5625rem auto 0rem;        
@@ -311,14 +297,12 @@
     .main-third-block{
         display: flex;
         justify-content: space-between;
-        width: 76.25rem;
-        min-height: 28.3125rem;
     }
 
     .main-third-back, .main-third-forward{
         font-size: 2rem;
         font-weight: 900;
-        margin: 10rem 0rem;
+        margin: 10% 2%;
         transform: scale(.5,1);
         text-decoration: none;
         color: #000;
@@ -340,7 +324,6 @@
         justify-content: space-between;
         font-size: 1rem;
         font-weight: 400;
-        min-height: 10.5rem;
     }
 
     .main-third-list li:before {
@@ -356,7 +339,7 @@
         text-decoration: none;
         font-size: 1.25rem;
         font-weight: 500;
-        padding: .495rem 4.8125rem;
+        padding: 0.495rem 4.8125rem;
         margin-bottom: 4rem;
     }
 
@@ -365,7 +348,7 @@
     }
 
     .main-third-picture{
-        width: 40.0625rem;
+        display: flex;
         right: 0rem;
         bottom: 0rem;
     }
@@ -387,9 +370,9 @@
 
     .main-fourth-container{
         display: flex;
-        flex-direction: column;
-        min-height: 41.5625rem;
-        width: 120rem;
+        flex-direction: column;       
+        align-items: center;
+        width: 60%;
     }
 
     .main-fourth-container h1{
@@ -401,14 +384,12 @@
 
     .main-fourth-rewiev{
         display: flex;
-        width: 81.25rem;
-        margin: 3.75rem auto 0rem;
+        margin-top: 3.75rem;
     }
 
     .main-fourth-rewiev-element{
         display: flex;
         flex-direction: column;
-        width: 26.25rem;
     }
 
     .main-fourth-rewiev-element h2{
@@ -417,7 +398,7 @@
     }
 
     .main-fourth-rewiev-element nobr{
-        margin: .625rem 0rem 1.1875rem;
+        margin: 0.625rem 0rem 1.1875rem;
     }
 
     .rewiev-star{
@@ -443,8 +424,8 @@
         text-decoration: none;
         background-color: #fed100;
         color: #000;
-        border: solid .0625rem;
-        padding: .625rem 3.888rem;
+        border: solid 0.0625rem;
+        padding: 0.625rem 3.888rem;
         margin: 3.8125rem auto 0rem;
     }
 
@@ -452,9 +433,9 @@
 
     .container{
         width: 20rem;
-        min-height: 37.4375rem;
+        min-height: 37.5rem;
     }
-  
+
     .wrapper-top {
         display: flex;
         justify-content: space-between;
@@ -513,10 +494,11 @@
         padding: 1.125rem 6.891rem;
         display: flex;
         justify-content: center;
-        margin: 0rem .875rem;
+        margin: 0rem 0.875rem;
         box-shadow: none;
         z-index: 1;
     }
+
     .wrapper-mid-button:hover {
         background-color: #ff772b;
         box-shadow: none;
@@ -532,23 +514,17 @@
     }
   
     .pict-man-mob {
-        display: flex;
+        display: block;
         position: absolute;
-        margin: auto;
         top:55%; left:50%;
         transform:translate(-50%, -50%);
-    }
-
-    main{
-        width: 20rem;
-        min-height: 7.75rem;
     }
 
     .main-first{
         width: 100%;
     }
 
-    .main-first h1{
+    .main-first h2{
         font-size: 1.25rem;
         font-weight: 600;
         text-align: center;
@@ -565,27 +541,29 @@
     .main-first-element{
         display: flex;
         align-items: center;
-        width: 16.3125rem;
-        margin: 0rem;
+        width: 80%;
+        margin: 1rem;
     }
 
     .main-first-number{
         display: flex;
+        justify-content: start;
         font-size: 3.125rem;
         font-weight: 300;
-        width: 4.125rem;        
-        margin: .83rem 0rem .84rem 1.75rem;
     }
 
-    .tab-text, .tab-text-mob{
-        display: flex;
+    .tab-text,
+    .tab-text-mob{
+        display: block;
         position: absolute;
         font-size: 1rem;
         font-weight: 400;
-        margin: 0rem 0rem 0rem 7.75rem;
+        margin: 0rem 0rem 0rem 6rem;
     }
 
-    .tab-text p, .tab-text-spec{
+    .tab-text p,
+    .tab-text-spec,
+    .big-text{
         display: none;
     }
 
@@ -595,18 +573,24 @@
         margin: 0rem;
     }
 
-    .main-second{        
-        width: 100%;
-        min-height: 33.4375rem;
+    .main-second{ 
         display: flex;
         flex-direction: column;
         margin: 0rem;
     }
 
-    .main-second h1{
+    .mid-text-mob{
+        display: block;
         font-size: 1.25rem;
         font-weight: 600;
-        margin: 3.125rem auto 2.5rem;
+        margin: 3.125rem auto 0.8rem;
+    }
+
+    .big-text-mob{
+        display: block;
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin: 2.2rem auto;
     }
 
     .main-second h2{
@@ -627,29 +611,19 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 26.3125rem;
-        min-height: 24.125rem;
-    }
-
-    .main-second-element-mob h1{
-        font-size: 1.875rem;
-        font-weight: 600;
-        margin: 0rem;
     }
 
     .main-second-element-mob h2{
         display: block;
         font-size: 1.125rem;
         font-weight: 500;
+        margin: 0rem auto 1.15rem;
     }
 
-    .trans{
+    .main-second-element-mob pre{
         display: block;
-    }
-
-    .trans p{
         text-align: center;
-        margin: 1.67rem 0rem;  
+        line-height: 2.3; 
     }
 
     .main-second-button{
@@ -658,7 +632,7 @@
         padding: 1.125rem 6.891rem;
         display: flex;
         justify-content: center;
-        margin: 0rem .875rem 0rem;
+        margin: 1.1rem 0.875rem;
     }
 
     .main-second-button:hover{
@@ -670,7 +644,7 @@
         color: #000;
         font-size: 1rem;
         font-weight: 500;
-        margin: 1rem auto 0rem;
+        margin: 0.3rem auto;
     }
 
     .main-third{
@@ -678,15 +652,8 @@
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
-        width: 20rem;
-        min-height: 36.9375rem;
-        margin-top: 6.375rem;
-    }
-
-    .main-third h1{
-        font-size: 1.875rem;
-        font-weight: 600;
-        text-align: center;
+        width: 100%;
+        margin-top: 2.375rem;
     }
 
     .main-third h2{
@@ -696,13 +663,13 @@
     .main-third-menu{
         display: flex;
         justify-content: space-between;
-        width: 16.9375rem;
+        width: 80%;
         font-size: 1rem;
         font-weight: 500;
         margin: 1.25rem auto 2.5rem;
     }
 
-    .main-third-menu a {
+    .main-third-menu a{
         text-decoration: none;
         color: #000;
     }
@@ -711,7 +678,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
     }
 
     .main-third-back,
@@ -734,31 +700,30 @@
 
     .main-third-sign-mob{
         display: block;
-        font-size: .75rem;
+        font-size: 0.75rem;
         font-weight: 400;
         text-align: center;
         margin: 15rem 5rem 1rem;
     }
 
-    .main-third-Hmenu{
+    .main-third-hmenu{
         display: flex;
         margin: 0rem auto 0rem;
         
     }
 
-    .main-third-Hmenu-element{
+    .main-third-hmenu-element{
         background-color: #000;
-        padding: .25rem;
+        padding: 0.25rem;
         height: 0rem;
         display: inline-block;
-        margin: .5rem;
+        margin: 0.5rem;
         border-radius: 45%;
     }
 
-    .main-third-Hmenu-element:hover{
-        height: .125rem;
-        padding: .3125rem;
-        box-shadow: 0 0 0 .1875rem #fff, 0 0 0 .3125rem #fed100;
+    .main-third-hmenu-element:hover{
+        padding: 0.3125rem;
+        box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.3125rem #fed100;
         
     }
 
@@ -772,7 +737,7 @@
         padding: 1.125rem 6.891rem;
         display: flex;
         justify-content: center;
-        margin: 0rem .875rem 2.8125rem;
+        margin: 0rem 0.875rem 2.8125rem;
     }
 
     .main-third-button:hover{
@@ -782,15 +747,7 @@
     .main-fourth-container{
         display: flex;
         flex-direction: column;
-        min-height: 35.875rem;
-        width: 20rem;
-    }
-
-    .main-fourth-container h1{
-        font-size: 1.875rem;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 2.5rem;        
+        width: 95%;
     }
 
     .main-fourth-rewiev-element{
@@ -798,26 +755,23 @@
     }
 
     .main-fourth-rewiev{
-        width: 18.875rem;
         margin: 2.5rem auto 3rem;
     }
 
     .main-fourth-rewiev-element-mob{
         display: flex;
         flex-direction: column;
-        width: 26.25rem;
-        min-height: 19.6875rem;
         margin-left: auto;
         margin-right: auto;
     }
 
     .main-fourth-rewiev-element-mob h2{
-        font-size: 1.5rem;
-        font-weight: 600;
+        font-size: 1.125rem;
+        font-weight: 500;
     }
 
     .main-fourth-rewiev-element-mob nobr{
-        margin: .625rem 0rem 2.3125rem;
+        margin: 0.625rem 0rem 2.3125rem;
     }
 
     .rewiev-star{
@@ -840,7 +794,7 @@
         background-color: #fed100;
         color: #000;
         border: solid .0625rem;
-        padding: .625rem 3.888rem;
+        padding: 0.625rem 3.888rem;
         margin: 0rem auto 3.125rem;
     }
 }
