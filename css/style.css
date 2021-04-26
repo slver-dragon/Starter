@@ -378,7 +378,7 @@
         width: 48%;
     }
 
-    .all-reviews h1 {
+    .all-reviews h2 {
         font-size: 1.875rem;
         font-weight: 600;
         text-align: center;
@@ -755,6 +755,11 @@
         width: 95%;
     }
 
+    .all-reviews h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    
     .review-element {
         display: none;
     }
