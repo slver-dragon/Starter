@@ -178,6 +178,7 @@
         font-size: 3.125rem;
         font-weight: 300;
         margin-right: 2rem;
+        text-shadow: 0.125rem 0rem #fed100;
     }
 
     .tab-text{
@@ -414,6 +415,7 @@
     .read-after{
         margin-top: 1.125rem;
         color: #000;
+        text-decoration: underline;
     }
 
     .main-fourth-button{
@@ -783,6 +785,7 @@
     .read-after{
         margin-top: 1.125rem;
         color: #000;
+        /*text-decoration: underline;*/
     }
 
     .main-fourth-button{
