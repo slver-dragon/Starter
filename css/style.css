@@ -75,14 +75,14 @@
   
     .wrapper-mid-title h1 {
         font-size: 4.375rem;
-        line-height: 0.95;
+        line-height: 0.95em;
         font-weight: 700;
     }
   
     .wrapper-mid-title h3 {
         font-size: 1.875rem;
         font-weight: 600;
-        line-height: 3;
+        line-height: 3em;
     }
   
     .wrapper-mid-button {
@@ -245,7 +245,7 @@
         display: block;
         margin: 0rem 7.25rem;
         text-align: center;
-        line-height:3.5;
+        line-height:3.5em;
     }
 
     .offer-sum {
@@ -469,7 +469,7 @@
     .logo {
         font-size: 1rem;
         font-weight: 600;
-        line-height: 3;
+        line-height: 3em;
     }
 
     .b-menu {
@@ -665,7 +665,7 @@
     .offer-element-mob pre {
         display: block;
         text-align: center;
-        line-height: 2.3; 
+        line-height: 2.3em; 
     }
 
     .offer-button {
