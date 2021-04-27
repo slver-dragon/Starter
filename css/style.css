@@ -378,8 +378,6 @@
 
     .reviews {
         display: flex;
-        align-items: flex-start;
-        align-content: center;
         justify-content: center;
         background-color: #fed100;
     }
@@ -615,7 +613,6 @@
     }
 
     .offer-element-mob {
-        display: block;
         display: flex;
         flex-direction: column;
         border: none;
@@ -718,7 +715,6 @@
 
     .transport-picture-mob {
         display: block;
-        position: absolute;
         margin-left: auto;
         margin-right: auto;
     }
@@ -728,7 +724,7 @@
         font-size: 0.75rem;
         font-weight: 400;
         text-align: center;
-        margin: 15rem 5rem 1rem;
+        margin: 1rem 5rem;
     }
 
     .transport-choise {
