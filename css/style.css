@@ -75,14 +75,14 @@
   
     .wrapper-mid-title h1 {
         font-size: 4.375rem;
-        line-height: 0.95;
+        line-height: 0.95em;
         font-weight: 700;
     }
   
     .wrapper-mid-title h3 {
         font-size: 1.875rem;
         font-weight: 600;
-        line-height: 3;
+        line-height: 3em;
     }
   
     .wrapper-mid-button {
@@ -92,7 +92,7 @@
         text-decoration: none;
         font-size: 1.5rem;
         padding: 1.15%;
-        width: 21%;
+        width: 23%;
         margin: 0% 0% 5%;       
         box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
     }
@@ -100,6 +100,7 @@
     .wrapper-mid-button:hover {
         background-color: #ff772b;
         box-shadow: 0.75rem 0.75rem #fff;
+        cursor: pointer;        
     }
   
     .wrapper-mid-icons {
@@ -139,14 +140,325 @@
     .phone-call:hover {
         content: url(/img/phone_hover.png);
     }
+
+    main {
+        display: flex;
+        flex-direction: column;               
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .how-it-work {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 60%;
+    }
+
+    .how-it-work h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 5.9375rem;
+    }
+
+    .work-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .work-list-element {
+        display: flex;
+        width: 40%;
+        margin-top: 3.8125rem;
+    }
+
+    .work-number {
+        display: flex;
+        font-size: 3.125rem;
+        font-weight: 300;
+        margin-right: 2rem;
+        text-shadow: 0.125rem 0rem #fed100;
+    }
+
+    .work-text, .work-text-spec {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        font-weight: 400;
+        width: 59%;
+    }
+
+    .work-text-mob {
+        display: none;
+    }
+
+    .work-text h4, .work-text-spec h4 {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 0.9375rem;
+    }
   
+    .prices {        
+        display: flex;
+        flex-direction: column;
+        margin-top: 6.5rem;
+    }
+
+    .prices h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .prices h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0.9375rem auto;
+        text-align: center;
+    }
+
+    .offer {
+        display: flex;
+        justify-content: center;       
+        margin-top: 3.75rem;        
+    }
+
+    .offer-element {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 0.0625rem solid #FED100;
+        margin: 0rem 0.5rem;
+        width: 15%;
+    }
+
+    .flat-type {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 5.25rem auto 3.8125rem;
+    }
+
+    .offer-element pre {
+        display: block;
+        text-align: center;
+        line-height:3.5em;
+    }
+
+    .offer-sum {
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin-top: 3.965rem;
+    }
+
+    .offer-button {
+        background-color: #fed100;
+        color: #333333;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 500;
+        padding: 0.495rem 4.8125rem;
+        margin: 3rem auto 5rem;
+    }
+
+    .offer-button:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .offer-allprices {
+        display: none;
+    }
+
+    .transport {
+        display: flex;
+        flex-direction: column;
+        width: 44%;
+        margin: 6.375rem auto 0rem;     
+    }
+
+    .transport h2 {
+        display: block;
+        font-size: 1.875rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .transport h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0.9375rem;
+    }
+
+    .transport-menu {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.25rem;
+        font-weight: 500;
+        width: 45%;
+        margin: 4.5625rem auto 2rem;        
+    }
+
+    .transport-element {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .element-back, .element-forward {
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 10% 2%;
+        transform: scale(.5,1);
+        text-decoration: none;
+        color: #000;
+    }
+
+    .element-back:hover,
+    .element-forward:hover {
+        cursor: pointer;
+    }
+
+    .transport-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .auto-type {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .description-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .description-list li:before {
+        padding-right: 1rem;
+        font-weight: 700;
+        content: '✓'; 
+    }
+
+    .transport-button {
+        background-color: #fed100;
+        color: #333333;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 500;
+        padding: 0.495rem 4.8125rem;
+        margin-bottom: 4rem;
+    }
+
+    .transport-button:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .transport-picture {
+        display: block;
+    }
+
+    .transport-picture-mob,
+    .main-third-sign,
+    .auto-description,
+    .main-third-Hmenu {
+        display: none;
+    }
+
+    .reviews {
+        display: flex;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+        background-color: #fed100;
+    }
+
+    .all-reviews {
+        display: flex;
+        flex-direction: column;       
+        align-items: center;
+        width: 48%;
+    }
+
+    .all-reviews h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 6.25rem;        
+    }
+
+    .reviews-container {
+        display: flex;
+        margin-top: 3.75rem;
+    }
+
+    .review-element {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review-name {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .review-info {
+        margin: 0.625rem 0rem 1.1875rem;
+    }
+
+    .review-star {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color:#ff352b;
+    }
+
+    .review-element-mob {
+        display: none;
+    }
+
+    .read-after {
+        margin-top: 1.125rem;
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .review-button {
+        display: block;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-decoration: none;
+        background-color: #fed100;
+        color: #000;
+        border: solid 0.0625rem;
+        padding: 0.625rem 3.888rem;
+        margin: 3.8125rem auto 0rem;
+    }
+
+    .review-button:hover {
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+    }
+
   @media (max-width: 320px) {
 
     .container{
         width: 20rem;
-        min-height: 37.4375rem;
+        min-height: 37.5rem;
     }
-  
+
     .wrapper-top {
         display: flex;
         justify-content: space-between;
@@ -157,7 +469,7 @@
     .logo {
         font-size: 1rem;
         font-weight: 600;
-        line-height: 3;
+        line-height: 3em;
     }
 
     .b-menu {
@@ -202,14 +514,18 @@
     }
   
     .wrapper-mid-button {
-        padding: 5% 38%;
+        padding: 1rem 6.891rem;
         display: flex;
-        position: relative;
         justify-content: center;
-        left: .3rem;
-        margin: 0rem;
+        width: 92%;
+        margin: 0rem 0.875rem;
         box-shadow: none;
-        z-index: 1;
+    }
+
+    .wrapper-mid-button:hover {
+        background-color: #ff772b;
+        box-shadow: none;
+        cursor: pointer;
     }
   
     .head-menu,
@@ -222,11 +538,298 @@
     }
   
     .pict-man-mob {
-        display: flex;
+        display: block;
         position: absolute;
-        margin: auto;
         top:55%; left:50%;
         transform:translate(-50%, -50%);
+    }
+
+    .how-it-work {
+        width: 100%;
+    }
+
+    .how-it-work h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        margin: 2.5rem 0rem 3rem 0rem;
+    }
+
+    .work-list {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        position: relative;
+    }
+
+    .work-list-element {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin: 1rem;
+    }
+
+    .work-number {
+        display: flex;
+        justify-content: start;
+        font-size: 3.125rem;
+        font-weight: 300;
+    }
+
+    .work-text,
+    .work-text-mob {
+        display: block;
+        position: absolute;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0rem 0rem 0rem 6rem;
+    }
+
+    .work-text p,
+    .work-text-spec,
+    .offer-element{
+        display: none;
+    }
+
+    .work-text h4, .work-text-mobh4 {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0rem;
+    }
+
+    .prices { 
+        display: flex;
+        flex-direction: column;
+        margin: 0rem;
+    }
+
+    .prices h2 {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 3.125rem auto 2.1rem;
+    }
+
+    .offer {
+        margin: 0rem;
+    }
+
+    .offer-element-mob {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        width: 100%;
+    }
+
+    .offer-element-mob pre {
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .offer-sum {
+        display: block;
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin: 2.2rem auto;
+    }
+
+    .prices h3 {
+       display: none;
+    }
+
+    .flat-type {
+        display: block;
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin: 0rem auto 1.15rem;
+    }
+
+    .offer-button {
+        background-color: #fed100;
+        color: #333333;
+        padding: 1.125rem 6.891rem;
+        display: flex;
+        justify-content: center;
+        margin: 1.1rem auto 0.875rem;
+    }
+
+    .offer-button:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .offer-allprices {
+        display: block;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0.3rem auto;
+        text-decoration: underline;
+    }
+
+    .transport {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 4.5rem;
+    }
+
+    .transport h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .transport-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 1.25rem auto 2.5rem;
+    }
+
+    .transport-menu a {
+        text-decoration: none;
+        color: #000;
+        margin: 0rem 0.4rem;
+    }
+
+    .transport-element {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .element-back,
+    .element-forward,
+    .transport-picture,
+    .transport h3,
+    .description-list,
+    .auto-type{
+        display: none;
+    }
+
+    .transport-element h2 {
+        text-align: left;
+    }
+
+    .transport-picture-mob {
+        display: block;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .auto-description {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 400;
+        text-align: center;
+        margin: 15rem 5rem 1rem;
+    }
+
+    .transport-choise {
+        display: flex;
+        margin: 0rem auto 0rem;
+    }
+
+    .choiser-element {
+        background-color: #000;
+        padding: 0.25rem;
+        height: 0rem;
+        display: inline-block;
+        margin: 0.5rem;
+        border-radius: 45%;
+    }
+
+    .choiser-element:hover {
+        padding: 0.3125rem;
+        box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.3125rem #fed100;
+        cursor: pointer;
+    }
+
+    .transport-description {
+        display: block;
+    }
+
+    .transport-button {
+        background-color: #fed100;
+        color: #333333;
+        padding: 1.125rem 6.891rem;
+        display: flex;
+        justify-content: center;
+        margin: 0rem 0.875rem 2.8125rem;
+    }
+
+    .transport-button:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .all-reviews {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .all-reviews h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    
+    .review-element {
+        display: none;
+    }
+
+    .reviews-container {
+        margin: 2.5rem auto 3rem;
+    }
+
+    .review-element-mob {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .review-name-mob {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    .review-element-mob nobr {
+        margin: 0.625rem 0rem 2.3125rem;
+    }
+
+    .review-star {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color:#ff352b;
+    }
+
+    .read-after {
+        margin-top: 1.125rem;
+        color: #000;
+    }
+
+    .review-button {
+        display: block;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-decoration: none;
+        background-color: #fed100;
+        color: #000;
+        border: solid .0625rem;
+        padding: 0.625rem 3.888rem;
+        margin: 0rem auto 3.125rem;
+    }
+
+    .review-info{
+        white-space: nowrap;
     }
 }
   
