@@ -182,11 +182,12 @@
         text-shadow: 0.125rem 0rem #fed100;
     }
 
-    .work-text {
+    .work-text, .work-text-spec {
         display: flex;
         flex-direction: column;
         font-size: 1rem;
         font-weight: 400;
+        width: 59%;
     }
 
     .work-text-mob {
@@ -232,18 +233,17 @@
         align-items: center;
         border: 0.0625rem solid #FED100;
         margin: 0rem 0.5rem;
+        width: 15%;
     }
 
     .flat-type {
-        margin-top: 5.25rem;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 3.8125rem;
+        margin: 5.25rem auto 3.8125rem;
     }
 
-    .possib {
+    .offer-element pre {
         display: block;
-        margin: 0rem 7.25rem;
         text-align: center;
         line-height:3.5em;
     }
@@ -520,7 +520,6 @@
         width: 92%;
         margin: 0rem 0.875rem;
         box-shadow: none;
-        z-index: 1;
     }
 
     .wrapper-mid-button:hover {
@@ -617,23 +616,17 @@
 
     .offer-element-mob {
         display: block;
-        margin: 0rem;
+        display: flex;
+        flex-direction: column;
         border: none;
+        width: 100%;
     }
 
-    .flat-type {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: 500;
-        margin-top: 2.5rem;
-    }
-
-    .possib {
+    .offer-element-mob pre {
         display: block;
         font-size: 1rem;
         font-weight: 400;
         text-align: center;
-        width: 80%;
     }
 
     .offer-sum {
@@ -647,25 +640,11 @@
        display: none;
     }
 
-    .offer-element-mob {
-        display: block;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
     .flat-type {
         display: block;
         font-size: 1.125rem;
         font-weight: 500;
         margin: 0rem auto 1.15rem;
-    }
-
-    .offer-element-mob pre {
-        display: block;
-        text-align: center;
-        line-height: 2.3em; 
     }
 
     .offer-button {
@@ -674,7 +653,7 @@
         padding: 1.125rem 6.891rem;
         display: flex;
         justify-content: center;
-        margin: 1.1rem 0.875rem;
+        margin: 1.1rem auto 0.875rem;
     }
 
     .offer-button:hover {
@@ -688,6 +667,7 @@
         font-size: 1rem;
         font-weight: 500;
         margin: 0.3rem auto;
+        text-decoration: underline;
     }
 
     .transport {
