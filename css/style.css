@@ -92,7 +92,7 @@
         text-decoration: none;
         font-size: 1.5rem;
         padding: 1.15%;
-        width: 21%;
+        width: 23%;
         margin: 0% 0% 5%;       
         box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
     }
@@ -100,6 +100,7 @@
     .wrapper-mid-button:hover {
         background-color: #ff772b;
         box-shadow: 0.75rem 0.75rem #fff;
+        cursor: pointer;        
     }
   
     .wrapper-mid-icons {
@@ -188,9 +189,7 @@
         font-weight: 400;
     }
 
-    .work-text-mob,
-    .mid-text-mob,
-    .big-text-mob {
+    .work-text-mob {
         display: none;
     }
 
@@ -207,13 +206,13 @@
         margin-top: 6.5rem;
     }
 
-    .big-text {
+    .prices h2 {
         font-size: 1.875rem;
         font-weight: 600;
         text-align: center;
     }
 
-    .prices h2 {
+    .prices h3 {
         font-size: 1.5rem;
         font-weight: 600;
         margin: 0.9375rem auto;
@@ -237,17 +236,22 @@
 
     .flat-type {
         margin-top: 5.25rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 3.8125rem;
     }
 
-    .offer-element-mob {
-        display: none;
-    }
-
-    .offer-element pre {
+    .possib {
         display: block;
         margin: 0rem 7.25rem;
-        align-items: center;
+        text-align: center;
         line-height:3.5;
+    }
+
+    .offer-sum {
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin-top: 3.965rem;
     }
 
     .offer-button {
@@ -258,11 +262,12 @@
         font-size: 1.25rem;
         font-weight: 500;
         padding: 0.495rem 4.8125rem;
-        margin: 5rem auto;
+        margin: 3rem auto 5rem;
     }
 
     .offer-button:hover {
         color: #fff;
+        cursor: pointer;
     }
 
     .offer-allprices {
@@ -277,6 +282,13 @@
     }
 
     .transport h2 {
+        display: block;
+        font-size: 1.875rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .transport h3 {
         font-size: 1.5rem;
         font-weight: 600;
         text-align: center;
@@ -288,13 +300,8 @@
         justify-content: space-between;
         font-size: 1.25rem;
         font-weight: 500;
-        margin: 4.5625rem auto 0rem;        
-    }
-    
-    .transport-menu a {
-        text-decoration: none;
-        color: #000;
-        margin: 0rem 4.3125rem;
+        width: 45%;
+        margin: 4.5625rem auto 2rem;        
     }
 
     .transport-element {
@@ -311,13 +318,20 @@
         color: #000;
     }
 
+    .element-back:hover,
+    .element-forward:hover {
+        cursor: pointer;
+    }
+
     .transport-description {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
 
-    .transport-element h2 {
+    .auto-type {
+        font-size: 1.5rem;
+        font-weight: 600;
         text-align: left;
     }
 
@@ -348,12 +362,11 @@
 
     .transport-button:hover {
         color: #fff;
+        cursor: pointer;
     }
 
     .transport-picture {
-        display: flex;
-        right: 0rem;
-        bottom: 0rem;
+        display: block;
     }
 
     .transport-picture-mob,
@@ -433,6 +446,12 @@
         margin: 3.8125rem auto 0rem;
     }
 
+    .review-button:hover {
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+    }
+
   @media (max-width: 320px) {
 
     .container{
@@ -495,9 +514,10 @@
     }
   
     .wrapper-mid-button {
-        padding: 1.125rem 6.891rem;
+        padding: 1rem 6.891rem;
         display: flex;
         justify-content: center;
+        width: 92%;
         margin: 0rem 0.875rem;
         box-shadow: none;
         z-index: 1;
@@ -506,6 +526,7 @@
     .wrapper-mid-button:hover {
         background-color: #ff772b;
         box-shadow: none;
+        cursor: pointer;
     }
   
     .head-menu,
@@ -567,7 +588,7 @@
 
     .work-text p,
     .work-text-spec,
-    .big-text {
+    .offer-element{
         display: none;
     }
 
@@ -583,41 +604,58 @@
         margin: 0rem;
     }
 
-    .mid-text-mob {
+    .prices h2 {
         display: block;
         font-size: 1.25rem;
         font-weight: 600;
-        margin: 3.125rem auto 0.8rem;
+        margin: 3.125rem auto 2.1rem;
     }
 
-    .big-text-mob {
+    .offer {
+        margin: 0rem;
+    }
+
+    .offer-element-mob {
+        display: block;
+        margin: 0rem;
+        border: none;
+    }
+
+    .flat-type {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-top: 2.5rem;
+    }
+
+    .possib {
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        width: 80%;
+    }
+
+    .offer-sum {
         display: block;
         font-size: 1.875rem;
         font-weight: 600;
         margin: 2.2rem auto;
     }
 
-    .prices h2 {
+    .prices h3 {
        display: none;
     }
 
-    .offer {
-        display: flex;
-        margin: 0rem;        
-    }
-
-    .offer-element {
-        display: none;
-    }
-
     .offer-element-mob {
+        display: block;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
 
-    .flat-type-mob {
+    .flat-type {
         display: block;
         font-size: 1.125rem;
         font-weight: 500;
@@ -641,6 +679,7 @@
 
     .offer-button:hover {
         color: #fff;
+        cursor: pointer;
     }
 
     .offer-allprices {
@@ -654,14 +693,13 @@
     .transport {
         display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
         width: 100%;
-        margin-top: 2.375rem;
+        margin-top: 4.5rem;
     }
 
     .transport h2 {
-        display: none;
+        font-size: 1.25rem;
+        font-weight: 600;
     }
 
     .transport-menu {
@@ -688,6 +726,7 @@
     .element-back,
     .element-forward,
     .transport-picture,
+    .transport h3,
     .description-list,
     .auto-type{
         display: none;
@@ -729,7 +768,7 @@
     .choiser-element:hover {
         padding: 0.3125rem;
         box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.3125rem #fed100;
-        
+        cursor: pointer;
     }
 
     .transport-description {
@@ -747,6 +786,7 @@
 
     .transport-button:hover {
         color: #fff;
+        cursor: pointer;
     }
     
     .all-reviews {
@@ -793,7 +833,6 @@
     .read-after {
         margin-top: 1.125rem;
         color: #000;
-        /*text-decoration: underline;*/
     }
 
     .review-button {
