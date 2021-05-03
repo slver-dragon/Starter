@@ -6,7 +6,7 @@
         background-color: #fed100;
     }
   
-    .container {
+    .h-container {
         display: flex;
         flex-direction: column;
         font-family: "Montserrat", sans-serif;
@@ -398,12 +398,14 @@
 
     .reviews-container {
         display: flex;
+        justify-content: space-between;
         margin-top: 3.75rem;
     }
 
     .review-element {
         display: flex;
         flex-direction: column;
+        width: 31%;
     }
 
     .review-name {
@@ -441,7 +443,7 @@
         color: #000;
         border: solid 0.0625rem;
         padding: 0.625rem 3.888rem;
-        margin: 3.8125rem auto 0rem;
+        margin: 3.8125rem auto  5.875rem;
     }
 
     .review-button:hover {
@@ -450,9 +452,114 @@
         border: none;
     }
 
+    /*форма заказа*/
+
+    .order {
+        display: flex;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .order h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin: 7.75rem auto 0.625rem;
+    }
+
+    .order-block {
+        width: 45.4375rem;
+        height: 52.9375rem;
+    }
+
+    .order-form {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #333333;
+    }
+
+    .element-merger {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .order-element {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+    }
+
+    .order-element h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0%;
+    }
+
+    .select-region,
+    .select-city {
+        margin: 0rem;
+    }
+
+    .input-city {
+        margin: 0rem;
+    }
+ /*--*/
+    .hidden-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+   /* .another-checkbox {
+        
+        
+    }
+ /*--*/
+    .order-final {
+        display: flex;
+
+    }
+
+    .timer {
+        font-size: 6rem;
+        font-weight: 400;
+        margin-right: 0%;        
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    select {
+        width: 18.75rem;
+        height: 2.125rem;
+        border-bottom: 0.0625rem solid #333333;
+        margin: 4rem 0rem;
+    }
+
+    /*.order-option {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*.addition-services {
+
+    }
+
+    .order-final {
+
+    }*/
+
+    .f-container {
+        display: flex;
+        min-height: 25.0625rem;
+        width: 82rem;
+    }
+
   @media (max-width: 320px) {
 
-    .container{
+    .h-container{
         width: 20rem;
         min-height: 37.5rem;
     }
@@ -518,6 +625,7 @@
         width: 92%;
         margin: 0rem 0.875rem;
         box-shadow: none;
+        z-index: 1;
     }
 
     .wrapper-mid-button:hover {
@@ -540,6 +648,7 @@
         position: absolute;
         top:55%; left:50%;
         transform:translate(-50%, -50%);
+        
     }
 
     .how-it-work {
@@ -826,6 +935,39 @@
 
     .review-info{
         white-space: nowrap;
+    }
+
+    .order {
+        min-height: 45.25rem;
+
+    }
+
+    /*.order-block {
+
+
+    }
+
+    /*.order-form {
+
+    }
+
+    .order-option {
+
+    }
+
+    .addition-services {
+
+    }
+
+    .order-final {
+
+    }*/
+
+    .f-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 25.0625rem;
+        width: 82rem;
     }
 }
   

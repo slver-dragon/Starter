@@ -12,7 +12,7 @@
   </head>
   <body>
    <header>
-      <div class="container">
+      <div class="h-container">
         <div class="wrapper-top">            
           <p class="logo">MOVEE</p>
           <ul class="head-menu">
@@ -193,6 +193,70 @@
           <button class="review-button">Все отзывы</button>
         </div>
       </div>
+      <div class="order">
+        <div class="order-block">
+          <h2>Закажи переезд прямо сейчас со скидкой %</h2>
+          <p>Мы перезвоним в течении 10 секунд</p>
+          <form action="#" method="get" class="order-form">
+            <div class="element-merger">
+              <div class="order-element">
+                <input type="text" placeholder="Ваше имя" id="name"><br>
+                <label for="region"><h2> Укажите область</h2></label><br>
+                <select name="select-region" class="select-region" id="region">
+                  <option value="minsk-reg">Минская</option>
+                  <option value="brest-reg">Брестская</option>
+                  <option value="grodn-reg">Гродненская</option>
+                  <option value="viteb-reg">Витебская</option>
+                  <option value="mogil-reg">Могилевская</option>
+                  <option value="gomel-reg">Гомельская</option>
+                </select>
+              </div>
+              <div class="order-element">
+                <input type="tel" placeholder="Телефон" id="phone"><br>
+                <label for="city"><h2>Укажите город</h2></label><br>
+                <select name="select-city" class="select-city" id="city">
+                  <option value="minsk">Минск</option>
+                  <option value="brest">Брест</option>
+                  <option value="grodno">Гродно</option>
+                  <option value="vitebsk">Витебск</option>
+                  <option value="mogilev">Могилев</option>
+                  <option value="gomel">Гомель</option>
+                  <option value="another">Свой вариант</option>
+                </select>
+                <input type="text" class="input-city" placeholder="Добавить город" id="a-city"><br>
+              </div>
+            </div>
+            <div class="pay-option">
+              <label><input type="radio" name="pay" value="courier"> Наличными курьеру</label>
+              <label><input type="radio" name="pay" value="card" checked> Картой курьеру</label>
+              <label><input type="radio" name="pay" value="bank"> Банковский перевод</label>
+            </div>
+            <div class="addition-services">
+              
+              <label class="another_checkbox"><input type="checkbox" name="measure"> Вызов замерщика</label>
+              <label class="another_checkbox"><input type="checkbox" name="packing" disabled> Упаковка для хрупких предметов</label>
+              <label class="another_checkbox"><input type="checkbox" name="crane" disabled> Кран</label>
+              <label class="another_checkbox"><input type="checkbox" name="assembly" checked> Сборка мебели</label>
+              <label class="another_checkbox"><input type="checkbox" name="oversized" checked> Крупногабаритные предметы</label>-->
+            </div>
+          <div class="order-final">
+              <span class="timer">05:37:25</span>
+              <div class="button-checkbox">
+                <button href="#" class="wrapper-mid-button">Заказать</button><br>
+                <label><input type="checkbox" name="apply" checked> Даю согласие на обработку данных</label>
+              </div>
+          </div>
+        </form>
+        </div>
+      </div>
+      <div class="map">
+
+      </div>
     </main>
+    <footer>
+      <div class="f-container">
+        
+      </div>
+    </footer>
   </body>
 </html>
