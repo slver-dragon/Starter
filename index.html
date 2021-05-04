@@ -195,13 +195,14 @@
       </div>
       <div class="order">
         <div class="order-block">
-          <h2>Закажи переезд прямо сейчас со скидкой %</h2>
-          <p>Мы перезвоним в течении 10 секунд</p>
+          <span class="order-title-desk"><h2>Закажи переезд прямо сейчас со скидкой %</h2></span>
+          <span class="order-title-mob"><h2>Закажи переезд<br>прямо сейчас</h2></span>
+          <p> Мы перезвоним в течении 10 секунд</p>
           <form action="#" method="get" class="order-form">
             <div class="element-merger">
               <div class="order-element">
-                <input type="text" placeholder="Ваше имя" id="name"><br>
-                <label for="region"><h2> Укажите область</h2></label><br>
+                <input type="text" placeholder="Ваше имя"><br>
+                <label for="region" class="fname"> Укажите область</label><br>
                 <select name="select-region" class="select-region" id="region">
                   <option value="minsk-reg">Минская</option>
                   <option value="brest-reg">Брестская</option>
@@ -213,8 +214,8 @@
               </div>
               <div class="order-element">
                 <input type="tel" placeholder="Телефон" id="phone"><br>
-                <label for="city"><h2>Укажите город</h2></label><br>
-                <select name="select-city" class="select-city" id="city">
+                <span class="fname">Укажите город</span><br>
+                <select name="select-city" class="select-city">
                   <option value="minsk">Минск</option>
                   <option value="brest">Брест</option>
                   <option value="grodno">Гродно</option>
@@ -225,28 +226,59 @@
                 </select>
                 <input type="text" class="input-city" placeholder="Добавить город" id="a-city"><br>
               </div>
-            </div>
+            </div>            
             <div class="pay-option">
-              <label><input type="radio" name="pay" value="courier"> Наличными курьеру</label>
-              <label><input type="radio" name="pay" value="card" checked> Картой курьеру</label>
-              <label><input type="radio" name="pay" value="bank"> Банковский перевод</label>
+              <span class="fname">Способ оплаты</span><br>
+              <label class="another_radio">
+                <input type="radio" name="pay" value="courier" disabled> 
+                <span> Наличными курьеру</span>
+              </label>
+              <label class="another_radio">
+                <input type="radio" name="pay" value="card" checked>
+                <span> Картой курьеру</span>
+              </label>
+              <label class="another_radio">
+                <input type="radio" name="pay" value="bank" disabled>
+                <span> Банковский перевод</span>
+              </label>
             </div>
             <div class="addition-services">
-              
-              <label class="another_checkbox"><input type="checkbox" name="measure"> Вызов замерщика</label>
-              <label class="another_checkbox"><input type="checkbox" name="packing" disabled> Упаковка для хрупких предметов</label>
-              <label class="another_checkbox"><input type="checkbox" name="crane" disabled> Кран</label>
-              <label class="another_checkbox"><input type="checkbox" name="assembly" checked> Сборка мебели</label>
-              <label class="another_checkbox"><input type="checkbox" name="oversized" checked> Крупногабаритные предметы</label>-->
+              <span class="fname">Дополнительные услуги</span><br>
+              <label class="another_checkbox">
+                <input type="checkbox" name="measure">
+                <span> Вызов замерщика</span>
+              </label>
+              <label class="another_checkbox">
+                <input type="checkbox" name="packing" disabled>
+                <span> Упаковка для хрупких предметов</span>
+              </label>
+              <label class="another_checkbox">
+                <input type="checkbox" name="crane" disabled>
+                <span> Кран</span>
+              </label>
+              <label class="another_checkbox">
+                <input type="checkbox" name="assembly" checked>
+                <span> Сборка мебели</span>
+              </label>
+              <label class="another_checkbox">
+                <input type="checkbox" name="oversized" checked>
+                <span> Крупногабаритные предметы</span>
+              </label>
             </div>
-          <div class="order-final">
+            <div class="order-final-desk">
               <span class="timer">05:37:25</span>
               <div class="button-checkbox">
-                <button href="#" class="wrapper-mid-button">Заказать</button><br>
-                <label><input type="checkbox" name="apply" checked> Даю согласие на обработку данных</label>
+                <button href="#" class="order-button">Заказать со скидкой</button>
+                <label><input type="checkbox" name="apply" checked><span class="apply"> Даю согласие на обработку данных</span></label>
               </div>
-          </div>
-        </form>
+            </div>
+            <div class="order-final-mob">
+              <div class="button-checkbox">
+                <button href="#" class="order-button">Перезвонить мне</button>
+                <label><input type="checkbox" name="apply" checked><span class="apply"> Даю согласие на обработку данных</span></label>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <div class="map">

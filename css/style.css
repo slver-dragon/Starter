@@ -453,7 +453,7 @@
     }
 
     /*форма заказа*/
-
+    
     .order {
         display: flex;
         align-items: flex-start;
@@ -461,14 +461,17 @@
         justify-content: center;
     }
 
-    .order h2 {
+    .order-title-desk h2 {
         font-size: 1.875rem;
         font-weight: 600;
         margin: 7.75rem auto 0.625rem;
     }
 
+    .order-title-mob {
+        display: none;
+    }
     .order-block {
-        width: 45.4375rem;
+        width: 35%;
         height: 52.9375rem;
     }
 
@@ -492,7 +495,7 @@
 
     }
 
-    .order-element h2 {
+    .fname {
         font-size: 1.25rem;
         font-weight: 700;
         margin: 0%;
@@ -506,21 +509,140 @@
     .input-city {
         margin: 0rem;
     }
- /*--*/
-    .hidden-checkbox {
+
+    .pay-option,
+    .addition-services {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .another_radio {
+        margin: 1rem;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .another_radio input[type=radio] {
         position: absolute;
         z-index: -1;
         opacity: 0;
     }
 
-   /* .another-checkbox {
-        
-        
+    .another_radio span {
+        display: inline-block;
+        position: relative; 
+        padding: 0 0 0 2.8rem; 
+        line-height: 1.5rem;
+        margin-top: 2rem;    
+    }
+
+    .another_radio span:before {
+        content: "";
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: 0.0625rem;
+        top: 0rem;
+        transition: background 0.3s ease;
+        background: url(/img/radio.png) 0 0 no-repeat;
+    }
+
+ /* Checked-radio*/
+    .another_radio input[type=radio]:checked + span:before {
+        background-image: url(/img/radio-mrk.png);
+    }
+
+ /* Hover-radio*/
+    .another_radio span:hover:before {
+        filter: brightness(110%);
+    }
+
+ /* Active-radio*/
+    .another_radio span:active:before {
+        filter: brightness(80%);
+    }
+
+ /* Disabled-radio*/
+    .another_radio input[type=radio]:disabled + span {
+        color: #666;
+        cursor: default;
+    }
+
+    .another_radio input[type=radio]:disabled + span:before {
+        filter: grayscale(100%);
+        opacity: 0.6;
+    }
+ 
+    .addition-services {
+        width: 100%;
+    }
+
+    .another_checkbox {
+    	margin: 1rem;
+	    cursor: pointer;
+	    position: relative;
+    }
+
+    .another_checkbox input[type=checkbox] {
+	    position: absolute;
+	    z-index: -1;
+    	opacity: 0;
+    }
+
+    .another_checkbox span {
+	    display: inline-block;
+	    position: relative; 
+    	padding: 0 0 0 3rem; 
+	    line-height: 1.5rem;
+        margin-top: 2rem;    
+    }
+
+    .another_checkbox span:before {
+	    content: "";
+	    display: inline-block;
+	    width: 1.5rem;
+    	height: 1.5rem;
+	    position: absolute;
+    	left: 0.0625rem;
+	    top: 0rem;
+    	transition: background 0.3s ease;
+	    background: url(/img/checkbox.png) 0 0 no-repeat;
+    }
+ 
+ /* Checked-checkbox*/
+    .another_checkbox input[type=checkbox]:checked + span:before {
+    	background-image: url(/img/checkbox-mrk.png);
+    }
+ 
+ /* Hover-checkbox*/
+    .another_checkbox span:hover:before {
+	    filter: brightness(110%);
+    }
+ 
+ /* Active-checkbox*/
+    .another_checkbox span:active:before {
+	    filter: brightness(80%);
+    }
+ 
+ /* Disabled-checkbox*/
+    .another_checkbox input[type=checkbox]:disabled + span {
+	    color: #666;
+	    cursor: default;
+    }
+
+    .another_checkbox input[type=checkbox]:disabled + span:before {
+	    filter: grayscale(100%);
+	    opacity: 0.6;
     }
  /*--*/
-    .order-final {
+    .order-final-desk {
         display: flex;
+        justify-content: space-between;
+    }
 
+    .order-final-mob {
+        display: none;
     }
 
     .timer {
@@ -536,6 +658,30 @@
         height: 2.125rem;
         border-bottom: 0.0625rem solid #333333;
         margin: 4rem 0rem;
+    }
+
+    .button-checkbox {
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+        width: 40%;
+       
+    }
+
+    .order-button {
+        background-color: #ff352b;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 5% 10%;
+        margin: 0% 1% 5%;       
+        box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fff, 0.75rem 0.75rem #fed100;
+    }
+
+    .apply {
+        font-size: 0.75rem;
+        font-weight: 400;
     }
 
     /*.order-option {
@@ -866,7 +1012,7 @@
         padding: 1.125rem 6.891rem;
         display: flex;
         justify-content: center;
-        margin: 0rem 0.875rem 2.8125rem;
+        margin: 0rem 0.25rem 2.8125rem;
     }
 
     .transport-button:hover {
@@ -938,15 +1084,78 @@
     }
 
     .order {
-        min-height: 45.25rem;
-
+        width: 20rem;
+        min-height: 32.375rem;
+        align-items: center;
+        margin: auto;
     }
 
-    /*.order-block {
-
-
+    .order-block {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        
     }
 
+    .order-title-desk {
+        display: none;
+    }
+
+    .order-title-mob {
+        display: flex;
+        align-content: center;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 3.875rem auto 1rem;  
+    }
+
+    .order-block p {
+        font-size: 0.9275rem;
+        font-weight: 400;
+        margin: 0rem auto 3rem;  
+    }
+
+    .element-merger {
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .fname,
+    .select-region,
+    .select-city,
+    .input-city,
+    .pay-option,
+    .addition-services,
+    .order-final-desk {
+        display: none;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+        margin: 0rem;
+    }
+
+
+    .order-final-mob {
+        display: block;
+    }
+
+    .button-checkbox {
+        width: auto;
+    }
+
+    .order-button {
+        background-color: #ff352b;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 6% 14%;
+        margin: 0% 1% 4%;
+        box-shadow: none;   
+    }    
     /*.order-form {
 
     }
@@ -962,6 +1171,10 @@
     .order-final {
 
     }*/
+
+    .map {
+        width: auto;
+    }
 
     .f-container {
         display: flex;
