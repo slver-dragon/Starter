@@ -43,7 +43,7 @@
           <img class="pict-man" src="img/man.png" alt="MOVEE">
           <div>
             <img class="pict-car" src="img/car.png" alt="MOVEE">
-            <a class="phone-call" href="#"><img src="img/phone_normal.png" alt="8(029)-999-12-13"></a>
+            <a class="phone-call" href="tel:+375299991213"><img src="img/phone_normal.png" alt="8(029)-999-12-13"></a>
           </div>
       </div>
     </header>
@@ -202,8 +202,8 @@
             <div class="element-merger">
               <div class="order-element">
                 <input type="text" placeholder="Ваше имя"><br>
-                <label for="region" class="fname"> Укажите область</label><br>
-                <select name="select-region" class="select-region" id="region">
+                <span class="fname"> Укажите область</span><br>
+                <select name="select-region" class="select-region">
                   <option value="minsk-reg">Минская</option>
                   <option value="brest-reg">Брестская</option>
                   <option value="grodn-reg">Гродненская</option>
@@ -213,7 +213,7 @@
                 </select>
               </div>
               <div class="order-element">
-                <input type="tel" placeholder="Телефон" id="phone"><br>
+                <input type="tel" placeholder="Телефон"><br>
                 <span class="fname">Укажите город</span><br>
                 <select name="select-city" class="select-city">
                   <option value="minsk">Минск</option>
@@ -224,13 +224,13 @@
                   <option value="gomel">Гомель</option>
                   <option value="another">Свой вариант</option>
                 </select>
-                <input type="text" class="input-city" placeholder="Добавить город" id="a-city"><br>
+                <input type="text" class="input-city" placeholder="Добавить город"><br>
               </div>
             </div>            
             <div class="pay-option">
               <span class="fname">Способ оплаты</span><br>
               <label class="another_radio">
-                <input type="radio" name="pay" value="courier" disabled> 
+                <input type="radio" name="pay" value="courier"> 
                 <span> Наличными курьеру</span>
               </label>
               <label class="another_radio">
@@ -238,7 +238,7 @@
                 <span> Картой курьеру</span>
               </label>
               <label class="another_radio">
-                <input type="radio" name="pay" value="bank" disabled>
+                <input type="radio" name="pay" value="bank">
                 <span> Банковский перевод</span>
               </label>
             </div>
@@ -249,11 +249,11 @@
                 <span> Вызов замерщика</span>
               </label>
               <label class="another_checkbox">
-                <input type="checkbox" name="packing" disabled>
+                <input type="checkbox" name="packing">
                 <span> Упаковка для хрупких предметов</span>
               </label>
               <label class="another_checkbox">
-                <input type="checkbox" name="crane" disabled>
+                <input type="checkbox" name="crane">
                 <span> Кран</span>
               </label>
               <label class="another_checkbox">
@@ -268,26 +268,75 @@
             <div class="order-final-desk">
               <span class="timer">05:37:25</span>
               <div class="button-checkbox">
-                <button href="#" class="order-button">Заказать со скидкой</button>
-                <label><input type="checkbox" name="apply" checked><span class="apply"> Даю согласие на обработку данных</span></label>
-              </div>
-            </div>
-            <div class="order-final-mob">
-              <div class="button-checkbox">
-                <button href="#" class="order-button">Перезвонить мне</button>
+                <button href="#" class="order-button-desk">Заказать со скидкой</button>
+                <button href="#" class="order-button-mob">Перезвонить мне</button>
                 <label><input type="checkbox" name="apply" checked><span class="apply"> Даю согласие на обработку данных</span></label>
               </div>
             </div>
           </form>
         </div>
       </div>
-      <div class="map">
-
+      <div class="map-desk">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1225.6895103002962!2d23.695868771999574!3d52.091033282192356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2z0YPQuy4g0JHRg9C00ZHQvdC90L7Qs9C-IDY0LCDQkdGA0LXRgdGC!5e0!3m2!1sru!2sby!4v1620113489197!5m2!1sru!2sby" width="1920" height="666" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="inform-desk">
+          <div class="inform-desk-container">
+            <span class="logo">MOVEE</span>
+            <ul>
+              <li><span class="inform-city">Брест</span></li>
+              <li><span class="inform-phone">8-(029)-999-12-13</span></li>
+              <li><span class="inform-mail"><u>hello@movee.ru</u></span></li>
+            </ul>
+            <div class="info-social">
+              <a href="youtube.com"><img src="/img/youtube.png" alt="#"></a>
+              <a href="vk.com"><img src="/img/vk.png" alt="#"></a>
+              <a href="facebook.com"><img src="/img/facebook.png" alt="#"></a>
+              <a href="instagram.com"><img src="/img/instagram.png" alt="#"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-mob">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1225.6895103002962!2d23.695868771999574!3d52.091033282192356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2z0YPQuy4g0JHRg9C00ZHQvdC90L7Qs9C-IDY0LCDQkdGA0LXRgdGC!5e0!3m2!1sru!2sby!4v1620113489197!5m2!1sru!2sby" width="320" height="524" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <ul class="inform-mob">
+          <li>Брест</li>
+          <li><u>8 (029)-999-12-13</u></li>
+          <li><u> hello@movee.ru</u></li>
+        </ul>
       </div>
     </main>
     <footer>
       <div class="f-container">
-        
+        <div class="footer-main">
+          <span class="logo">MOVEE</span>
+          <a href="#">Политика конфиденциальнности</a>
+          <a href="#">Соглашение на обработку персональных данных</a>
+        </div>
+        <ul class="footer-menu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Цены</a></li>
+          <li><a href="#">Автопарк</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="footer-socnet">
+          <div class="social">
+            <a href="youtube.com"><img src="/img/youtube.png" alt="#"></a>
+            <a href="vk.com"><img src="/img/vk.png" alt="#"></a>
+            <a href="facebook.com"><img src="/img/facebook.png" alt="#"></a>
+            <a href="instagram.com"><img src="/img/instagram.png" alt="#"></a>
+          </div>
+          <a class="e-letter" href="mailto:hello@movee.ru">hello@movee.ru</a>
+          <span class="follow-text" >Поделиться в соц. сетях</span>
+          <div class="follow">
+            <a href="vk.com"><img src="/img/vkx2.png" alt="#"></a>
+            <a href="facebook.com"><img src="/img/facebookx2.png" alt="#"></a>
+          </div>
+        </div>
+        <div class="footer-phone">
+          <button href="#" class="footer-button-desk">Обратный звонок</button>
+          <button href="#" class="footer-button-mob">Заказать</button>
+          <a class="fphone" href="tel:+375299991213">8(029)-999-12-13</a>
+        </div>
       </div>
     </footer>
   </body>

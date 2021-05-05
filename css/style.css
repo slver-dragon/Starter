@@ -33,9 +33,8 @@
         display: flex;
         justify-content: space-between;
         width: 40%;
-        font-size: 1.4rem;
+        font-size: 1.125rem;
         font-weight: 500;
-        margin: 0rem;
     }
   
     li {
@@ -57,7 +56,6 @@
         font-size: 1.5rem;
         text-decoration: underline;
         font-weight: 600;
-        margin: 0rem;
     }
   
     .wrapper-mid {
@@ -641,7 +639,10 @@
         justify-content: space-between;
     }
 
-    .order-final-mob {
+    .order-button-mob,
+    .map-mob,
+    .footer-button-mob,
+    .inform-mob{
         display: none;
     }
 
@@ -668,7 +669,7 @@
        
     }
 
-    .order-button {
+    .order-button-desk {
         background-color: #ff352b;
         color: #fff;
         text-align: center;
@@ -684,23 +685,144 @@
         font-weight: 400;
     }
 
-    /*.order-option {
+    .map-desk {
+        position: relative;
+        margin: 25rem auto 0rem;
+    }
+
+    .inform-desk {
+        position: absolute;
+        width: 19.1675%;
+        height: 48.659%;
+        background-color: #fff;
+        top: 25%;
+        right: 56%;
+    }
+
+    .inform-desk-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 10%;
+    }
+
+    .inform-desk-container li {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 1.5rem 0rem;
+    }
+
+    .inform-desk-container li:before {
+        padding-right: 1rem;
+        font-weight: 700;
+        content: '✓';
+        color: #fed100; 
+    }
+
+    .info-social {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        margin: 10% 5% 10% 40%;
+    }
+
+    footer {
+        display: flex;
+        align-items: flex-start;
+        align-content: center;        
+        background-color: #fed100;
+    }
+    
+    .f-container {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Montserrat", sans-serif;
+        min-height: 25.0625rem;
+        width: 82rem;
+        margin: auto;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .footer-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 21%;
+        height: 13.0625rem;
+        margin: 6rem auto 5rem;
+    }
+
+    .footer-main a {
+        
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 6rem auto 5rem;
+    }
+  
+    .footer-menu a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .footer-socnet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 6rem auto 5rem;
+        width: 13%;
+    }
+
+    .social {
         display: flex;
         justify-content: space-between;
     }
 
-    /*.addition-services {
-
+    .follow-text {
+        text-align: center;
     }
 
-    .order-final {
-
-    }*/
-
-    .f-container {
+    .follow {
         display: flex;
-        min-height: 25.0625rem;
-        width: 82rem;
+        justify-content: space-evenly;
+    }
+
+    .e-letter {
+        color: #000;
+    }
+
+    .footer-phone {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.25rem;
+        font-weight: 500;
+        width: 25%;
+        margin: 6rem auto 5rem;
+    }
+
+    .footer-button-desk {
+        color: #000;
+        border: 0.0625rem solid #000;
+        padding: 4% 8%;
+        margin: 0% 1% 2%;
+    }
+
+    .fphone {
+        display: flex;
+        margin: 0rem auto 0rem;
+        font-size: 1.1875rem;
+        text-align: center;
+        text-decoration: underline;
+        color: #000;
+        
     }
 
   @media (max-width: 320px) {
@@ -717,7 +839,7 @@
         margin: 1rem;
     }
   
-    .logo {
+    .wrapper-top p {
         font-size: 1rem;
         font-weight: 600;
         line-height: 3em;
@@ -1094,7 +1216,7 @@
         display: flex;
         flex-direction: column;
         width: 95%;
-        
+        height: 100%;
     }
 
     .order-title-desk {
@@ -1128,7 +1250,11 @@
     .input-city,
     .pay-option,
     .addition-services,
-    .order-final-desk {
+    .order-title-desk,
+    .order-button-desk,
+    .map-desk, .follow,
+    .follow-text, .timer,
+    .footer-button-desk {
         display: none;
     }
 
@@ -1143,44 +1269,85 @@
     }
 
     .button-checkbox {
-        width: auto;
+        width: 100%;
     }
 
-    .order-button {
+    .order-button-mob {
+        display: block;
         background-color: #ff352b;
         color: #fff;
         text-align: center;
         text-decoration: none;
-        font-size: 1rem;
-        padding: 6% 14%;
+        font-size: 1.25rem;
+        padding: 9% 14%;
         margin: 0% 1% 4%;
         box-shadow: none;   
     }    
-    /*.order-form {
-
+    
+    .map-mob {
+        display: block;
     }
 
-    .order-option {
-
+    .inform-mob {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        padding: 14.375% 12.5%;
     }
 
-    .addition-services {
-
-    }
-
-    .order-final {
-
-    }*/
-
-    .map {
-        width: auto;
+    .inform-mob li {
+        margin: 0.3965rem;
     }
 
     .f-container {
         display: flex;
         flex-direction: column;
-        min-height: 25.0625rem;
-        width: 82rem;
+        margin: 3.75rem auto 3.125rem;
+        text-align: center;
+    }
+
+    .footer-main {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer-main a {
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .footer-menu {
+        margin: 0.75rem auto;
+    }
+    .footer-menu li {
+        margin: 1rem auto 0rem;
+    }
+
+    .footer-socnet {
+        display: flex;
+        width: 10.3125rem;
+        margin: 2.1875rem auto 0rem;
+    }
+
+    .e-letter {
+        margin: 1.25rem auto;
+    }
+
+    .footer-phone {
+        width: 100%;
+        margin: 0rem auto;
+    }
+
+    .footer-button-mob {
+        display: block;
+        color: #000;
+        border: 0.0625rem solid #000;
+        padding: 5% 30%;
+        margin: 0rem auto;
     }
 }
   
