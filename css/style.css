@@ -457,12 +457,13 @@
         align-items: flex-start;
         align-content: center;
         justify-content: center;
+        margin-top: 7.75rem;
     }
 
-    .order-title-desk h2 {
+    .order-title-desk {
         font-size: 1.875rem;
         font-weight: 600;
-        margin: 7.75rem auto 0.625rem;
+        margin: 0.625rem auto;
     }
 
     .order-title-mob {
