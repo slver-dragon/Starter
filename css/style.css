@@ -494,7 +494,7 @@
 
     }
 
-    .fname {
+    .form-prompt {
         font-size: 1.25rem;
         font-weight: 700;
         margin: 0%;
@@ -516,7 +516,7 @@
     }
 
     .another_radio {
-        margin: 1rem;
+        margin-right: 1rem;
         cursor: pointer;
         position: relative;
     }
@@ -578,7 +578,7 @@
     }
 
     .another_checkbox {
-    	margin: 1rem;
+    	margin-right: 1rem;
 	    cursor: pointer;
 	    position: relative;
     }
@@ -727,6 +727,10 @@
         margin: 10% 5% 10% 40%;
     }
 
+    .inform-underline {
+        text-decoration: underline;
+    }
+
     footer {
         display: flex;
         align-items: flex-start;
@@ -755,7 +759,6 @@
     }
 
     .footer-main a {
-        
         font-size: 1rem;
         font-weight: 400;
         text-decoration: none;
@@ -1245,7 +1248,7 @@
 
     }
     
-    .fname,
+    .form-prompt,
     .select-region,
     .select-city,
     .input-city,
