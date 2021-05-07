@@ -1,1374 +1,1370 @@
-    header {
-        display: flex;
-        align-items: flex-start;
-        align-content: center;
-        justify-content: center;
-        background-color: #fed100;
-    }
-  
-    .h-container {
-        display: flex;
-        flex-direction: column;
-        font-family: "Montserrat", sans-serif;
-        min-height: 40.625rem;
-        width: 82rem;
-        position: relative;
-    }
-  
-    .wrapper-top {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 2%;
-        margin: 2% 0%;
-    }
-  
-    .logo {
-        margin: 0rem;
-        font-size: 1.875rem;
-        font-weight: 600;
-    }
-  
-    .head-menu {
-        display: flex;
-        justify-content: space-between;
-        width: 40%;
-        font-size: 1.125rem;
-        font-weight: 500;
-    }
-  
-    li {
-        list-style-type: none;
-    }
-  
-    .head-menu a {
-        text-decoration: none;
-        color: #000;
-    }
-  
-    .b-menu,
-    .pict-man-mob {
-        display: none;
-    }
-  
-    .phone {
-        color: #000;
-        font-size: 1.5rem;
-        text-decoration: underline;
-        font-weight: 600;
-    }
-  
-    .wrapper-mid {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 2.5rem 0rem;
-    }
-
-    .wrapper-mid-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-  
-    .wrapper-mid-title h1 {
-        font-size: 4.375rem;
-        line-height: 0.95em;
-        font-weight: 700;
-    }
-  
-    .wrapper-mid-title h3 {
-        font-size: 1.875rem;
-        font-weight: 600;
-        line-height: 3em;
-    }
-  
-    .wrapper-mid-button {
-        background-color: #ff352b;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1.5rem;
-        padding: 1.15%;
-        width: 23%;
-        margin: 0% 0% 5%;       
-        box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
-    }
-  
-    .wrapper-mid-button:hover {
-        background-color: #ff772b;
-        box-shadow: 0.75rem 0.75rem #fff;
-        cursor: pointer;        
-    }
-  
-    .wrapper-mid-icons {
-        display: flex;
-        font-size: 1rem;
-        font-weight: 400;
-        width: 40%;
-        margin-top: 4%;
-    }
-  
-    .icon-text {
-        width: 25%;
-        margin-left: 1rem;
-    }
-  
-    .pict-man {
-        width: 23.8125rem;
-        z-index: 1;
-        position: absolute;
-        right: 25%;
-        bottom: 0%;
-    }
-  
-    .pict-car {
-        align-self: top;
-        position: absolute;
-        right: -8%;
-        top: 26%;
-    }
-  
-    .phone-call {    
-        position: absolute;
-        right: 2%;
-        top: 72%;
-    }
-  
-    .phone-call:hover {
-        content: url(/img/phone_hover.png);
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;               
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .how-it-work {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        width: 60%;
-    }
-
-    .how-it-work h2 {
-        font-size: 1.875rem;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 5.9375rem;
-    }
-
-    .work-list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .work-list-element {
-        display: flex;
-        width: 40%;
-        margin-top: 3.8125rem;
-    }
-
-    .work-number {
-        display: flex;
-        font-size: 3.125rem;
-        font-weight: 300;
-        margin-right: 2rem;
-        text-shadow: 0.125rem 0rem #fed100;
-    }
-
-    .work-text, .work-text-spec {
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-        font-weight: 400;
-        width: 59%;
-    }
-
-    .work-text-mob {
-        display: none;
-    }
-
-    .work-text h4, .work-text-spec h4 {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: 500;
-        margin-bottom: 0.9375rem;
-    }
-  
-    .prices {        
-        display: flex;
-        flex-direction: column;
-        margin-top: 6.5rem;
-    }
-
-    .prices h2 {
-        font-size: 1.875rem;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .prices h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0.9375rem auto;
-        text-align: center;
-    }
-
-    .offer {
-        display: flex;
-        justify-content: center;       
-        margin-top: 3.75rem;        
-    }
-
-    .offer-element {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        border: 0.0625rem solid #FED100;
-        margin: 0rem 0.5rem;
-        width: 15%;
-    }
-
-    .flat-type {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 5.25rem auto 3.8125rem;
-    }
-
-    .offer-element pre {
-        display: block;
-        text-align: center;
-        line-height:3.5em;
-    }
-
-    .offer-sum {
-        font-size: 1.875rem;
-        font-weight: 600;
-        margin-top: 3.965rem;
-    }
-
-    .offer-button {
-        background-color: #fed100;
-        color: #333333;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1vw;
-        font-weight: 500;
-        padding: 3% 20%;
-        margin: 3rem auto 5rem;
-    }
-
-    .offer-button:hover {
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .offer-allprices {
-        display: none;
-    }
-
-    .transport {
-        display: flex;
-        flex-direction: column;
-        width: 44%;
-        margin: 6.375rem auto 0rem;     
-    }
-
-    .transport h2 {
-        display: block;
-        font-size: 1.875rem;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .transport h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 0.9375rem;
-    }
-
-    .transport-menu {
-        display: flex;
-        justify-content: center;
-        font-size: 1.25rem;
-        font-weight: 500;
-        margin: 0%;
-    }
-
-    .transport-element {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .active {
-        padding: 1.422% 7.451%;
-        border: 0.0625rem solid #fed100;
-        margin-top: 5%;
-    }
-
-    .noactive {
-        padding: 1.422% 7.451%;
-        border: 0.0625rem solid #fff;
-        margin-top: 5%;
-    }
-
-    .element-back, .element-forward {
-        font-size: 2rem;
-        font-weight: 900;
-        margin: 10% 2%;
-        transform: scale(.5,1);
-        text-decoration: none;
-        color: #000;
-    }
-
-    .element-back:hover,
-    .element-forward:hover {
-        cursor: pointer;
-    }
-
-    .transport-description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .auto-type {
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-align: left;
-    }
-
-    .description-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 1rem;
-        font-weight: 400;
-    }
-
-    .description-list li:before {
-        padding-right: 1rem;
-        font-weight: 700;
-        content: '✓'; 
-    }
-
-    .transport-button {
-        background-color: #fed100;
-        color: #333333;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1.25rem;
-        font-weight: 500;
-        padding: 0.495rem 4.8125rem;
-        margin-bottom: 4rem;
-    }
-
-    .transport-button:hover {
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .transport-picture {
-        display: block;
-    }
-
-    .transport-picture-mob,
-    .main-third-sign,
-    .auto-description,
-    .main-third-Hmenu {
-        display: none;
-    }
-
-    .reviews {
-        display: flex;
-        justify-content: center;
-        background-color: #fed100;
-    }
-
-    .all-reviews {
-        display: flex;
-        flex-direction: column;       
-        align-items: center;
-        width: 48%;
-    }
-
-    .all-reviews h2 {
-        font-size: 1.875rem;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 6.25rem;        
-    }
-
-    .reviews-container {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 3.75rem;
-    }
-
-    .review-element {
-        display: flex;
-        flex-direction: column;
-        width: 31%;
-    }
-
-    .review-name {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-
-    .review-info {
-        margin: 0.625rem 0rem 1.1875rem;
-    }
-
-    .review-star {
-        font-size: 1.25rem;
-        font-weight: 500;
-        color:#ff352b;
-    }
-
-    .review-element-mob {
-        display: none;
-    }
-
-    .read-after {
-        margin-top: 1.125rem;
-        color: #000;
-        text-decoration: underline;
-    }
-
-    .review-button {
-        display: block;
-        text-align: center;
-        font-size: 1.25rem;
-        font-weight: 500;
-        text-decoration: none;
-        background-color: #fed100;
-        color: #000;
-        border: 0.0625rem solid;
-        padding: 0.625rem 3.888rem;
-        margin: 3.8125rem auto 5.875rem;
-    }
-
-    .review-button:hover {
-        cursor: pointer;
-        background-color: #fff;
-        border: 0.0625rem solid #fed100;
-    }
-
-    /*форма заказа*/
-    
-    .order {
-        display: flex;
-        align-items: flex-start;
-        align-content: center;
-        justify-content: center;
-        margin-top: 7.75rem;
-    }
-
-    .order-title-desk {
-        font-size: 1.875rem;
-        font-weight: 600;
-        margin: 0.625rem auto;
-    }
-
-    .order-title-mob {
-        display: none;
-    }
-    .order-block {
-        width: 40%;
-        height: 80%;
-    }
-
-    .order-form {
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-        font-weight: 500;
-        color: #333333;
-    }
-
-    .element-merger {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .order-element {
-        display: flex;
-        flex-direction: column;
-        width: 45%;
-
-    }
-
-    .form-prompt {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin: 0%;
-        max-width: 90%;
-    }
-
-    .select-region,
-    .select-city {
-        display: block;
-        max-width: 90%;
-        margin: 0%;
-    }
-
-    .your-name,
-    .your-phon,
-    .input-city {
-        display: block;
-        max-width: 90%;
-        margin: 0%;
-    }
-    .pay-option,
-    .addition-services {
-        width: 100%;
-        margin-bottom: 4rem;
-    }
-
-    .another_radio {
-        margin-right: 1rem;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .another_radio input[type=radio] {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
-
-    .another_radio span {
-        display: inline-block;
-        position: relative; 
-        padding: 0 0 0 2.8rem; 
-        line-height: 1.5rem;
-        margin-top: 2rem;    
-    }
-
-    .another_radio span:before {
-        content: "";
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        position: absolute;
-        left: 0.0625rem;
-        top: 0rem;
-        transition: background 0.3s ease;
-        background: url(/img/radio.png) 0 0 no-repeat;
-    }
-
- /* Checked-radio*/
-    .another_radio input[type=radio]:checked + span:before {
-        background-image: url(/img/radio-mrk.png);
-    }
-
- /* Hover-radio*/
-    .another_radio span:hover:before {
-        filter: brightness(110%);
-    }
-
- /* Active-radio*/
-    .another_radio span:active:before {
-        filter: brightness(80%);
-    }
-
- /* Disabled-radio*/
-    .another_radio input[type=radio]:disabled + span {
-        color: #666;
-        cursor: default;
-    }
-
-    .another_radio input[type=radio]:disabled + span:before {
-        filter: grayscale(100%);
-        opacity: 0.6;
-    }
- 
-    .addition-services {
-        width: 100%;
-    }
-
-    .another_checkbox {
-    	margin-right: 0.75rem;
-	    cursor: pointer;
-	    position: relative;
-    }
-
-    .another_checkbox input[type=checkbox] {
-	    position: absolute;
-	    z-index: -1;
-    	opacity: 0;
-    }
-
-    .another_checkbox span {
-	    display: inline-block;
-	    position: relative; 
-    	padding: 0 0 0 3rem; 
-	    line-height: 1.5rem;
-        margin-top: 2rem;    
-    }
-
-    .another_checkbox span:before {
-	    content: "";
-	    display: inline-block;
-	    width: 1.5rem;
-    	height: 1.5rem;
-	    position: absolute;
-    	left: 0.0625rem;
-	    top: 0rem;
-    	transition: background 0.3s ease;
-	    background: url(/img/checkbox.png) 0 0 no-repeat;
-    }
- 
- /* Checked-checkbox*/
-    .another_checkbox input[type=checkbox]:checked + span:before {
-    	background-image: url(/img/checkbox-mrk.png);
-    }
- 
- /* Hover-checkbox*/
-    .another_checkbox span:hover:before {
-	    filter: brightness(110%);
-    }
- 
- /* Active-checkbox*/
-    .another_checkbox span:active:before {
-	    filter: brightness(80%);
-    }
- 
- /* Disabled-checkbox*/
-    .another_checkbox input[type=checkbox]:disabled + span {
-	    color: #666;
-	    cursor: default;
-    }
-
-    .another_checkbox input[type=checkbox]:disabled + span:before {
-	    filter: grayscale(100%);
-	    opacity: 0.6;
-    }
- /*--*/
-    .order-final-desk {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .order-button-mob,
-    .map-mob,
-    .footer-button-mob,
-    .inform-mob{
-        display: none;
-    }
-
-    .timer {
-        font-size: 5vw;
-        font-weight: 400;
-        margin-right: 0%;      
-    }
-
-    .your-name,
-    .your-phon,
-    .input-city {
-        width: 18.75rem;
-        height: 2.125rem;
-        border-bottom: 0.0625rem solid #333333;
-        margin: 3rem 0rem;
-    }
-
-    .button-checkbox {
-        display: flex;
-        flex-direction: column;
-        margin: 2%;
-        width: 40%;
-       
-    }
-
-    .order-button-desk {
-        background-color: #ff352b;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1rem;
-        padding: 5% 10%;
-        margin: 0% 1% 5%;       
-        box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fff, 0.75rem 0.75rem #fed100;
-    }
-
-    .apply {
-        font-size: 0.75rem;
-        font-weight: 400;
-    }
-
-    .map-desk {
-        position: relative;
-        margin: 6.5rem auto 0rem;
-    }
-
-    .inform-desk {
-        position: absolute;
-        width: 19.1675%;
-        height: 48.659%;
-        background-color: #fff;
-        top: 25%;
-        right: 56%;
-    }
-
-    .inform-desk-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin: 10%;
-    }
-
-    .inform-desk-container li {
-        font-size: 1rem;
-        font-weight: 400;
-        margin: 1.5rem 0rem;
-    }
-
-    .inform-desk-container li:before {
-        padding-right: 1rem;
-        font-weight: 700;
-        content: '✓';
-        color: #fed100; 
-    }
-
-    .info-social {
-        display: flex;
-        justify-content: space-around;
-        width: 60%;
-        margin: 10% 5% 10% 40%;
-    }
-
-    .inform-underline {
-        text-decoration: underline;
-    }
-
-    footer {
-        display: flex;
-        align-items: flex-start;
-        align-content: center;        
-        background-color: #fed100;
-    }
-    
-    .f-container {
-        display: flex;
-        justify-content: space-between;
-        font-family: "Montserrat", sans-serif;
-        min-height: 25.0625rem;
-        width: 82rem;
-        margin: auto;
-        font-size: 1.25rem;
-        font-weight: 500;
-    }
-
-    .footer-main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 21%;
-        height: 13.0625rem;
-        margin: 6rem auto 5rem;
-    }
-
-    .footer-main a {
-        font-size: 1rem;
-        font-weight: 400;
-        text-decoration: none;
-        color: #000;
-    }
-
-    .footer-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 6rem auto 5rem;
-    }
-  
-    .footer-menu a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .footer-socnet {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 6rem auto 5rem;
-        width: 13%;
-    }
-
-    .social {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .follow-text {
-        text-align: center;
-    }
-
-    .follow {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .e-letter {
-        color: #000;
-    }
-
-    .footer-phone {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.25rem;
-        font-weight: 500;
-        width: 25%;
-        margin: 6rem auto 5rem;
-    }
-
-    .footer-button-desk {
-        color: #000;
-        border: 0.0625rem solid #000;
-        padding: 4% 8%;
-        margin: 0% 1% 2%;
-    }
-
-    .fphone {
-        display: flex;
-        margin: 0rem auto 0rem;
-        font-size: 1.1875rem;
-        text-align: center;
-        text-decoration: underline;
-        color: #000;
-        
-    }
-
-  @media (max-width: 320px) {
-
-    .h-container{
-        width: 20rem;
-        min-height: 37.5rem;
-    }
-
-    .wrapper-top {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin: 1rem;
-    }
-  
-    .wrapper-top p {
-        font-size: 1rem;
-        font-weight: 600;
-        line-height: 3em;
-    }
-
-    .b-menu {
-        display: flex;
-        position: relative;
-        width: 2.75rem;
-        height: 1.1875rem;
-        margin: 0.5rem;
-        border-top: 0.125rem solid #000;
-        border-bottom: 0.125rem solid #000;
-    }
-
-    .b-menu:before {
-        content: "";
-        position: absolute;
-        top: 0.5625rem;
-        width: 100%;
-        border-top: 0.125rem solid #000;
-    }
-  
-    .wrapper-mid {
-        min-height: 30rem;
-        margin: 0%;
-    }
-
-    .wrapper-mid-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-    }
-  
-    .wrapper-mid-title h1 {
-        font-size: 1.75rem;
-        font-weight: 700;
-    }
-  
-    .wrapper-mid-title h3 {
-        height: 4rem;
-        font-size: 1.125rem;
-        font-weight: 600;
-    }
-  
-    .wrapper-mid-button {
-        padding: 1rem 6.891rem;
-        display: flex;
-        justify-content: center;
-        width: 92%;
-        margin: 0rem 0.875rem;
-        box-shadow: none;
-        z-index: 1;
-    }
-
-    .wrapper-mid-button:hover {
-        background-color: #ff772b;
-        box-shadow: none;
-        cursor: pointer;
-    }
-  
-    .head-menu,
-    .phone,
-    .wrapper-mid-icons,
-    .pict-man,
-    .pict-car,
-    .phone-call {
-        display: none;
-    }
-  
-    .pict-man-mob {
-        display: block;
-        position: absolute;
-        top:55%; left:50%;
-        transform:translate(-50%, -50%);
-        
-    }
-
-    .how-it-work {
-        width: 100%;
-    }
-
-    .how-it-work h2 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        text-align: center;
-        margin: 2.5rem 0rem 3rem 0rem;
-    }
-
-    .work-list {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        position: relative;
-    }
-
-    .work-list-element {
-        display: flex;
-        align-items: center;
-        width: 80%;
-        margin: 1rem;
-    }
-
-    .work-number {
-        display: flex;
-        justify-content: start;
-        font-size: 3.125rem;
-        font-weight: 300;
-    }
-
-    .work-text,
-    .work-text-mob {
-        display: block;
-        position: absolute;
-        font-size: 1rem;
-        font-weight: 400;
-        margin: 0rem 0rem 0rem 6rem;
-    }
-
-    .work-text p,
-    .work-text-spec,
-    .offer-element{
-        display: none;
-    }
-
-    .work-text h4, .work-text-mobh4 {
-        font-size: 1rem;
-        font-weight: 400;
-        margin: 0rem;
-    }
-
-    .prices { 
-        display: flex;
-        flex-direction: column;
-        margin: 0rem;
-    }
-
-    .prices h2 {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin: 3.125rem auto 2.1rem;
-    }
-
-    .offer {
-        margin: 0rem;
-    }
-
-    .offer-element-mob {
-        display: flex;
-        flex-direction: column;
-        border: none;
-        width: 100%;
-    }
-
-    .offer-element-mob pre {
-        display: block;
-        font-size: 1rem;
-        font-weight: 400;
-        text-align: center;
-    }
-
-    .offer-sum {
-        display: block;
-        font-size: 1.875rem;
-        font-weight: 600;
-        margin: 2.2rem auto;
-    }
-
-    .prices h3 {
-       display: none;
-    }
-
-    .flat-type {
-        display: block;
-        font-size: 1.125rem;
-        font-weight: 500;
-        margin: 0rem auto 1.15rem;
-    }
-
-    .offer-button {
-        background-color: #fed100;
-        color: #333333;
-        padding: 1.125rem 6.891rem;
-        display: flex;
-        justify-content: center;
-        margin: 1.1rem auto 0.875rem;
-    }
-
-    .offer-button:hover {
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .offer-allprices {
-        display: block;
-        color: #000;
-        font-size: 1rem;
-        font-weight: 500;
-        margin: 0.3rem auto;
-        text-decoration: underline;
-    }
-
-    .transport {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 4.5rem;
-    }
-
-    .transport h2 {
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-
-    .transport-menu {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        font-size: 1rem;
-        font-weight: 500;
-        margin: 1.25rem auto 2.5rem;
-    }
-
-    .transport-menu a {
-        text-decoration: none;
-        color: #000;
-        margin: 0rem 0.4rem;
-    }
-
-    .transport-element {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .element-back,
-    .element-forward,
-    .transport-picture,
-    .transport h3,
-    .description-list,
-    .auto-type{
-        display: none;
-    }
-
-    .transport-element h2 {
-        text-align: left;
-    }
-
-    .transport-picture-mob {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .auto-description {
-        display: block;
-        font-size: 0.75rem;
-        font-weight: 400;
-        text-align: center;
-        margin: 1rem 5rem;
-    }
-
-    .transport-choise {
-        display: flex;
-        margin: 0rem auto 0rem;
-    }
-
-    .choiser-element {
-        background-color: #000;
-        padding: 0.25rem;
-        height: 0rem;
-        display: inline-block;
-        margin: 0.5rem;
-        border-radius: 45%;
-    }
-
-    .choiser-element:hover {
-        padding: 0.3125rem;
-        box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.3125rem #fed100;
-        cursor: pointer;
-    }
-
-    .transport-description {
-        display: block;
-    }
-
-    .transport-button {
-        background-color: #fed100;
-        color: #333333;
-        padding: 1.125rem 6.891rem;
-        display: flex;
-        justify-content: center;
-        margin: 0rem 0.25rem 2.8125rem;
-    }
-
-    .transport-button:hover {
-        color: #fff;
-        cursor: pointer;
-    }
-    
-    .all-reviews {
-        display: flex;
-        flex-direction: column;
-        width: 95%;
-    }
-
-    .all-reviews h2 {
-        font-size: 1.25rem;
-        font-weight: 600;
-    }
-    
-    .review-element {
-        display: none;
-    }
-
-    .reviews-container {
-        margin: 2.5rem auto 3rem;
-    }
-
-    .review-element-mob {
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .review-name-mob {
-        font-size: 1.125rem;
-        font-weight: 500;
-    }
-
-    .review-element-mob nobr {
-        margin: 0.625rem 0rem 2.3125rem;
-    }
-
-    .review-star {
-        font-size: 1.25rem;
-        font-weight: 500;
-        color:#ff352b;
-    }
-
-    .read-after {
-        margin-top: 1.125rem;
-        color: #000;
-    }
-
-    .review-button {
-        display: block;
-        text-align: center;
-        font-size: 1.25rem;
-        font-weight: 500;
-        text-decoration: none;
-        background-color: #fed100;
-        color: #000;
-        border: solid .0625rem;
-        padding: 0.625rem 3.888rem;
-        margin: 0rem auto 3.125rem;
-    }
-
-    .review-info{
-        white-space: nowrap;
-    }
-
-    .order {
-        width: 20rem;
-        min-height: 32.375rem;
-        align-items: center;
-        margin: auto;
-    }
-
-    .order-block {
-        display: flex;
-        flex-direction: column;
-        width: 95%;
-        height: 100%;
-    }
-
-    .order-title-mob {
-        display: flex;
-        align-content: center;
-        text-align: center;
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin: 2rem auto 1rem;  
-    }
-
-    .order-block p {
-        font-size: 0.9275rem;
-        font-weight: 400;
-        margin: 0rem auto 3rem;  
-    }
-
-    .element-merger {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .form-prompt,
-    .select-region,
-    .select-city,
-    .input-city,
-    .pay-option, .fphone,
-    .addition-services,
-    .order-title-desk,
-    .order-button-desk,
-    .map-desk, .follow,
-    .follow-text, .timer,
-    .footer-button-desk {
-        display: none;
-    }
-
-    .your-name,
-    .your-phon {
-        display: block;
-        margin: 1rem auto;
-    }
-
-    .order-element {
-        width: 100%;
-    }
-    .order-final-mob {
-        display: block;
-    }
-
-    .button-checkbox {
-        width: 100%;
-    }
-
-    .order-button-mob {
-        display: block;
-        background-color: #ff352b;
-        color: #fff;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1.25rem;
-        padding: 9% 14%;
-        margin: 0% 1% 4%;
-        box-shadow: none;   
-    }    
-    
-    .map-mob {
-        display: block;
-    }
-
-    .inform-mob {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 0.9375rem;
-        font-weight: 400;
-        padding: 14.375% 12.5%;
-    }
-
-    .inform-mob li {
-        margin: 0.3965rem;
-    }
-
-    .f-container {
-        display: flex;
-        flex-direction: column;
-        margin: 2.75rem auto 3.125rem;
-        text-align: center;
-    }
-
-    .footer-main {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: auto;
-    }
-
-    .footer-main a {
-        font-weight: 500;
-        text-align: center;
-    }
-
-    .footer-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 11.25rem;
-        margin: 0.75rem auto;
-    }
-    
-    .footer-socnet {
-        display: flex;
-        width: 10.3125rem;
-        margin: 2.1875rem auto 0rem;
-    }
-
-    .e-letter {
-        margin: 1.25rem auto;
-    }
-
-    .footer-phone {
-        width: 100%;
-        margin: 2rem auto 0rem;
-    }
-
-    .footer-button-mob {
-        display: block;
-        color: #000;
-        border: 0.0625rem solid #000;
-        padding: 5% 30%;
-        margin: 0rem auto;
-    }
+header {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+  background-color: #fed100;
 }
-  
+
+.h-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  min-height: 40.625rem;
+  width: 82rem;
+  position: relative;
+}
+
+.wrapper-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 2%;
+  margin: 2% 0%;
+}
+
+.logo {
+  margin: 0rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.head-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+li {
+  list-style-type: none;
+}
+
+.head-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.b-menu,
+.pict-man-mob {
+  display: none;
+}
+
+.phone {
+  color: #000;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.wrapper-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2.5rem 0rem;
+}
+
+.wrapper-mid-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.wrapper-mid-title h1 {
+  font-size: 4.375rem;
+  line-height: 0.95em;
+  font-weight: 700;
+}
+
+.wrapper-mid-title h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 3em;
+}
+
+.wrapper-mid-button {
+  background-color: #ff352b;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1.15%;
+  width: 23%;
+  margin: 0% 0% 5%;
+  box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fed100, 0.75rem 0.75rem #fff;
+}
+
+.wrapper-mid-button:hover {
+  background-color: #ff772b;
+  box-shadow: 0.75rem 0.75rem #fff;
+  cursor: pointer;
+}
+
+.wrapper-mid-icons {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 40%;
+  margin-top: 4%;
+}
+
+.icon-text {
+  width: 25%;
+  margin-left: 1rem;
+}
+
+.pict-man {
+  width: 23.8125rem;
+  z-index: 1;
+  position: absolute;
+  right: 25%;
+  bottom: 0%;
+}
+
+.pict-car {
+  align-self: top;
+  position: absolute;
+  right: -8%;
+  top: 26%;
+}
+
+.phone-call {
+  position: absolute;
+  right: 2%;
+  top: 72%;
+}
+
+.phone-call:hover {
+  content: url(/img/phone_hover.png);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+
+.how-it-work {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 60%;
+}
+
+.how-it-work h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5.9375rem;
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.work-list-element {
+  display: flex;
+  width: 40%;
+  margin-top: 3.8125rem;
+}
+
+.work-number {
+  display: flex;
+  font-size: 3.125rem;
+  font-weight: 300;
+  margin-right: 2rem;
+  text-shadow: 0.125rem 0rem #fed100;
+}
+
+.work-text,
+.work-text-spec {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 59%;
+}
+
+.work-text-mob {
+  display: none;
+}
+
+.work-text h4,
+.work-text-spec h4 {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.9375rem;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6.5rem;
+}
+
+.prices h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.prices h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.9375rem auto;
+  text-align: center;
+}
+
+.offer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.75rem;
+}
+
+.offer-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 0.0625rem solid #fed100;
+  margin: 0rem 0.5rem;
+  width: 15%;
+}
+
+.flat-type {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 5.25rem auto 3.8125rem;
+}
+
+.offer-element pre {
+  display: block;
+  text-align: center;
+  line-height: 3.5em;
+}
+
+.offer-sum {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-top: 3.965rem;
+}
+
+.offer-button {
+  background-color: #fed100;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.042vw;
+  font-weight: 500;
+  padding: 3% 20%;
+  margin: 3rem auto 5rem;
+}
+
+.offer-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.offer-allprices {
+  display: none;
+}
+
+.transport {
+  display: flex;
+  flex-direction: column;
+  width: 44%;
+  margin: 6.375rem auto 0rem;
+}
+
+.transport h2 {
+  display: block;
+  font-size: 1.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.transport h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.9375rem;
+}
+
+.transport-menu {
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0%;
+}
+
+.transport-element {
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-type-active {
+  padding: 1.422% 7.451%;
+  border: 0.0625rem solid #fed100;
+  margin-top: 5%;
+}
+
+.car-type {
+  padding: 1.422% 7.451%;
+  border: 0.0625rem solid #fff;
+  margin-top: 5%;
+}
+
+.element-back,
+.element-forward {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 10% 2%;
+  transform: scale(0.5, 1);
+  text-decoration: none;
+  color: #000;
+}
+
+.element-back:hover,
+.element-forward:hover {
+  cursor: pointer;
+}
+
+.transport-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.auto-type {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.description-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.description-list li:before {
+  padding-right: 1rem;
+  font-weight: 700;
+  content: "✓";
+}
+
+.transport-button {
+  background-color: #fed100;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.495rem 4.8125rem;
+  margin-bottom: 4rem;
+}
+
+.transport-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.transport-picture {
+  display: block;
+}
+
+.transport-picture-mob,
+.main-third-sign,
+.auto-description,
+.main-third-Hmenu {
+  display: none;
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  background-color: #fed100;
+}
+
+.all-reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+}
+
+.all-reviews h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 6.25rem;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.75rem;
+}
+
+.review-element {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+}
+
+.review-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.review-info {
+  margin: 0.625rem 0rem 1.1875rem;
+}
+
+.review-star {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ff352b;
+}
+
+.review-element-mob {
+  display: none;
+}
+
+.read-after {
+  margin-top: 1.125rem;
+  color: #000;
+  text-decoration: underline;
+}
+
+.review-button {
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #fed100;
+  color: #000;
+  border: 0.0625rem solid;
+  padding: 0.625rem 3.888rem;
+  margin: 3.8125rem auto 5.875rem;
+}
+
+.review-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border: 0.0625rem solid #fed100;
+}
+
+.order {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+  margin-top: 7.75rem;
+}
+
+.order-title-desk {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin: 0.625rem auto;
+}
+
+.order-title-mob {
+  display: none;
+}
+.order-block {
+  width: 40%;
+  height: 80%;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.element-merger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-element {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.form-prompt {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0%;
+  max-width: 90%;
+}
+
+.select-region,
+.select-city {
+  display: block;
+  max-width: 90%;
+  margin: 0%;
+}
+
+.your-name,
+.your-phon,
+.input-city {
+  display: block;
+  max-width: 90%;
+  margin: 0%;
+}
+.pay-option,
+.addition-services {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.another_radio {
+  margin-right: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.another_radio input[type="radio"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.another_radio span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 2.8rem;
+  line-height: 1.5rem;
+  margin-top: 2rem;
+}
+
+.another_radio span:before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0.0625rem;
+  top: 0rem;
+  transition: background 0.3s ease;
+  background: url(/img/radio.png) 0 0 no-repeat;
+}
+
+.another_radio input[type="radio"]:checked + span:before {
+  background-image: url(/img/radio-mrk.png);
+}
+
+.another_radio span:hover:before {
+  filter: brightness(110%);
+}
+
+.another_radio span:active:before {
+  filter: brightness(80%);
+}
+
+.another_radio input[type="radio"]:disabled + span {
+  color: #666;
+  cursor: default;
+}
+
+.another_radio input[type="radio"]:disabled + span:before {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.addition-services {
+  width: 100%;
+}
+
+.another_checkbox {
+  margin-right: 0.75rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.another_checkbox input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.another_checkbox span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 3rem;
+  line-height: 1.5rem;
+  margin-top: 2rem;
+}
+
+.another_checkbox span:before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0.0625rem;
+  top: 0rem;
+  transition: background 0.3s ease;
+  background: url(/img/checkbox.png) 0 0 no-repeat;
+}
+
+.another_checkbox input[type="checkbox"]:checked + span:before {
+  background-image: url(/img/checkbox-mrk.png);
+}
+
+.another_checkbox span:hover:before {
+  filter: brightness(110%);
+}
+
+.another_checkbox span:active:before {
+  filter: brightness(80%);
+}
+
+.another_checkbox input[type="checkbox"]:disabled + span {
+  color: #666;
+  cursor: default;
+}
+
+.another_checkbox input[type="checkbox"]:disabled + span:before {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.order-final-desk {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-button-mob,
+.map-mob,
+.footer-button-mob,
+.inform-mob {
+  display: none;
+}
+
+.timer {
+  font-size: 5vw;
+  font-weight: 400;
+  margin-right: 0%;
+}
+
+.your-name,
+.your-phon,
+.input-city {
+  width: 18.75rem;
+  height: 2.125rem;
+  border-bottom: 0.0625rem solid #333333;
+  margin: 3rem 0rem;
+}
+
+.button-checkbox {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  width: 40%;
+}
+
+.order-button-desk {
+  background-color: #ff352b;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5% 10%;
+  margin: 0% 1% 5%;
+  box-shadow: 0.75rem 0.75rem 0.0625rem -0.125rem #fff, 0.75rem 0.75rem #fed100;
+}
+
+.apply {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.map-desk {
+  position: relative;
+  margin: 6.5rem auto 0rem;
+}
+
+.inform-desk {
+  position: absolute;
+  width: 19.1675%;
+  height: 48.659%;
+  background-color: #fff;
+  top: 25%;
+  right: 56%;
+}
+
+.inform-desk-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10%;
+}
+
+.inform-desk-container a {
+  color: #000;
+  text-decoration: none;
+}
+.inform-desk-container li {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1.5rem 0rem;
+}
+
+.inform-desk-container li:before {
+  padding-right: 1rem;
+  font-weight: 700;
+  content: "✓";
+  color: #fed100;
+}
+
+.info-social {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 10% 5% 10% 40%;
+}
+
+.inform-underline {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  background-color: #fed100;
+}
+
+.f-container {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  min-height: 25.0625rem;
+  width: 82rem;
+  margin: auto;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 21%;
+  height: 13.0625rem;
+  margin: 6rem auto 5rem;
+}
+
+.footer-main a {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 6rem auto 5rem;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-socnet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 6rem auto 5rem;
+  width: 13%;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.follow-text {
+  text-align: center;
+}
+
+.follow {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.e-letter {
+  color: #000;
+}
+
+.footer-phone {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 25%;
+  margin: 6rem auto 5rem;
+}
+
+.footer-button-desk {
+  color: #000;
+  border: 0.0625rem solid #000;
+  padding: 4% 8%;
+  margin: 0% 1% 2%;
+}
+
+.fphone {
+  display: flex;
+  margin: 0rem auto 0rem;
+  font-size: 1.1875rem;
+  text-align: center;
+  text-decoration: underline;
+  color: #000;
+}
+
+@media (max-width: 320px) {
+  .h-container {
+    width: 20rem;
+    min-height: 37.5rem;
+  }
+
+  .wrapper-top {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1rem;
+  }
+
+  .wrapper-top p {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 3em;
+  }
+
+  .b-menu {
+    display: flex;
+    position: relative;
+    width: 2.75rem;
+    height: 1.1875rem;
+    margin: 0.5rem;
+    border-top: 0.125rem solid #000;
+    border-bottom: 0.125rem solid #000;
+  }
+
+  .b-menu:before {
+    content: "";
+    position: absolute;
+    top: 0.5625rem;
+    width: 100%;
+    border-top: 0.125rem solid #000;
+  }
+
+  .wrapper-mid {
+    min-height: 30rem;
+    margin: 0%;
+  }
+
+  .wrapper-mid-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .wrapper-mid-title h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  .wrapper-mid-title h3 {
+    height: 4rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .wrapper-mid-button {
+    padding: 1rem 6.891rem;
+    display: flex;
+    justify-content: center;
+    width: 92%;
+    margin: 0rem 0.875rem;
+    box-shadow: none;
+    z-index: 1;
+  }
+
+  .wrapper-mid-button:hover {
+    background-color: #ff772b;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  .head-menu,
+  .phone,
+  .wrapper-mid-icons,
+  .pict-man,
+  .pict-car,
+  .phone-call {
+    display: none;
+  }
+
+  .pict-man-mob {
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .how-it-work {
+    width: 100%;
+  }
+
+  .how-it-work h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 2.5rem 0rem 3rem 0rem;
+  }
+
+  .work-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+  }
+
+  .work-list-element {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 1rem;
+  }
+
+  .work-number {
+    display: flex;
+    justify-content: start;
+    font-size: 3.125rem;
+    font-weight: 300;
+  }
+
+  .work-text,
+  .work-text-mob {
+    display: block;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0rem 0rem 0rem 6rem;
+  }
+
+  .work-text p,
+  .work-text-spec,
+  .offer-element {
+    display: none;
+  }
+
+  .work-text h4,
+  .work-text-mobh4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0rem;
+  }
+
+  .prices {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+  }
+
+  .prices h2 {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 3.125rem auto 2.1rem;
+  }
+
+  .offer {
+    margin: 0rem;
+  }
+
+  .offer-element-mob {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 100%;
+  }
+
+  .offer-element-mob pre {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .offer-sum {
+    display: block;
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin: 2.2rem auto;
+  }
+
+  .prices h3 {
+    display: none;
+  }
+
+  .flat-type {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0rem auto 1.15rem;
+  }
+
+  .offer-button {
+    background-color: #fed100;
+    color: #333333;
+    padding: 1.125rem 6.891rem;
+    display: flex;
+    justify-content: center;
+    margin: 1.1rem auto 0.875rem;
+  }
+
+  .offer-button:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .offer-allprices {
+    display: block;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.3rem auto;
+    text-decoration: underline;
+  }
+
+  .transport {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4.5rem;
+  }
+
+  .transport h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .transport-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.25rem auto 2.5rem;
+  }
+
+  .transport-menu a {
+    text-decoration: none;
+    color: #000;
+    margin: 0rem 0.4rem;
+  }
+
+  .transport-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .element-back,
+  .element-forward,
+  .transport-picture,
+  .transport h3,
+  .description-list,
+  .auto-type {
+    display: none;
+  }
+
+  .transport-element h2 {
+    text-align: left;
+  }
+
+  .transport-picture-mob {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .auto-description {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 1rem 5rem;
+  }
+
+  .transport-choise {
+    display: flex;
+    margin: 0rem auto 0rem;
+  }
+
+  .choiser-element {
+    background-color: #000;
+    padding: 0.25rem;
+    height: 0rem;
+    display: inline-block;
+    margin: 0.5rem;
+    border-radius: 45%;
+  }
+
+  .choiser-element:hover {
+    padding: 0.3125rem;
+    box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.3125rem #fed100;
+    cursor: pointer;
+  }
+
+  .transport-description {
+    display: block;
+  }
+
+  .transport-button {
+    background-color: #fed100;
+    color: #333333;
+    padding: 1.125rem 6.891rem;
+    display: flex;
+    justify-content: center;
+    margin: 0rem 0.25rem 2.8125rem;
+  }
+
+  .transport-button:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .all-reviews {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .all-reviews h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .review-element {
+    display: none;
+  }
+
+  .reviews-container {
+    margin: 2.5rem auto 3rem;
+  }
+
+  .review-element-mob {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .review-name-mob {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .review-element-mob nobr {
+    margin: 0.625rem 0rem 2.3125rem;
+  }
+
+  .review-star {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #ff352b;
+  }
+
+  .read-after {
+    margin-top: 1.125rem;
+    color: #000;
+  }
+
+  .review-button {
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #fed100;
+    color: #000;
+    border: solid 0.0625rem;
+    padding: 0.625rem 3.888rem;
+    margin: 0rem auto 3.125rem;
+  }
+
+  .review-info {
+    white-space: nowrap;
+  }
+
+  .order {
+    width: 20rem;
+    min-height: 32.375rem;
+    align-items: center;
+    margin: auto;
+  }
+
+  .order-block {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 100%;
+  }
+
+  .order-title-mob {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem auto 1rem;
+  }
+
+  .order-block p {
+    font-size: 0.9275rem;
+    font-weight: 400;
+    margin: 0rem auto 3rem;
+  }
+
+  .element-merger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-prompt,
+  .select-region,
+  .select-city,
+  .input-city,
+  .pay-option,
+  .fphone,
+  .addition-services,
+  .order-title-desk,
+  .order-button-desk,
+  .map-desk,
+  .follow,
+  .follow-text,
+  .timer,
+  .footer-button-desk {
+    display: none;
+  }
+
+  .your-name,
+  .your-phon {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .order-element {
+    width: 100%;
+  }
+  .order-final-mob {
+    display: block;
+  }
+
+  .button-checkbox {
+    width: 100%;
+  }
+
+  .order-button-mob {
+    display: block;
+    background-color: #ff352b;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 9% 14%;
+    margin: 0% 1% 4%;
+    box-shadow: none;
+  }
+
+  .map-mob {
+    display: block;
+  }
+
+  .inform-mob {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    padding: 14.375% 12.5%;
+  }
+
+  .inform-mob li {
+    margin: 0.3965rem;
+  }
+
+  .f-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2.75rem auto 3.125rem;
+    text-align: center;
+  }
+
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+
+  .footer-main a {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 11.25rem;
+    margin: 0.75rem auto;
+  }
+
+  .footer-socnet {
+    display: flex;
+    width: 10.3125rem;
+    margin: 2.1875rem auto 0rem;
+  }
+
+  .e-letter {
+    margin: 1.25rem auto;
+  }
+
+  .footer-phone {
+    width: 100%;
+    margin: 2rem auto 0rem;
+  }
+
+  .footer-button-mob {
+    display: block;
+    color: #000;
+    border: 0.0625rem solid #000;
+    padding: 5% 30%;
+    margin: 0rem auto;
+  }
+}
