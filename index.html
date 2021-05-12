@@ -143,34 +143,36 @@
           <span class="car-type">Каблуки</span>
           <span class="car-type">Грузовики</span>
         </div>
-        <div class="transport-element">
-          <img
-            class="transport-picture-mob"
-            src="img/gazel_mob.png"
-            alt="Газели"
-          />
-          <button class="element-back">&lt;</button>
-          <p class="auto-description">Газель 3 метра / 1,5 тонны</p>
-          <div class="transport-choise">
-            <span class="choiser-element"></span>
-            <span class="choiser-element"></span>
-            <span class="choiser-element"></span>
-            <span class="choiser-element"></span>
-            <span class="choiser-element"></span>
+        <ul>
+          <div class="transport-element">
+            <img
+              class="transport-picture-mob"
+              src="img/gazel_mob.png"
+              alt="Газели"
+            />
+            <button class="element-back">&lt;</button>
+            <p class="auto-description">Газель 3 метра / 1,5 тонны</p>
+            <div class="transport-choise">
+              <span class="choiser-element"></span>
+              <span class="choiser-element"></span>
+              <span class="choiser-element"></span>
+              <span class="choiser-element"></span>
+              <span class="choiser-element"></span>
+            </div>
+            <div class="transport-description">
+              <span class="auto-type">Газель 3 метра</span>
+              <ul class="description-list">
+                <li>Ширина 2 м</li>
+                <li>Высота 2 м</li>
+                <li>Объем 16 м³</li>
+                <li>Грузоподъемность 1,5 т</li>
+              </ul>
+              <button class="transport-button">Заказать</button>
+            </div>
+            <img class="transport-picture" src="img/gazel.png" alt="Газели" />
+            <button class="element-forward">&gt;</button>
           </div>
-          <div class="transport-description">
-            <span class="auto-type">Газель 3 метра</span>
-            <ul class="description-list">
-              <li>Ширина 2 м</li>
-              <li>Высота 2 м</li>
-              <li>Объем 16 м³</li>
-              <li>Грузоподъемность 1,5 т</li>
-            </ul>
-            <button class="transport-button">Заказать</button>
-          </div>
-          <img class="transport-picture" src="img/gazel.png" alt="Газели" />
-          <button class="element-forward">&gt;</button>
-        </div>
+        </ul>
       </div>
       <div class="reviews">
         <div class="all-reviews">
@@ -258,7 +260,7 @@
           <form action="#" method="get" class="order-form">
             <div class="element-merger">
               <div class="order-element">
-                <input class="your-name" type="text" placeholder="Ваше имя" />
+                <input class="your-name" type="text" placeholder="Ваше имя" id="your-name" />
                 <div class="form-prompt">Укажите область</div>
                 <br />
                 <select name="select-region" class="select-region">
@@ -290,6 +292,12 @@
                 />
               </div>
             </div>
+            <!--<script>
+              document.getElementById("order-button-desk").onclick = function () {
+                alert("Hi!!!");
+               
+              } 
+            </script>-->
             <div class="pay-option">
               <div class="form-prompt">Способ оплаты</div>
               <label class="another_radio">
@@ -305,8 +313,11 @@
                 <span> Банковский перевод</span>
               </label>
             </div>
-            <div class="addition-services">
-              <div class="form-prompt">Дополнительные услуги</div>
+            <div class="form-prompt" id="form-prompt">
+              Дополнительные услуги
+              <input type="button" class="hider-button" id="hider-button" />
+            </div>
+            <div class="addition-services" id="addition-service">
               <label class="another_checkbox">
                 <input type="checkbox" name="measure" />
                 <span> Вызов замерщика</span>
@@ -328,10 +339,37 @@
                 <span> Крупногабаритные предметы</span>
               </label>
             </div>
+            <script>
+              document.getElementById(
+                "hider-button"
+              ).onclick = function () {
+                if (
+                  document.getElementById("addition-service").hidden != true
+                ) {
+                  document.getElementById("addition-service").hidden = true;
+                  document.getElementById("hider-button").className =
+                    "hider-button-active";
+                } else {
+                  document.getElementById("addition-service").hidden = false;
+                  document.getElementById("hider-button").className =
+                    "hider-button";
+                }
+              };
+            </script>
             <div class="order-final-desk">
-              <span class="timer">05:37:25</span>
+              <span class="timer">05:37:25</span
+              ><!--
+              <script>
+                if period == "" {
+                var period = 21600;}
+
+                var hours = Math.floor(peiod / 3600);
+                var minutes = Math.floor(peiod % 3600);
+                var seconds = Math.floor(period % 60);
+                document.getElementById("demo").innerHTML = hours + ":" + minutes + ":" + seconds;
+              </script>-->
               <div class="button-checkbox">
-                <button class="order-button-desk">Заказать со скидкой</button>
+                <button class="order-button-desk" id="order-button-desk">Заказать со скидкой</button>
                 <button class="order-button-mob">Перезвонить мне</button>
                 <label
                   ><input type="checkbox" name="apply" checked /><span
