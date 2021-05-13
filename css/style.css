@@ -680,6 +680,13 @@ main {
   margin-right: 0%;
 }
 
+.timer-end {
+  font-size: 3vw;
+  font-weight: 400;
+  margin-right: 0%;
+  color: #ff352b;
+}
+
 .your-name,
 .your-name:focus,
 .your-phon,

@@ -57,27 +57,28 @@ order_button.onclick = function () {
   console.log(form_block);
 };
 
-//Таймер набросок
+//Таймер
+let timerBlock = document.getElementById("timer");
 let hours;
 let minutes;
 let seconds;
-let period = 10;
+let period = 21600;
 let timeResult;
 
-timer = setInterval(function() {
-    hours = Math.floor(period / 60 / 60 % 60);
-    hours = hours < 10 ? '0' + hours : hours;
-    minutes = Math.floor(period / 60 % 60);
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = Math.floor(period % 60);
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    if (period <= 0) {
-        clearInterval(timer);
-        timeResult = "Время вышло"
-    }
-    else {
-        timeResult = hours + ":" + minutes + ":" + seconds;
-    }
-    document.getElementById("timer").innerHTML = timeResult;
-    --period;
-}, 1000)
+timer = setInterval(function () {
+  hours = Math.floor((period / 60 / 60) % 60);
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = Math.floor((period / 60) % 60);
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = Math.floor(period % 60);
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  if (period <= 0) {
+    clearInterval(timer);
+    timerBlock.className = "timer-end";
+    timeResult = "Время вышло";
+  } else {
+    timeResult = hours + ":" + minutes + ":" + seconds;
+  }
+  timerBlock.innerHTML = timeResult;
+  --period;
+}, 1000);
