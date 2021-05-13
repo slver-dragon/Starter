@@ -260,7 +260,12 @@
           <form action="#" method="get" class="order-form">
             <div class="element-merger">
               <div class="order-element">
-                <input class="your-name" type="text" placeholder="Ваше имя" id="your-name" />
+                <input
+                  class="your-name"
+                  type="text"
+                  placeholder="Ваше имя"
+                  id="your-name"
+                />
                 <div class="form-prompt">Укажите область</div>
                 <br />
                 <select name="select-region" class="select-region">
@@ -273,31 +278,26 @@
                 </select>
               </div>
               <div class="order-element">
-                <input class="your-phon" type="tel" placeholder="Телефон" />
+                <input class="your-phon" type="tel" id="your-phon" placeholder="Телефон" />
                 <div class="form-prompt">Укажите город</div>
                 <br />
-                <select name="select-city" class="select-city">
-                  <option value="minsk">Минск</option>
-                  <option value="brest">Брест</option>
-                  <option value="grodno">Гродно</option>
-                  <option value="vitebsk">Витебск</option>
-                  <option value="mogilev">Могилев</option>
-                  <option value="gomel">Гомель</option>
-                  <option value="another">Свой вариант</option>
+                <select name="select-city" class="select-city" id="select-city">
+                  <option value="7">Мозырь</option>
+                  <option value="1">Минск</option>
+                  <option value="2">Брест</option>
+                  <option value="3">Гродно</option>
+                  <option value="4">Витебск</option>
+                  <option value="5">Могилев</option>
+                  <option value="6">Гомель</option>
                 </select>
                 <input
                   type="text"
                   class="input-city"
+                  id="input-city"
                   placeholder="Добавить город"
                 />
               </div>
             </div>
-            <!--<script>
-              document.getElementById("order-button-desk").onclick = function () {
-                alert("Hi!!!");
-               
-              } 
-            </script>-->
             <div class="pay-option">
               <div class="form-prompt">Способ оплаты</div>
               <label class="another_radio">
@@ -340,39 +340,27 @@
               </label>
             </div>
             <script>
-              document.getElementById(
-                "hider-button"
-              ).onclick = function () {
-                if (
-                  document.getElementById("addition-service").hidden != true
-                ) {
-                  document.getElementById("addition-service").hidden = true;
-                  document.getElementById("hider-button").className =
-                    "hider-button-active";
+              let hider_button = document.getElementById("hider-button");
+              let addition_service = document.getElementById("addition-service");
+              hider_button.onclick = function () {
+                if (addition_service.hidden != true) {
+                  addition_service.hidden = true;
+                  hider_button.className = "hider-button-active";
                 } else {
-                  document.getElementById("addition-service").hidden = false;
-                  document.getElementById("hider-button").className =
-                    "hider-button";
+                  addition_service.hidden = false;
+                  hider_button.className = "hider-button";
                 }
               };
             </script>
             <div class="order-final-desk">
-              <span class="timer">05:37:25</span
-              ><!--
-              <script>
-                if period == "" {
-                var period = 21600;}
-
-                var hours = Math.floor(peiod / 3600);
-                var minutes = Math.floor(peiod % 3600);
-                var seconds = Math.floor(period % 60);
-                document.getElementById("demo").innerHTML = hours + ":" + minutes + ":" + seconds;
-              </script>-->
+              <span class="timer" id="timer"></span>
               <div class="button-checkbox">
-                <button class="order-button-desk" id="order-button-desk">Заказать со скидкой</button>
+                <button class="order-button-desk" id="order-button-desk">
+                  Заказать со скидкой
+                </button>
                 <button class="order-button-mob">Перезвонить мне</button>
                 <label
-                  ><input type="checkbox" name="apply" checked /><span
+                  ><input type="checkbox" name="apply" id="apply" checked /><span
                     class="apply"
                   >
                     Даю согласие на обработку данных</span
@@ -478,5 +466,6 @@
         </div>
       </div>
     </footer>
+    <script src='/scripts/script.js'></script>
   </body>
 </html>
