@@ -351,6 +351,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 10rem;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -1075,6 +1076,8 @@ footer {
   }
 
   .offer-button {
+    font-size: 1.25rem;
+    font-weight: 500;
     background-color: #fed100;
     color: #333333;
     padding: 1.125rem 6.891rem;
@@ -1086,6 +1089,7 @@ footer {
   .offer-button:hover {
     color: #fff;
     cursor: pointer;
+  
   }
 
   .offer-allprices {

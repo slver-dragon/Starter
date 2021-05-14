@@ -1,60 +1,73 @@
-//Работа с формой
-let order_button = document.getElementById("order-button-desk");
+//Валидация полей и отправка формы
+let form = document.getElementById("order-form");
+let orderButton = document.getElementById("order-button-desk");
 let apply = document.getElementById("apply");
-let your_name = document.getElementById("your-name");
-let your_phon = document.getElementById("your-phon");
-let input_city = document.getElementById("input-city");
-let select_city = document.getElementById("select-city");
-let not_valid_num = /[0-9]/g;
-let form_block = 0;
+let yourName = document.getElementById("your-name");
+let yourPhon = document.getElementById("your-phon");
+let notValidNum = /[0-9]/g;
+let formBlock = 0;
 
-input_city.oninput = function () {
-  this.value = this.value.replace(not_valid_num, "");
+yourName.oninput = function () {
+  //блокирование цифр в текстовом поле Имя
+  this.value = this.value.replace(notValidNum, "");
 };
 
-your_name.oninput = function () {
-  this.value = this.value.replace(not_valid_num, "");
+yourName.onfocus = function () {
+  yourName.className = "your-name";
+  yourName.placeholder = "Ваше имя";
 };
 
-input_city.onchange = function () {
-  let new_option = new Option(
-    input_city.value,
-    String(select_city.options.length + 1)
-  );
-  select_city.append(new_option);
+yourPhon.onfocus = function () {
+  yourPhon.className = "your-phon";
+  yourPhon.placeholder = "Телефон";
 };
 
-your_name.onfocus = function () {
-  your_name.className = "your-name";
-  your_name.placeholder = "Ваше имя";
-};
-
-your_phon.onfocus = function () {
-  your_phon.className = "your-phon";
-  your_phon.placeholder = "Телефон";
-};
-
-order_button.onclick = function () {
-  if (your_name.value == "") {
-    your_name.className = "your-name-error";
-    your_name.placeholder = "  Нет имени";
-    form_block++;
+orderButton.onclick = function () {
+  if (yourName.value == "") {
+    yourName.className = "your-name-error";
+    yourName.placeholder = "  Нет имени";
+    formBlock++;
   }
 
-  if (your_phon.value == "") {
-    your_phon.className = "your-phon-error";
-    your_phon.placeholder = "  Не указан номер";
-    form_block++;
+  if (yourPhon.value == "") {
+    yourPhon.className = "your-phon-error";
+    yourPhon.placeholder = "  Не указан номер";
+    formBlock++;
   }
 
   if (!apply.checked) {
-    form_block++;
+    formBlock++;
   }
 
-  if (form_block == 0) {
-    /*submit*/
+  if (formBlock == 0) {
+    form.submit();
   }
-  console.log(form_block);
+};
+
+//Добавление своего города
+let inputCity = document.getElementById("input-city");
+let selectCity = document.getElementById("select-city");
+inputCity.onchange = function () {
+  if (inputCity.value != "") {
+    let newOption = new Option(
+      inputCity.value,
+      String(selectCity.options.length + 1)
+    );
+    selectCity.append(newOption);
+  }
+};
+
+inputCity.oninput = function () {
+  //блокирование цифр в текстовом поле Город
+  this.value = this.value.replace(notValidNum, "");
+};
+
+//Скрытие части формы
+let hider_button = document.getElementById("hider-button");
+let addition_service = document.getElementById("addition-service");
+hider_button.onclick = function () {
+  hider_button.classList.toggle("hider-button-active");
+  addition_service.hidden = addition_service.hidden != true;
 };
 
 //Таймер
@@ -82,3 +95,62 @@ timer = setInterval(function () {
   timerBlock.innerHTML = timeResult;
   --period;
 }, 1000);
+
+ShareVK = function (purl, ptitle, pimg, text) {
+  url = "http://vkontakte.ru/share.php?";
+  url += "url=" + encodeURIComponent(purl);
+  url += "&title=" + encodeURIComponent(ptitle);
+  url += "&image=" + encodeURIComponent(pimg);
+  url += "&description=" + encodeURIComponent(text);
+  url += "&noparse=true";
+  window.open(url, ptitle);
+};
+
+ShareFB = function (purl, ptitle, pimg, text) {
+  url = "http://www.facebook.com/sharer.php?s=100";
+  url += "&p[title]=" + encodeURIComponent(ptitle);
+  url += "&p[summary]=" + encodeURIComponent(text);
+  url += "&p[url]=" + encodeURIComponent(purl);
+  url += "&p[images][0]=" + encodeURIComponent(pimg);
+  window.open(url, ptitle);
+};
+
+//Листалка
+let elementForward = document.getElementById("elementForward");
+let elementBack = document.getElementById("elementBack");
+let current = 0;
+let transport = [
+  ['gazel','kabluk','gruzov'],
+  ["Газель 3 метра", "Каблук 2 метра ", "Грузовик 3 метра"],
+  ["Ширина 2 м", "Ширина 1.8 м", "Ширина 3 м"],
+  ["Высота 2 м", "Высота 1.2 м", "Высота 3 м"],
+  ["Объем 16 м³", "Объем 8 м³", "Объем 20 м³"],
+  ["Грузоподъемность 1,5 т", "Грузоподъемность 0.8 т", "Грузоподъемность 2 т"],
+  ["img/gazel.png", "img/kabluk.png", "img/gruzovik.png"],
+];
+
+elementForward.onclick = function () {
+  document.getElementById(transport[0][current]).className = "car-type";
+  current = current > 1 ? 0 : ++current;
+  document.getElementById(transport[0][current]).className = "car-type-active";
+  document.getElementById("transport-title").innerHTML = transport[1][current];
+  document.getElementById("transport-1").innerHTML = transport[2][current];
+  document.getElementById("transport-2").innerHTML = transport[3][current];
+  document.getElementById("transport-3").innerHTML = transport[4][current];
+  document.getElementById("transport-4").innerHTML = transport[5][current];
+  document.getElementById("transport-picture").src =
+    transport[6][current];
+};
+
+elementBack.onclick = function () {
+  document.getElementById(transport[0][current]).className = "car-type";
+  current = current == 0 ? 2 : --current;
+  document.getElementById(transport[0][current]).className = "car-type-active";
+  document.getElementById("transport-title").innerHTML = transport[1][current];
+  document.getElementById("transport-1").innerHTML = transport[2][current];
+  document.getElementById("transport-2").innerHTML = transport[3][current];
+  document.getElementById("transport-3").innerHTML = transport[4][current];
+  document.getElementById("transport-4").innerHTML = transport[5][current];
+  document.getElementById("transport-picture").src =
+    transport[6][current];
+};

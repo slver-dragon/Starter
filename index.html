@@ -139,9 +139,9 @@
         <h2>Автопарк</h2>
         <h3>10 видов автомобилей от 800 кг до 10 тонн</h3>
         <div class="transport-menu">
-          <span class="car-type-active">Газели</span>
-          <span class="car-type">Каблуки</span>
-          <span class="car-type">Грузовики</span>
+          <span class="car-type-active" id="gazel">Газели</span>
+          <span class="car-type" id="kabluk">Каблуки</span>
+          <span class="car-type" id="gruzov">Грузовики</span>
         </div>
         <ul>
           <div class="transport-element">
@@ -150,7 +150,7 @@
               src="img/gazel_mob.png"
               alt="Газели"
             />
-            <button class="element-back">&lt;</button>
+            <button class="element-back" id="elementBack">&lt;</button>
             <p class="auto-description">Газель 3 метра / 1,5 тонны</p>
             <div class="transport-choise">
               <span class="choiser-element"></span>
@@ -160,17 +160,17 @@
               <span class="choiser-element"></span>
             </div>
             <div class="transport-description">
-              <span class="auto-type">Газель 3 метра</span>
+              <span class="auto-type" id="transport-title">Газель 3 метра</span>
               <ul class="description-list">
-                <li>Ширина 2 м</li>
-                <li>Высота 2 м</li>
-                <li>Объем 16 м³</li>
-                <li>Грузоподъемность 1,5 т</li>
+                <li id="transport-1">Ширина 2 м</li>
+                <li id="transport-2">Высота 2 м</li>
+                <li id="transport-3">Объем 16 м³</li>
+                <li id="transport-4">Грузоподъемность 1,5 т</li>
               </ul>
               <button class="transport-button">Заказать</button>
             </div>
-            <img class="transport-picture" src="img/gazel.png" alt="Газели" />
-            <button class="element-forward">&gt;</button>
+            <img class="transport-picture" id="transport-picture" src="img/gazel.png" alt="Газели" />
+            <button class="element-forward" id="elementForward">&gt;</button>
           </div>
         </ul>
       </div>
@@ -257,7 +257,7 @@
           >
           <div class="order-title-mob">Закажи переезд прямо сейчас</div>
           <p>Мы перезвоним в течении 10 секунд</p>
-          <form action="#" method="get" class="order-form">
+          <form action="#" method="get" class="order-form" id="order-form">
             <div class="element-merger">
               <div class="order-element">
                 <input
@@ -315,7 +315,7 @@
             </div>
             <div class="form-prompt" id="form-prompt">
               Дополнительные услуги
-              <input type="button" class="hider-button" id="hider-button" />
+              <input type="button" class="hider-button hider-button-active" id="hider-button" />
             </div>
             <div class="addition-services" id="addition-service">
               <label class="another_checkbox">
@@ -339,19 +339,6 @@
                 <span> Крупногабаритные предметы</span>
               </label>
             </div>
-            <script>
-              let hider_button = document.getElementById("hider-button");
-              let addition_service = document.getElementById("addition-service");
-              hider_button.onclick = function () {
-                if (addition_service.hidden != true) {
-                  addition_service.hidden = true;
-                  hider_button.className = "hider-button-active";
-                } else {
-                  addition_service.hidden = false;
-                  hider_button.className = "hider-button";
-                }
-              };
-            </script>
             <div class="order-final-desk">
               <span class="timer" id="timer"></span>
               <div class="button-checkbox">
@@ -453,10 +440,10 @@
           <a class="e-letter" href="mailto:hello@movee.ru">hello@movee.ru</a>
           <span class="follow-text">Поделиться в соц. сетях</span>
           <div class="follow">
-            <a href="http://www.vk.com"><img src="/img/vkx2.png" alt="#" /></a>
-            <a href="http://www.facebook.com"
-              ><img src="/img/facebookx2.png" alt="#"
-            /></a>
+            <a onclick="ShareVK('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')">
+              <img src="/img/vkx2.png" alt="#" /></a>
+            <a onclick="ShareFB('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')">
+              <img src="/img/facebookx2.png" alt="#"/></a>
           </div>
         </div>
         <div class="footer-phone">
