@@ -305,7 +305,6 @@ main {
 
 .transport-lister {
   display: flex;
-  
 }
 
 .transport-element {
@@ -1094,7 +1093,6 @@ footer {
   .offer-button:hover {
     color: #fff;
     cursor: pointer;
-  
   }
 
   .offer-allprices {
@@ -1144,7 +1142,7 @@ footer {
     border-right: #fed100;
     margin-top: 5%;
   }
-  
+
   .car-type {
     padding: 0%;
     border: none;

@@ -51,7 +51,12 @@ inputCity.onchange = function () {
     );
     selectCity.append(newOption);
   }
-  event.preventDefault();
+
+  inputCity.addEventListener("keydown", function (event) {
+    if (event.keyCode == 13) {
+      event.preventDefault();
+    }
+  });
 };
 
 inputCity.oninput = function () {
@@ -113,38 +118,78 @@ let elementForward = document.getElementById("elementForward");
 let elementBack = document.getElementById("elementBack");
 let current = 0;
 let transport = [
-  ['gazel',"Газель 3 метра","Ширина 2 м","Высота 2 м","Объем 16 м³","Грузоподъемность 1,5 т","img/gazel.png"],
-  ['kabluk',"Каблук 2 метра ","Ширина 1.8 м","Высота 1.2 м","Объем 8 м³","Грузоподъемность 0.8 т","img/kabluk.png"],
-  ['gruzov',"Грузовик 3 метра","Ширина 3 м","Высота 3 м","Объем 20 м³","Грузоподъемность 2 т","img/gruzovik.png"],
-  ['gazel',"Газель 3 метра","Ширина 2 м","Высота 2 м","Объем 16 м³","Грузоподъемность 1,5 т","img/gazel.png"],
-  ['kabluk',"Каблук 2 метра ","Ширина 1.8 м","Высота 1.2 м","Объем 8 м³","Грузоподъемность 0.8 т","img/kabluk.png"],
-  ['gruzov',"Грузовик 3 метра","Ширина 3 м","Высота 3 м","Объем 20 м³","Грузоподъемность 2 т","img/gruzovik.png"]
+  [
+    "gazel",
+    "Газель 3 метра",
+    "Ширина 2 м",
+    "Высота 2 м",
+    "Объем 16 м³",
+    "Грузоподъемность 1,5 т",
+    "img/gazel.png",
+  ],
+  [
+    "kabluk",
+    "Каблук 2 метра ",
+    "Ширина 1.8 м",
+    "Высота 1.2 м",
+    "Объем 8 м³",
+    "Грузоподъемность 0.8 т",
+    "img/kabluk.png",
+  ],
+  [
+    "gruzov",
+    "Грузовик 3 метра",
+    "Ширина 3 м",
+    "Высота 3 м",
+    "Объем 20 м³",
+    "Грузоподъемность 2 т",
+    "img/gruzovik.png",
+  ],
+  [
+    "gazel",
+    "Газель 3 метра",
+    "Ширина 2 м",
+    "Высота 2 м",
+    "Объем 16 м³",
+    "Грузоподъемность 1,5 т",
+    "img/gazel.png",
+  ],
+  [
+    "kabluk",
+    "Каблук 2 метра ",
+    "Ширина 1.8 м",
+    "Высота 1.2 м",
+    "Объем 8 м³",
+    "Грузоподъемность 0.8 т",
+    "img/kabluk.png",
+  ],
+  [
+    "gruzov",
+    "Грузовик 3 метра",
+    "Ширина 3 м",
+    "Высота 3 м",
+    "Объем 20 м³",
+    "Грузоподъемность 2 т",
+    "img/gruzovik.png",
+  ],
 ];
 
 elementForward.onclick = function () {
   document.getElementById(transport[current][0]).className = "car-type";
-  current = current > (transport.length-2) ? 0 : ++current;
+  current = current > transport.length - 2 ? 0 : ++current;
   document.getElementById(transport[current][0]).className = "car-type-active";
-  document.getElementById("transport-title").innerHTML = transport[current][1];
-  document.getElementById("transport-1").innerHTML = transport[current][2];
-  document.getElementById("transport-2").innerHTML = transport[current][3];
-  document.getElementById("transport-3").innerHTML = transport[current][4];
-  document.getElementById("transport-4").innerHTML = transport[current][5];
-  document.getElementById("transport-picture").src =
-    transport[current][6];
-  console.log(current);
+  for (let i = 1; i < 6; i++) {
+    document.getElementById("transport-" + i).innerHTML = transport[current][i];
+  }
+  document.getElementById("transport-picture").src = transport[current][6];
 };
 
 elementBack.onclick = function () {
   document.getElementById(transport[current][0]).className = "car-type";
-  current = current == 0 ? (transport.length-1) : --current;
+  current = current == 0 ? transport.length - 1 : --current;
   document.getElementById(transport[current][0]).className = "car-type-active";
-  document.getElementById("transport-title").innerHTML = transport[current][1];
-  document.getElementById("transport-1").innerHTML = transport[current][2];
-  document.getElementById("transport-2").innerHTML = transport[current][3];
-  document.getElementById("transport-3").innerHTML = transport[current][4];
-  document.getElementById("transport-4").innerHTML = transport[current][5];
-  document.getElementById("transport-picture").src =
-    transport[current][6];
-  console.log(current);
+  for (let i = 1; i < 6; i++) {
+    document.getElementById("transport-" + i).innerHTML = transport[current][i];
+  }
+  document.getElementById("transport-picture").src = transport[current][6];
 };
