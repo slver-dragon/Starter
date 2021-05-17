@@ -1,4 +1,3 @@
-//Валидация полей и отправка формы
 let form = document.getElementById("order-form");
 let orderButton = document.getElementById("order-button-desk");
 let apply = document.getElementById("apply");
@@ -8,7 +7,6 @@ let notValidNum = /[0-9]/g;
 let formBlock = 0;
 
 yourName.oninput = function () {
-  //блокирование цифр в текстовом поле Имя
   this.value = this.value.replace(notValidNum, "");
 };
 
@@ -35,16 +33,14 @@ orderButton.onclick = function () {
     formBlock++;
   }
 
-  if (!apply.checked) {
-    formBlock++;
-  }
-
-  if (formBlock == 0) {
+  if (apply.checked && formBlock == 0) {
     form.submit();
   }
+
+  event.preventDefault();
+  formBlock = 0;
 };
 
-//Добавление своего города
 let inputCity = document.getElementById("input-city");
 let selectCity = document.getElementById("select-city");
 inputCity.onchange = function () {
@@ -55,22 +51,20 @@ inputCity.onchange = function () {
     );
     selectCity.append(newOption);
   }
+  event.preventDefault();
 };
 
 inputCity.oninput = function () {
-  //блокирование цифр в текстовом поле Город
   this.value = this.value.replace(notValidNum, "");
 };
 
-//Скрытие части формы
-let hider_button = document.getElementById("hider-button");
-let addition_service = document.getElementById("addition-service");
-hider_button.onclick = function () {
-  hider_button.classList.toggle("hider-button-active");
-  addition_service.hidden = addition_service.hidden != true;
+let hiderButton = document.getElementById("hider-button");
+let additionService = document.getElementById("addition-service");
+hiderButton.onclick = function () {
+  hiderButton.classList.toggle("hider-button-active");
+  additionService.hidden = additionService.hidden != true;
 };
 
-//Таймер
 let timerBlock = document.getElementById("timer");
 let hours;
 let minutes;
@@ -115,42 +109,42 @@ ShareFB = function (purl, ptitle, pimg, text) {
   window.open(url, ptitle);
 };
 
-//Листалка
 let elementForward = document.getElementById("elementForward");
 let elementBack = document.getElementById("elementBack");
 let current = 0;
 let transport = [
-  ['gazel','kabluk','gruzov'],
-  ["Газель 3 метра", "Каблук 2 метра ", "Грузовик 3 метра"],
-  ["Ширина 2 м", "Ширина 1.8 м", "Ширина 3 м"],
-  ["Высота 2 м", "Высота 1.2 м", "Высота 3 м"],
-  ["Объем 16 м³", "Объем 8 м³", "Объем 20 м³"],
-  ["Грузоподъемность 1,5 т", "Грузоподъемность 0.8 т", "Грузоподъемность 2 т"],
-  ["img/gazel.png", "img/kabluk.png", "img/gruzovik.png"],
+  ['gazel',"Газель 3 метра","Ширина 2 м","Высота 2 м","Объем 16 м³","Грузоподъемность 1,5 т","img/gazel.png"],
+  ['kabluk',"Каблук 2 метра ","Ширина 1.8 м","Высота 1.2 м","Объем 8 м³","Грузоподъемность 0.8 т","img/kabluk.png"],
+  ['gruzov',"Грузовик 3 метра","Ширина 3 м","Высота 3 м","Объем 20 м³","Грузоподъемность 2 т","img/gruzovik.png"],
+  ['gazel',"Газель 3 метра","Ширина 2 м","Высота 2 м","Объем 16 м³","Грузоподъемность 1,5 т","img/gazel.png"],
+  ['kabluk',"Каблук 2 метра ","Ширина 1.8 м","Высота 1.2 м","Объем 8 м³","Грузоподъемность 0.8 т","img/kabluk.png"],
+  ['gruzov',"Грузовик 3 метра","Ширина 3 м","Высота 3 м","Объем 20 м³","Грузоподъемность 2 т","img/gruzovik.png"]
 ];
 
 elementForward.onclick = function () {
-  document.getElementById(transport[0][current]).className = "car-type";
-  current = current > 1 ? 0 : ++current;
-  document.getElementById(transport[0][current]).className = "car-type-active";
-  document.getElementById("transport-title").innerHTML = transport[1][current];
-  document.getElementById("transport-1").innerHTML = transport[2][current];
-  document.getElementById("transport-2").innerHTML = transport[3][current];
-  document.getElementById("transport-3").innerHTML = transport[4][current];
-  document.getElementById("transport-4").innerHTML = transport[5][current];
+  document.getElementById(transport[current][0]).className = "car-type";
+  current = current > (transport.length-2) ? 0 : ++current;
+  document.getElementById(transport[current][0]).className = "car-type-active";
+  document.getElementById("transport-title").innerHTML = transport[current][1];
+  document.getElementById("transport-1").innerHTML = transport[current][2];
+  document.getElementById("transport-2").innerHTML = transport[current][3];
+  document.getElementById("transport-3").innerHTML = transport[current][4];
+  document.getElementById("transport-4").innerHTML = transport[current][5];
   document.getElementById("transport-picture").src =
-    transport[6][current];
+    transport[current][6];
+  console.log(current);
 };
 
 elementBack.onclick = function () {
-  document.getElementById(transport[0][current]).className = "car-type";
-  current = current == 0 ? 2 : --current;
-  document.getElementById(transport[0][current]).className = "car-type-active";
-  document.getElementById("transport-title").innerHTML = transport[1][current];
-  document.getElementById("transport-1").innerHTML = transport[2][current];
-  document.getElementById("transport-2").innerHTML = transport[3][current];
-  document.getElementById("transport-3").innerHTML = transport[4][current];
-  document.getElementById("transport-4").innerHTML = transport[5][current];
+  document.getElementById(transport[current][0]).className = "car-type";
+  current = current == 0 ? (transport.length-1) : --current;
+  document.getElementById(transport[current][0]).className = "car-type-active";
+  document.getElementById("transport-title").innerHTML = transport[current][1];
+  document.getElementById("transport-1").innerHTML = transport[current][2];
+  document.getElementById("transport-2").innerHTML = transport[current][3];
+  document.getElementById("transport-3").innerHTML = transport[current][4];
+  document.getElementById("transport-4").innerHTML = transport[current][5];
   document.getElementById("transport-picture").src =
-    transport[6][current];
+    transport[current][6];
+  console.log(current);
 };

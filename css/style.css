@@ -303,6 +303,11 @@ main {
   margin: 0%;
 }
 
+.transport-lister {
+  display: flex;
+  
+}
+
 .transport-element {
   display: flex;
   justify-content: space-between;

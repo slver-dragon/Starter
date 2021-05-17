@@ -143,36 +143,45 @@
           <span class="car-type" id="kabluk">Каблуки</span>
           <span class="car-type" id="gruzov">Грузовики</span>
         </div>
-        <ul>
-          <div class="transport-element">
-            <img
-              class="transport-picture-mob"
-              src="img/gazel_mob.png"
-              alt="Газели"
-            />
-            <button class="element-back" id="elementBack">&lt;</button>
-            <p class="auto-description">Газель 3 метра / 1,5 тонны</p>
-            <div class="transport-choise">
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
+        <div class="transport-lister">
+          <button class="element-back" id="elementBack">&lt;</button>
+          <ul>
+            <div class="transport-element">
+              <img
+                class="transport-picture-mob"
+                src="img/gazel_mob.png"
+                alt="Газели"
+              />
+              <p class="auto-description">Газель 3 метра / 1,5 тонны</p>
+              <div class="transport-choise">
+                <span class="choiser-element"></span>
+                <span class="choiser-element"></span>
+                <span class="choiser-element"></span>
+                <span class="choiser-element"></span>
+                <span class="choiser-element"></span>
+              </div>
+              <div class="transport-description">
+                <span class="auto-type" id="transport-title"
+                  >Газель 3 метра</span
+                >
+                <ul class="description-list">
+                  <li id="transport-1">Ширина 2 м</li>
+                  <li id="transport-2">Высота 2 м</li>
+                  <li id="transport-3">Объем 16 м³</li>
+                  <li id="transport-4">Грузоподъемность 1,5 т</li>
+                </ul>
+                <button class="transport-button">Заказать</button>
+              </div>
+              <img
+                class="transport-picture"
+                id="transport-picture"
+                src="img/gazel.png"
+                alt="Газели"
+              />
             </div>
-            <div class="transport-description">
-              <span class="auto-type" id="transport-title">Газель 3 метра</span>
-              <ul class="description-list">
-                <li id="transport-1">Ширина 2 м</li>
-                <li id="transport-2">Высота 2 м</li>
-                <li id="transport-3">Объем 16 м³</li>
-                <li id="transport-4">Грузоподъемность 1,5 т</li>
-              </ul>
-              <button class="transport-button">Заказать</button>
-            </div>
-            <img class="transport-picture" id="transport-picture" src="img/gazel.png" alt="Газели" />
-            <button class="element-forward" id="elementForward">&gt;</button>
-          </div>
-        </ul>
+          </ul>
+          <button class="element-forward" id="elementForward">&gt;</button>
+        </div>
       </div>
       <div class="reviews">
         <div class="all-reviews">
@@ -278,7 +287,12 @@
                 </select>
               </div>
               <div class="order-element">
-                <input class="your-phon" type="tel" id="your-phon" placeholder="Телефон" />
+                <input
+                  class="your-phon"
+                  type="tel"
+                  id="your-phon"
+                  placeholder="Телефон"
+                />
                 <div class="form-prompt">Укажите город</div>
                 <br />
                 <select name="select-city" class="select-city" id="select-city">
@@ -315,7 +329,11 @@
             </div>
             <div class="form-prompt" id="form-prompt">
               Дополнительные услуги
-              <input type="button" class="hider-button hider-button-active" id="hider-button" />
+              <input
+                type="button"
+                class="hider-button hider-button-active"
+                id="hider-button"
+              />
             </div>
             <div class="addition-services" id="addition-service">
               <label class="another_checkbox">
@@ -347,9 +365,12 @@
                 </button>
                 <button class="order-button-mob">Перезвонить мне</button>
                 <label
-                  ><input type="checkbox" name="apply" id="apply" checked /><span
-                    class="apply"
-                  >
+                  ><input
+                    type="checkbox"
+                    name="apply"
+                    id="apply"
+                    checked
+                  /><span class="apply">
                     Даю согласие на обработку данных</span
                   ></label
                 >
@@ -440,10 +461,16 @@
           <a class="e-letter" href="mailto:hello@movee.ru">hello@movee.ru</a>
           <span class="follow-text">Поделиться в соц. сетях</span>
           <div class="follow">
-            <a onclick="ShareVK('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')">
-              <img src="/img/vkx2.png" alt="#" /></a>
-            <a onclick="ShareFB('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')">
-              <img src="/img/facebookx2.png" alt="#"/></a>
+            <a
+              onclick="ShareVK('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')"
+            >
+              <img src="/img/vkx2.png" alt="#"
+            /></a>
+            <a
+              onclick="ShareFB('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')"
+            >
+              <img src="/img/facebookx2.png" alt="#"
+            /></a>
           </div>
         </div>
         <div class="footer-phone">
@@ -453,6 +480,6 @@
         </div>
       </div>
     </footer>
-    <script src='/scripts/script.js'></script>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>
