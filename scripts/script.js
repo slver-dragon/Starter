@@ -1,44 +1,14 @@
 let form = document.getElementById("order-form");
 let orderButton = document.getElementById("order-button-desk");
-let apply = document.getElementById("apply");
 let yourName = document.getElementById("your-name");
 let yourPhon = document.getElementById("your-phon");
-let notValidNum = /[0-9]/g;
-let formBlock = 0;
+let apply = document.getElementById("apply");
 
-yourName.oninput = function () {
-  this.value = this.value.replace(notValidNum, "");
-};
-
-yourName.onfocus = function () {
-  yourName.className = "your-name";
-  yourName.placeholder = "Ваше имя";
-};
-
-yourPhon.onfocus = function () {
-  yourPhon.className = "your-phon";
-  yourPhon.placeholder = "Телефон";
-};
-
-orderButton.onclick = function () {
-  if (yourName.value == "") {
-    yourName.className = "your-name-error";
-    yourName.placeholder = "  Нет имени";
-    formBlock++;
-  }
-
-  if (yourPhon.value == "") {
-    yourPhon.className = "your-phon-error";
-    yourPhon.placeholder = "  Не указан номер";
-    formBlock++;
-  }
-
-  if (apply.checked && formBlock == 0) {
-    form.submit();
-  }
-
-  event.preventDefault();
-  formBlock = 0;
+orderButton.onsubmit = function () {
+  yourName.value == '' ? yourName.classList.add('error') : yourName.classList.remove('error');
+  yourPhon.value == '' ? yourPhon.classList.add('error') : yourPhon.classList.remove('error');
+  yourName.value == '' || yourPhon.value == '' || !apply.checked ? event.preventDefault() : form.submit();
+  
 };
 
 let inputCity = document.getElementById("input-city");
@@ -52,16 +22,18 @@ inputCity.onchange = function () {
     selectCity.append(newOption);
   }
 
-  inputCity.addEventListener("keydown", function (event) {
-    if (event.keyCode == 13) {
+  form.addEventListener("keydown", function (levent) {
+    if (levent.code == 13) {
       event.preventDefault();
     }
   });
 };
 
-inputCity.oninput = function () {
-  this.value = this.value.replace(notValidNum, "");
-};
+form.addEventListener("submit", () => {
+  console.log("Событие отправки формы");//Это просто для контроля в конце работы удалю
+});
+
+/*---------------------------------------------------*/
 
 let hiderButton = document.getElementById("hider-button");
 let additionService = document.getElementById("addition-service");
