@@ -4,9 +4,23 @@ let yourName = document.getElementById("your-name");
 let yourPhon = document.getElementById("your-phon");
 let apply = document.getElementById("apply");
 
-orderButton.onsubmit = function () {
+function clearField(obj) {
+  obj.classList.remove('error');
+}
+
+yourName.onfocus = clearField(yourName);
+
+yourPhon.onfocus = function () {
+  yourPhon.classList.remove('error');
+}
+
+function validating() {
   yourName.value == '' ? yourName.classList.add('error') : yourName.classList.remove('error');
   yourPhon.value == '' ? yourPhon.classList.add('error') : yourPhon.classList.remove('error');
+}
+
+orderButton.onclick = function () {
+  validating();
   yourName.value == '' || yourPhon.value == '' || !apply.checked ? event.preventDefault() : form.submit();
   
 };
@@ -14,6 +28,7 @@ orderButton.onsubmit = function () {
 let inputCity = document.getElementById("input-city");
 let selectCity = document.getElementById("select-city");
 inputCity.onchange = function () {
+  symbolControl (inputCity,notValidNum);
   if (inputCity.value != "") {
     let newOption = new Option(
       inputCity.value,
@@ -22,8 +37,9 @@ inputCity.onchange = function () {
     selectCity.append(newOption);
   }
 
-  form.addEventListener("keydown", function (levent) {
-    if (levent.code == 13) {
+  inputCity.addEventListener("keydown", function (event) {
+    
+    if (event.code == 13) {
       event.preventDefault();
     }
   });
@@ -150,7 +166,7 @@ elementForward.onclick = function () {
   document.getElementById(transport[current][0]).className = "car-type";
   current = current > transport.length - 2 ? 0 : ++current;
   document.getElementById(transport[current][0]).className = "car-type-active";
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < transport[0].length -1; i++) {
     document.getElementById("transport-" + i).innerHTML = transport[current][i];
   }
   document.getElementById("transport-picture").src = transport[current][6];
@@ -160,7 +176,7 @@ elementBack.onclick = function () {
   document.getElementById(transport[current][0]).className = "car-type";
   current = current == 0 ? transport.length - 1 : --current;
   document.getElementById(transport[current][0]).className = "car-type-active";
-  for (let i = 1; i < 6; i++) {
+  for (let i = 1; i < transport[0].length - 1; i++) {
     document.getElementById("transport-" + i).innerHTML = transport[current][i];
   }
   document.getElementById("transport-picture").src = transport[current][6];
