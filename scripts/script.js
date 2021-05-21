@@ -4,31 +4,40 @@ let yourName = document.getElementById("your-name");
 let yourPhon = document.getElementById("your-phon");
 let apply = document.getElementById("apply");
 
-function clearField(obj) {
-  obj.classList.remove('error');
-}
-
-yourName.onfocus = clearField(yourName);
+yourName.onfocus = function () {
+  yourName.classList.remove("error");
+};
 
 yourPhon.onfocus = function () {
-  yourPhon.classList.remove('error');
-}
+  yourPhon.classList.remove("error");
+};
 
 function validating() {
-  yourName.value == '' ? yourName.classList.add('error') : yourName.classList.remove('error');
-  yourPhon.value == '' ? yourPhon.classList.add('error') : yourPhon.classList.remove('error');
+  yourName.value == ""
+    ? yourName.classList.add("error")
+    : yourName.classList.remove("error");
+  yourPhon.value == ""
+    ? yourPhon.classList.add("error")
+    : yourPhon.classList.remove("error");
 }
 
-orderButton.onclick = function () {
+form.onsubmit = function () {
+  yourName.value == "" || yourPhon.value == "" || !apply.checked
+    ? event.preventDefault()
+    : form.submit();
   validating();
-  yourName.value == '' || yourPhon.value == '' || !apply.checked ? event.preventDefault() : form.submit();
-  
 };
 
 let inputCity = document.getElementById("input-city");
 let selectCity = document.getElementById("select-city");
-inputCity.onchange = function () {
-  symbolControl (inputCity,notValidNum);
+
+
+inputCity.addEventListener("keydown", function (event) {
+  console.log(event.code);
+  if (event.code == 'Enter') {
+    event.preventDefault();
+  }
+
   if (inputCity.value != "") {
     let newOption = new Option(
       inputCity.value,
@@ -36,20 +45,7 @@ inputCity.onchange = function () {
     );
     selectCity.append(newOption);
   }
-
-  inputCity.addEventListener("keydown", function (event) {
-    
-    if (event.code == 13) {
-      event.preventDefault();
-    }
-  });
-};
-
-form.addEventListener("submit", () => {
-  console.log("Событие отправки формы");//Это просто для контроля в конце работы удалю
 });
-
-/*---------------------------------------------------*/
 
 let hiderButton = document.getElementById("hider-button");
 let additionService = document.getElementById("addition-service");
@@ -166,7 +162,7 @@ elementForward.onclick = function () {
   document.getElementById(transport[current][0]).className = "car-type";
   current = current > transport.length - 2 ? 0 : ++current;
   document.getElementById(transport[current][0]).className = "car-type-active";
-  for (let i = 1; i < transport[0].length -1; i++) {
+  for (let i = 1; i < transport[0].length - 1; i++) {
     document.getElementById("transport-" + i).innerHTML = transport[current][i];
   }
   document.getElementById("transport-picture").src = transport[current][6];
