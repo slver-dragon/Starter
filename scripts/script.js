@@ -19,25 +19,20 @@ function validating() {
   yourPhon.value == ""
     ? yourPhon.classList.add("error")
     : yourPhon.classList.remove("error");
-}
-
-form.onsubmit = function () {
   yourName.value == "" || yourPhon.value == "" || !apply.checked
     ? event.preventDefault()
     : form.submit();
+}
+
+form.onsubmit = function () {
   validating();
 };
 
 let inputCity = document.getElementById("input-city");
 let selectCity = document.getElementById("select-city");
 
-
 inputCity.addEventListener("keydown", function (event) {
-  console.log(event.code);
-  if (event.code == 'Enter') {
-    event.preventDefault();
-  }
-
+  event.preventDefault();
   if (inputCity.value != "") {
     let newOption = new Option(
       inputCity.value,
