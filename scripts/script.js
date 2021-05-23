@@ -25,15 +25,20 @@ function validating() {
 }
 
 form.onsubmit = function () {
-  validating();
+console.log(flag);
+if (flag) { 
+  return false;
+  flag = false;}
+else validating();
+console.log(flag);
 };
 
 let inputCity = document.getElementById("input-city");
 let selectCity = document.getElementById("select-city");
 
 inputCity.addEventListener("keydown", function (event) {
-  event.preventDefault();
-  if (inputCity.value != "") {
+  if (event.key == "Enter") {
+    event.preventDefault();
     let newOption = new Option(
       inputCity.value,
       String(selectCity.options.length + 1)
