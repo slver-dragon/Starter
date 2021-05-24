@@ -11,7 +11,7 @@ header {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   min-height: 40.625rem;
-  width: 82rem;
+  width: 81.625rem;
   position: relative;
 }
 
@@ -167,7 +167,7 @@ main {
 
 .work-list-element {
   display: flex;
-  width: 40%;
+  width: 45%;
   margin-top: 3.8125rem;
 }
 
