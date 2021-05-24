@@ -123,7 +123,6 @@ li {
 }
 
 .pict-car {
-  align-self: top;
   position: absolute;
   right: -8%;
   top: 26%;
@@ -303,6 +302,10 @@ main {
   margin: 0%;
 }
 
+.transport-lister {
+  display: flex;
+}
+
 .transport-element {
   display: flex;
   justify-content: space-between;
@@ -351,6 +354,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 10rem;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -513,9 +517,26 @@ main {
   max-width: 90%;
 }
 
+.hider-button {
+  border-right: 0.25rem solid #000;
+  border-top: 0.25rem solid #000;
+  height: 0.75rem;
+  width: 0.75rem;
+  transform: rotate(-0.125turn);
+}
+
+.hider-button-active {
+  border-right: 0.25rem solid #000;
+  border-top: 0.25rem solid #000;
+  height: 0.75rem;
+  width: 0.75rem;
+  transform: rotate(0.375turn);
+}
+
 .select-region,
 .select-city {
   display: block;
+  height: 2rem;
   max-width: 90%;
   margin: 0%;
 }
@@ -527,6 +548,7 @@ main {
   max-width: 90%;
   margin: 0%;
 }
+
 .pay-option,
 .addition-services {
   width: 100%;
@@ -663,13 +685,27 @@ main {
   margin-right: 0%;
 }
 
+.timer-end {
+  font-size: 3vw;
+  font-weight: 400;
+  margin-right: 0%;
+  color: #ff352b;
+}
+
 .your-name,
+.your-name:focus,
 .your-phon,
+.your-phon:active,
 .input-city {
   width: 18.75rem;
   height: 2.125rem;
   border-bottom: 0.0625rem solid #333333;
   margin: 3rem 0rem;
+  box-shadow: none;
+}
+
+.error {
+  box-shadow: inset 0 0 0rem 0.25rem #ff352b;
 }
 
 .button-checkbox {
@@ -1038,6 +1074,8 @@ footer {
   }
 
   .offer-button {
+    font-size: 1.25rem;
+    font-weight: 500;
     background-color: #fed100;
     color: #333333;
     padding: 1.125rem 6.891rem;
@@ -1074,11 +1112,9 @@ footer {
 
   .transport-menu {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: space-evenly;
     font-size: 1rem;
     font-weight: 500;
-    margin: 1.25rem auto 2.5rem;
   }
 
   .transport-menu a {
@@ -1091,6 +1127,20 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .car-type-active {
+    padding: 0%;
+    border-top: #fed100;
+    border-left: #fed100;
+    border-right: #fed100;
+    margin-top: 5%;
+  }
+
+  .car-type {
+    padding: 0%;
+    border: none;
+    margin-top: 5%;
   }
 
   .element-back,
