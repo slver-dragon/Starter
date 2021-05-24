@@ -25,12 +25,7 @@ function validating() {
 }
 
 form.onsubmit = function () {
-console.log(flag);
-if (flag) { 
-  return false;
-  flag = false;}
-else validating();
-console.log(flag);
+  validating();
 };
 
 let inputCity = document.getElementById("input-city");
