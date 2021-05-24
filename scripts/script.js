@@ -32,8 +32,8 @@ let inputCity = document.getElementById("input-city");
 let selectCity = document.getElementById("select-city");
 
 inputCity.addEventListener("keydown", function (event) {
+  event.preventDefault();
   if (event.key == "Enter") {
-    event.preventDefault();
     let newOption = new Option(
       inputCity.value,
       String(selectCity.options.length + 1)
