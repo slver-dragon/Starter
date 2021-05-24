@@ -536,6 +536,7 @@ main {
 .select-region,
 .select-city {
   display: block;
+  height: 2rem;
   max-width: 90%;
   margin: 0%;
 }
