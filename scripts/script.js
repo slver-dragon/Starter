@@ -134,7 +134,7 @@ let transport = [
     "Высота 2 м",
     "Объем 16 м³",
     "Грузоподъемность 1,5 т",
-    "./img/gazel.png",
+    "img/gazel.png",
   ],
   [
     "kabluk",
@@ -143,7 +143,7 @@ let transport = [
     "Высота 1.2 м",
     "Объем 8 м³",
     "Грузоподъемность 0.8 т",
-    "/img/kabluk.png",
+    "img/kabluk.png",
   ],
   [
     "gruzov",
