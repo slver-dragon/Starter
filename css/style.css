@@ -308,8 +308,6 @@ main {
 
 .transport-element {
   display: flex;
-  /*justify-content: space-between;*/
-  margin: auto;
 }
 
 .car-type-active {
