@@ -584,11 +584,11 @@ main {
   left: 0.0625rem;
   top: 0rem;
   transition: background 0.3s ease;
-  background: url(/img/radio.png) 0 0 no-repeat;
+  background: url(../img/radio.png) 0 0 no-repeat;
 }
 
 .another_radio input[type="radio"]:checked + span:before {
-  background-image: url(/img/radio-mrk.png);
+  background-image: url(../img/radio-mrk.png);
 }
 
 .another_radio span:hover:before {
