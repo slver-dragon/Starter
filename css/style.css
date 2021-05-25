@@ -118,13 +118,13 @@ li {
   width: 23.8125rem;
   z-index: 1;
   position: absolute;
-  right: 25%;
+  right: 30%;
   bottom: 0%;
 }
 
 .pict-car {
   position: absolute;
-  right: -8%;
+  right: -2%;
   top: 26%;
 }
 
