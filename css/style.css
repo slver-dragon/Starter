@@ -135,7 +135,7 @@ li {
 }
 
 .phone-call:hover {
-  content: url(img/phone_hover.png);
+  content: url(../img/phone_hover.png);
 }
 
 main {
