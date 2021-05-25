@@ -49,6 +49,9 @@ hiderButton.onclick = function () {
   additionService.hidden = additionService.hidden != true;
 };
 
+
+/*mouseover*/
+
 let timerBlock = document.getElementById("timer");
 let hours;
 let minutes;
@@ -104,7 +107,7 @@ let transport = [
     "Высота 2 м",
     "Объем 16 м³",
     "Грузоподъемность 1,5 т",
-    "img/gazel.png",
+    "../img/gazel.png",
   ],
   [
     "kabluk",
@@ -113,7 +116,7 @@ let transport = [
     "Высота 1.2 м",
     "Объем 8 м³",
     "Грузоподъемность 0.8 т",
-    "img/kabluk.png",
+    "../img/kabluk.png",
   ],
   [
     "gruzov",
@@ -122,7 +125,7 @@ let transport = [
     "Высота 3 м",
     "Объем 20 м³",
     "Грузоподъемность 2 т",
-    "img/gruzovik.png",
+    "../img/gruzovik.png",
   ],
   [
     "gazel",
@@ -131,7 +134,7 @@ let transport = [
     "Высота 2 м",
     "Объем 16 м³",
     "Грузоподъемность 1,5 т",
-    "img/gazel.png",
+    "../img/gazel.png",
   ],
   [
     "kabluk",
@@ -140,7 +143,7 @@ let transport = [
     "Высота 1.2 м",
     "Объем 8 м³",
     "Грузоподъемность 0.8 т",
-    "img/kabluk.png",
+    "../img/kabluk.png",
   ],
   [
     "gruzov",
@@ -149,7 +152,7 @@ let transport = [
     "Высота 3 м",
     "Объем 20 м³",
     "Грузоподъемность 2 т",
-    "img/gruzovik.png",
+    "../img/gruzovik.png",
   ],
 ];
 
