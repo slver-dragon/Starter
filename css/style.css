@@ -642,11 +642,11 @@ main {
   left: 0.0625rem;
   top: 0rem;
   transition: background 0.3s ease;
-  background: url(/img/checkbox.png) 0 0 no-repeat;
+  background: url(../img/checkbox.png) 0 0 no-repeat;
 }
 
 .another_checkbox input[type="checkbox"]:checked + span:before {
-  background-image: url(/img/checkbox-mrk.png);
+  background-image: url(../img/checkbox-mrk.png);
 }
 
 .another_checkbox span:hover:before {
@@ -734,6 +734,7 @@ main {
 .map-desk {
   position: relative;
   margin: 6.5rem auto 0rem;
+  width: 100%;
 }
 
 .inform-desk {
