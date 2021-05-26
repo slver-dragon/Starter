@@ -230,9 +230,13 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border: 0.0625rem solid #fed100;
+  
   margin: 0rem 0.5rem;
   width: 20%;
+}
+
+.offer-element-selected {
+  border: 0.0625rem solid #fed100;
 }
 
 .flat-type {
@@ -276,7 +280,7 @@ main {
 .transport {
   display: flex;
   flex-direction: column;
-  width: 44%;
+  width: 100%;
   margin: 6.375rem auto 0rem;
 }
 
@@ -304,6 +308,7 @@ main {
 
 .transport-lister {
   display: flex;
+  margin: 0 auto;
 }
 
 .transport-element {
@@ -382,6 +387,8 @@ main {
 
 .transport-picture {
   display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .transport-picture-mob,
@@ -877,7 +884,7 @@ footer {
   color: #000;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 900px) {
   .h-container {
     width: 20rem;
     min-height: 37.5rem;
