@@ -50,6 +50,33 @@ hiderButton.onclick = function () {
   additionService.hidden = additionService.hidden != true;
 };
 
+let offerElement1 = document.getElementById("offer-element-1");
+let offerElement2 = document.getElementById("offer-element-2");
+let offerElement3 = document.getElementById("offer-element-3");
+
+offerElement1.onmouseover = function () {
+  offerElement1.classList.add("offer-element-selected");
+}
+
+offerElement2.onmouseover = function () {
+  offerElement2.classList.add("offer-element-selected");
+}
+
+offerElement3.onmouseover = function () {
+  offerElement3.classList.add("offer-element-selected");
+}
+
+offerElement1.onmouseout = function () {
+  offerElement1.classList.remove("offer-element-selected");
+}
+
+offerElement2.onmouseout = function () {
+  offerElement2.classList.remove("offer-element-selected");
+}
+
+offerElement3.onmouseout = function () {
+  offerElement3.classList.remove("offer-element-selected");
+}
 /*function offerBorder() {
   for (j = 1; j < 4; j++) {
     document.getElementById("offer-element-" + j).onmouseover
