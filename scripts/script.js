@@ -40,6 +40,7 @@ inputCity.addEventListener("keydown", function (event) {
       String(selectCity.options.length + 1)
     );
     selectCity.append(newOption);
+    inputCity.value = "";
   }
 });
 
@@ -77,21 +78,6 @@ offerElement2.onmouseout = function () {
 offerElement3.onmouseout = function () {
   offerElement3.classList.remove("offer-element-selected");
 };
-
-/*function offerBorder() {
-  for (j = 1; j < 4; j++) {
-    document.getElementById("offer-element-" + j).onmouseover
-      ? document
-          .getElementById("offer-element-" + j)
-          .classList.add("offer-element-selected")
-      : 
-    document.getElementById("offer-element-" + j).onmouseout
-      ?
-      document
-          .getElementById("offer-element-" + j)
-          .classList.remove("offer-element-selected");
-  }
-}*/
 
 let timerBlock = document.getElementById("timer");
 let hours;

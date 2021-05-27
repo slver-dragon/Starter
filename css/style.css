@@ -115,7 +115,7 @@ li {
 }
 
 .pict-man {
-  width: 23.8125rem;
+  width: 30%;
   z-index: 1;
   position: absolute;
   right: 30%;
@@ -124,7 +124,8 @@ li {
 
 .pict-car {
   position: absolute;
-  right: -2%;
+  width: 40%;
+  left: 60%;
   top: 26%;
 }
 
@@ -307,7 +308,8 @@ main {
 
 .transport-lister {
   display: flex;
-  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
 }
 
 .transport-element {
@@ -528,6 +530,7 @@ main {
   height: 0.75rem;
   width: 0.75rem;
   transform: rotate(-0.125turn);
+  background: none;
 }
 
 .hider-button-active {
@@ -536,6 +539,7 @@ main {
   height: 0.75rem;
   width: 0.75rem;
   transform: rotate(0.375turn);
+  background: none;
 }
 
 .select-region,
@@ -883,7 +887,7 @@ footer {
   color: #000;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .h-container {
     width: 20rem;
     min-height: 37.5rem;
