@@ -230,7 +230,6 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  
   margin: 0rem 0.5rem;
   width: 20%;
 }
@@ -902,25 +901,42 @@ footer {
     font-weight: 600;
     line-height: 3em;
   }
-
+  
   .b-menu {
-    display: flex;
+    display: none;
+  }
+
+  .b-menu a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .tri-line {
+    display: inline-block;
     position: relative;
-    width: 2.75rem;
-    height: 1.1875rem;
-    margin: 0.5rem;
-    border-top: 0.125rem solid #000;
-    border-bottom: 0.125rem solid #000;
+    margin: 0.25rem;
+    cursor: pointer;
   }
 
-  .b-menu:before {
-    content: "";
+  .tri-line i {
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    margin: 0.25rem auto;
+    background: #222;
+  }
+
+  .act {
+    margin-right: 4.5rem;
+  }
+
+  .show {
+    display: block;
     position: absolute;
-    top: 0.5625rem;
-    width: 100%;
-    border-top: 0.125rem solid #000;
+    left: 75%;
+    top: 1%
   }
-
+ 
   .wrapper-mid {
     min-height: 30rem;
     margin: 0%;

@@ -77,6 +77,7 @@ offerElement2.onmouseout = function () {
 offerElement3.onmouseout = function () {
   offerElement3.classList.remove("offer-element-selected");
 }
+
 /*function offerBorder() {
   for (j = 1; j < 4; j++) {
     document.getElementById("offer-element-" + j).onmouseover
@@ -203,3 +204,11 @@ function elementReplace (newEl) {
   document.getElementById("transport-picture").src = transport[current][6];
 }
 
+let triLine = document.getElementById("tri-line");
+
+triLine.onclick = function () {
+
+    document.getElementById("b-menu").classList.toggle("show");
+    triLine.classList.length == 1 ? triLine.classList.add('act') :triLine.classList.remove('act');
+    console.log(triLine.classList);
+}
