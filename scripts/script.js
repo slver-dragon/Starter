@@ -56,27 +56,27 @@ let offerElement3 = document.getElementById("offer-element-3");
 
 offerElement1.onmouseover = function () {
   offerElement1.classList.add("offer-element-selected");
-}
+};
 
 offerElement2.onmouseover = function () {
   offerElement2.classList.add("offer-element-selected");
-}
+};
 
 offerElement3.onmouseover = function () {
   offerElement3.classList.add("offer-element-selected");
-}
+};
 
 offerElement1.onmouseout = function () {
   offerElement1.classList.remove("offer-element-selected");
-}
+};
 
 offerElement2.onmouseout = function () {
   offerElement2.classList.remove("offer-element-selected");
-}
+};
 
 offerElement3.onmouseout = function () {
   offerElement3.classList.remove("offer-element-selected");
-}
+};
 
 /*function offerBorder() {
   for (j = 1; j < 4; j++) {
@@ -171,30 +171,34 @@ let transport = [
     "Объем 20 м³",
     "Грузоподъемность 2 т",
     "img/gruzovik.png",
-  ]
+  ],
 ];
 
 elementForward.onclick = function () {
-  current > transport.length - 2 ? elementReplace(0) : elementReplace(current + 1);
+  current > transport.length - 2
+    ? elementReplace(0)
+    : elementReplace(current + 1);
 };
 
 elementBack.onclick = function () {
-  current == 0 ? elementReplace(transport.length - 1) : elementReplace(current - 1);
+  current == 0
+    ? elementReplace(transport.length - 1)
+    : elementReplace(current - 1);
 };
 
 tekElement1.onclick = function () {
   elementReplace(0);
-}
+};
 
 tekElement2.onclick = function () {
   elementReplace(1);
-}
+};
 
 tekElement3.onclick = function () {
   elementReplace(2);
-}
+};
 
-function elementReplace (newEl) {
+function elementReplace(newEl) {
   document.getElementById(transport[current][0]).className = "car-type";
   current = newEl;
   document.getElementById(transport[current][0]).className = "car-type-active";
@@ -207,8 +211,8 @@ function elementReplace (newEl) {
 let triLine = document.getElementById("tri-line");
 
 triLine.onclick = function () {
-
-    document.getElementById("b-menu").classList.toggle("show");
-    triLine.classList.length == 1 ? triLine.classList.add('act') :triLine.classList.remove('act');
-    console.log(triLine.classList);
-}
+  document.getElementById("b-menu").classList.toggle("show");
+  triLine.classList.length == 1
+    ? triLine.classList.add("act")
+    : triLine.classList.remove("act");
+};

@@ -901,7 +901,7 @@ footer {
     font-weight: 600;
     line-height: 3em;
   }
-  
+
   .b-menu {
     display: none;
   }
@@ -934,9 +934,9 @@ footer {
     display: block;
     position: absolute;
     left: 75%;
-    top: 1%
+    top: 1%;
   }
- 
+
   .wrapper-mid {
     min-height: 30rem;
     margin: 0%;
@@ -961,7 +961,7 @@ footer {
   }
 
   .wrapper-mid-button {
-    padding: 1rem 6.891rem;
+    padding: 1rem 34%;;
     display: flex;
     justify-content: center;
     width: 92%;
@@ -1101,7 +1101,7 @@ footer {
     font-weight: 500;
     background-color: #fed100;
     color: #333333;
-    padding: 1.125rem 6.891rem;
+    padding: 5% 34%;
     display: flex;
     justify-content: center;
     margin: 1.1rem auto 0.875rem;
@@ -1220,7 +1220,7 @@ footer {
   .transport-button {
     background-color: #fed100;
     color: #333333;
-    padding: 1.125rem 6.891rem;
+    padding: 5% 34%;
     display: flex;
     justify-content: center;
     margin: 0rem 0.25rem 2.8125rem;
