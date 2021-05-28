@@ -87,7 +87,6 @@ let period = 21600;
 let timeResult;
 
 timer = setInterval(function () {
-  /*offerBorder();*/
   hours = Math.floor((period / 60 / 60) % 60);
   hours = hours < 10 ? "0" + hours : hours;
   minutes = Math.floor((period / 60) % 60);
@@ -129,6 +128,9 @@ let elementBack = document.getElementById("elementBack");
 let tekElement1 = document.getElementById("gazel");
 let tekElement2 = document.getElementById("kabluk");
 let tekElement3 = document.getElementById("gruzov");
+let choisElement1 = document.getElementById("gazel-mob");
+let choisElement2 = document.getElementById("kabluk-mob");
+let choisElement3 = document.getElementById("gruzov-mob");
 
 let transport = [
   [
@@ -138,7 +140,7 @@ let transport = [
     "Высота 2 м",
     "Объем 16 м³",
     "Грузоподъемность 1,5 т",
-    "img/gazel.png",
+    "img/gazel",
   ],
   [
     "kabluk",
@@ -147,7 +149,7 @@ let transport = [
     "Высота 1.2 м",
     "Объем 8 м³",
     "Грузоподъемность 0.8 т",
-    "img/kabluk.png",
+    "img/kabluk",
   ],
   [
     "gruzov",
@@ -156,7 +158,7 @@ let transport = [
     "Высота 3 м",
     "Объем 20 м³",
     "Грузоподъемность 2 т",
-    "img/gruzovik.png",
+    "img/gruzovik",
   ],
 ];
 
@@ -184,6 +186,18 @@ tekElement3.onclick = function () {
   elementReplace(2);
 };
 
+choisElement1.onclick = function () {
+  elementReplace(0);
+};
+
+choisElement2.onclick = function () {
+  elementReplace(1);
+};
+
+choisElement3.onclick = function () {
+  elementReplace(2);
+};
+
 function elementReplace(newEl) {
   document.getElementById(transport[current][0]).className = "car-type";
   current = newEl;
@@ -191,7 +205,9 @@ function elementReplace(newEl) {
   for (let i = 1; i < transport[0].length - 1; i++) {
     document.getElementById("transport-" + i).innerHTML = transport[current][i];
   }
-  document.getElementById("transport-picture").src = transport[current][6];
+  document.getElementById("transport-picture").src = transport[current][6] + ".png";
+  document.getElementById("transport-picture-mob").src = transport[current][6] + "-mob.png";
+  document.getElementById("auto-description").innerHTML = transport[current][1] + " / "+ transport[current][5].slice(16,transport[current][5].length);
 }
 
 let triLine = document.getElementById("tri-line");
