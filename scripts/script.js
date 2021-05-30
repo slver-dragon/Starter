@@ -51,34 +51,6 @@ hiderButton.onclick = function () {
   additionService.hidden = additionService.hidden != true;
 };
 
-let offerElement1 = document.getElementById("offer-element-1");
-let offerElement2 = document.getElementById("offer-element-2");
-let offerElement3 = document.getElementById("offer-element-3");
-
-offerElement1.onmouseover = function () {
-  offerElement1.classList.add("offer-element-selected");
-};
-
-offerElement2.onmouseover = function () {
-  offerElement2.classList.add("offer-element-selected");
-};
-
-offerElement3.onmouseover = function () {
-  offerElement3.classList.add("offer-element-selected");
-};
-
-offerElement1.onmouseout = function () {
-  offerElement1.classList.remove("offer-element-selected");
-};
-
-offerElement2.onmouseout = function () {
-  offerElement2.classList.remove("offer-element-selected");
-};
-
-offerElement3.onmouseout = function () {
-  offerElement3.classList.remove("offer-element-selected");
-};
-
 let timerBlock = document.getElementById("timer");
 let hours;
 let minutes;
@@ -125,16 +97,15 @@ ShareFB = function (purl, ptitle, pimg, text) {
 
 let elementForward = document.getElementById("elementForward");
 let elementBack = document.getElementById("elementBack");
-let tekElement1 = document.getElementById("gazel");
-let tekElement2 = document.getElementById("kabluk");
-let tekElement3 = document.getElementById("gruzov");
+let transportMenu = document.getElementById ("transport-menu");
+let transportChoise = document.getElementById ("transport-choise");
 let choisElement1 = document.getElementById("gazel-mob");
 let choisElement2 = document.getElementById("kabluk-mob");
 let choisElement3 = document.getElementById("gruzov-mob");
 
 let transport = [
   [
-    "gazel",
+    "auto-1",
     "Газель 3 метра",
     "Ширина 2 м",
     "Высота 2 м",
@@ -143,7 +114,7 @@ let transport = [
     "img/gazel",
   ],
   [
-    "kabluk",
+    "auto-2",
     "Каблук 2 метра ",
     "Ширина 1.8 м",
     "Высота 1.2 м",
@@ -152,7 +123,7 @@ let transport = [
     "img/kabluk",
   ],
   [
-    "gruzov",
+    "auto-3",
     "Грузовик 3 метра",
     "Ширина 3 м",
     "Высота 3 м",
@@ -174,34 +145,22 @@ elementBack.onclick = function () {
     : elementReplace(current - 1);
 };
 
-tekElement1.onclick = function () {
-  elementReplace(0);
-};
+transportMenu.addEventListener ('click' , function(event) {
+  let targetElement = event.target.id;
+  elementReplace(Number(targetElement.slice(5,targetElement.length)) - 1);
+})
 
-tekElement2.onclick = function () {
-  elementReplace(1);
-};
-
-tekElement3.onclick = function () {
-  elementReplace(2);
-};
-
-choisElement1.onclick = function () {
-  elementReplace(0);
-};
-
-choisElement2.onclick = function () {
-  elementReplace(1);
-};
-
-choisElement3.onclick = function () {
-  elementReplace(2);
-};
+transportChoise.addEventListener ('click' , function(event) {
+  let targetRadio = event.target.id;
+  elementReplace(Number(targetRadio.slice(9,targetRadio.length)) - 1);
+})
 
 function elementReplace(newEl) {
-  document.getElementById(transport[current][0]).className = "car-type";
-  current = newEl;
-  document.getElementById(transport[current][0]).className = "car-type-active";
+  console.log(newEl,current);
+  document.getElementById(transport[current][0]).classList.toggle("car-type-active");
+  isNaN(newEl) ? newEl = current : current = newEl;
+  document.getElementById(transport[current][0]).classList.toggle("car-type-active");
+  console.log(newEl,current);
   for (let i = 1; i < transport[0].length - 1; i++) {
     document.getElementById("transport-" + i).innerHTML = transport[current][i];
   }
@@ -214,7 +173,7 @@ let triLine = document.getElementById("tri-line");
 
 triLine.onclick = function () {
   document.getElementById("b-menu").classList.toggle("show");
-  triLine.classList.length == 1
-    ? triLine.classList.add("act")
-    : triLine.classList.remove("act");
+  triLine.className != "triangle"
+    ? triLine.className = "triangle"
+    : triLine.className = "tri-line";
 };

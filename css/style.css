@@ -235,7 +235,7 @@ main {
   width: 20%;
 }
 
-.offer-element-selected {
+.offer-element:hover {
   border: 0.0625rem solid #fed100;
 }
 
@@ -317,14 +317,11 @@ main {
 }
 
 .car-type-active {
-  padding: 1.422% 7.451%;
   border: 0.0625rem solid #fed100;
-  margin-top: 5%;
 }
 
 .car-type {
   padding: 1.422% 7.451%;
-  border: 0.0625rem solid #fff;
   margin-top: 5%;
 }
 
@@ -930,8 +927,15 @@ footer {
     background: #222;
   }
 
-  .act {
+  .triangle {
     margin-right: 4.5rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 1.5rem solid #222;
+    border-top: 0.75rem solid transparent;
+    border-bottom: 0.75rem solid transparent;
   }
 
   .show {
@@ -1158,15 +1162,14 @@ footer {
 
   .car-type-active {
     padding: 0%;
-    border-top: #fed100;
-    border-left: #fed100;
-    border-right: #fed100;
+    border-top: #fff;
+    border-left: #fff;
+    border-right: #fff;
     margin-top: 5%;
   }
 
   .car-type {
     padding: 0%;
-    border: none;
     margin-top: 5%;
   }
 
