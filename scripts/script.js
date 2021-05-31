@@ -97,8 +97,8 @@ ShareFB = function (purl, ptitle, pimg, text) {
 
 let elementForward = document.getElementById("elementForward");
 let elementBack = document.getElementById("elementBack");
-let transportMenu = document.getElementById ("transport-menu");
-let transportChoise = document.getElementById ("transport-choise");
+let transportMenu = document.getElementById("transport-menu");
+let transportChoise = document.getElementById("transport-choise");
 let choisElement1 = document.getElementById("gazel-mob");
 let choisElement2 = document.getElementById("kabluk-mob");
 let choisElement3 = document.getElementById("gruzov-mob");
@@ -145,35 +145,44 @@ elementBack.onclick = function () {
     : elementReplace(current - 1);
 };
 
-transportMenu.addEventListener ('click' , function(event) {
+transportMenu.addEventListener("click", function (event) {
   let targetElement = event.target.id;
-  elementReplace(Number(targetElement.slice(5,targetElement.length)) - 1);
-})
+  elementReplace(Number(targetElement.slice(5, targetElement.length)) - 1);
+});
 
-transportChoise.addEventListener ('click' , function(event) {
+transportChoise.addEventListener("click", function (event) {
   let targetRadio = event.target.id;
-  elementReplace(Number(targetRadio.slice(9,targetRadio.length)) - 1);
-})
+  elementReplace(Number(targetRadio.slice(9, targetRadio.length)) - 1);
+});
 
 function elementReplace(newEl) {
-  console.log(newEl,current);
-  document.getElementById(transport[current][0]).classList.toggle("car-type-active");
-  isNaN(newEl) ? newEl = current : current = newEl;
-  document.getElementById(transport[current][0]).classList.toggle("car-type-active");
-  console.log(newEl,current);
+  console.log(newEl, current);
+  document
+    .getElementById(transport[current][0])
+    .classList.toggle("car-type-active");
+  isNaN(newEl) ? (newEl = current) : (current = newEl);
+  document
+    .getElementById(transport[current][0])
+    .classList.toggle("car-type-active");
+  console.log(newEl, current);
   for (let i = 1; i < transport[0].length - 1; i++) {
     document.getElementById("transport-" + i).innerHTML = transport[current][i];
   }
-  document.getElementById("transport-picture").src = transport[current][6] + ".png";
-  document.getElementById("transport-picture-mob").src = transport[current][6] + "-mob.png";
-  document.getElementById("auto-description").innerHTML = transport[current][1] + " / "+ transport[current][5].slice(16,transport[current][5].length);
+  document.getElementById("transport-picture").src =
+    transport[current][6] + ".png";
+  document.getElementById("transport-picture-mob").src =
+    transport[current][6] + "-mob.png";
+  document.getElementById("auto-description").innerHTML =
+    transport[current][1] +
+    " / " +
+    transport[current][5].slice(16, transport[current][5].length);
 }
 
-let triLine = document.getElementById("tri-line");
+let threeLine = document.getElementById("tri-line");
 
-triLine.onclick = function () {
+threeLine.onclick = function () {
   document.getElementById("b-menu").classList.toggle("show");
-  triLine.className != "triangle"
-    ? triLine.className = "triangle"
-    : triLine.className = "tri-line";
+  threeLine.className != "triangle"
+    ? (threeLine.className = "triangle")
+    : (threeLine.className = "tri-line");
 };

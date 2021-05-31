@@ -912,14 +912,14 @@ footer {
     color: #000;
   }
 
-  .tri-line {
+  .three-line {
     display: inline-block;
     position: relative;
     margin: 0.25rem;
     cursor: pointer;
   }
 
-  .tri-line i {
+  .three-line i {
     display: block;
     width: 2rem;
     height: 0.25rem;
