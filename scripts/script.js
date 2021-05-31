@@ -178,11 +178,11 @@ function elementReplace(newEl) {
     transport[current][5].slice(16, transport[current][5].length);
 }
 
-let threeLine = document.getElementById("tri-line");
+let threeLine = document.getElementById("three-line");
 
 threeLine.onclick = function () {
   document.getElementById("b-menu").classList.toggle("show");
   threeLine.className != "triangle"
     ? (threeLine.className = "triangle")
-    : (threeLine.className = "tri-line");
+    : (threeLine.className = "three-line");
 };
