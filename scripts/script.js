@@ -3,6 +3,7 @@ let orderButton = document.getElementById("order-button-desk");
 let yourName = document.getElementById("your-name");
 let yourPhon = document.getElementById("your-phon");
 let apply = document.getElementById("apply");
+let current = 0;
 
 yourName.onfocus = function () {
   yourName.classList.remove("error");
@@ -32,13 +33,14 @@ let inputCity = document.getElementById("input-city");
 let selectCity = document.getElementById("select-city");
 
 inputCity.addEventListener("keydown", function (event) {
-  event.preventDefault();
   if (event.key == "Enter") {
+    event.preventDefault();
     let newOption = new Option(
       inputCity.value,
       String(selectCity.options.length + 1)
     );
     selectCity.append(newOption);
+    inputCity.value = "";
   }
 });
 
@@ -95,80 +97,92 @@ ShareFB = function (purl, ptitle, pimg, text) {
 
 let elementForward = document.getElementById("elementForward");
 let elementBack = document.getElementById("elementBack");
-let current = 0;
+let transportMenu = document.getElementById("transport-menu");
+let transportChoise = document.getElementById("transport-choise");
+let choisElement1 = document.getElementById("gazel-mob");
+let choisElement2 = document.getElementById("kabluk-mob");
+let choisElement3 = document.getElementById("gruzov-mob");
+
 let transport = [
   [
-    "gazel",
+    "auto-1",
     "Газель 3 метра",
     "Ширина 2 м",
     "Высота 2 м",
     "Объем 16 м³",
     "Грузоподъемность 1,5 т",
-    "img/gazel.png",
+    "img/gazel",
   ],
   [
-    "kabluk",
+    "auto-2",
     "Каблук 2 метра ",
     "Ширина 1.8 м",
     "Высота 1.2 м",
     "Объем 8 м³",
     "Грузоподъемность 0.8 т",
-    "img/kabluk.png",
+    "img/kabluk",
   ],
   [
-    "gruzov",
+    "auto-3",
     "Грузовик 3 метра",
     "Ширина 3 м",
     "Высота 3 м",
     "Объем 20 м³",
     "Грузоподъемность 2 т",
-    "img/gruzovik.png",
-  ],
-  [
-    "gazel",
-    "Газель 3 метра",
-    "Ширина 2 м",
-    "Высота 2 м",
-    "Объем 16 м³",
-    "Грузоподъемность 1,5 т",
-    "img/gazel.png",
-  ],
-  [
-    "kabluk",
-    "Каблук 2 метра ",
-    "Ширина 1.8 м",
-    "Высота 1.2 м",
-    "Объем 8 м³",
-    "Грузоподъемность 0.8 т",
-    "img/kabluk.png",
-  ],
-  [
-    "gruzov",
-    "Грузовик 3 метра",
-    "Ширина 3 м",
-    "Высота 3 м",
-    "Объем 20 м³",
-    "Грузоподъемность 2 т",
-    "img/gruzovik.png",
+    "img/gruzovik",
   ],
 ];
 
 elementForward.onclick = function () {
-  document.getElementById(transport[current][0]).className = "car-type";
-  current = current > transport.length - 2 ? 0 : ++current;
-  document.getElementById(transport[current][0]).className = "car-type-active";
-  for (let i = 1; i < transport[0].length - 1; i++) {
-    document.getElementById("transport-" + i).innerHTML = transport[current][i];
-  }
-  document.getElementById("transport-picture").src = transport[current][6];
+  current > transport.length - 2
+    ? elementReplace(0)
+    : elementReplace(current + 1);
 };
 
 elementBack.onclick = function () {
-  document.getElementById(transport[current][0]).className = "car-type";
-  current = current == 0 ? transport.length - 1 : --current;
-  document.getElementById(transport[current][0]).className = "car-type-active";
+  current == 0
+    ? elementReplace(transport.length - 1)
+    : elementReplace(current - 1);
+};
+
+transportMenu.addEventListener("click", function (event) {
+  let targetElement = event.target.id;
+  elementReplace(Number(targetElement.slice(5, targetElement.length)) - 1);
+});
+
+transportChoise.addEventListener("click", function (event) {
+  let targetRadio = event.target.id;
+  elementReplace(Number(targetRadio.slice(9, targetRadio.length)) - 1);
+});
+
+function elementReplace(newEl) {
+  console.log(newEl, current);
+  document
+    .getElementById(transport[current][0])
+    .classList.toggle("car-type-active");
+  isNaN(newEl) ? (newEl = current) : (current = newEl);
+  document
+    .getElementById(transport[current][0])
+    .classList.toggle("car-type-active");
+  console.log(newEl, current);
   for (let i = 1; i < transport[0].length - 1; i++) {
     document.getElementById("transport-" + i).innerHTML = transport[current][i];
   }
-  document.getElementById("transport-picture").src = transport[current][6];
+  document.getElementById("transport-picture").src =
+    transport[current][6] + ".png";
+  document.getElementById("transport-picture-mob").src =
+    transport[current][6] + "-mob.png";
+  document.getElementById("auto-description").innerHTML =
+    transport[current][1] +
+    " / " +
+    transport[current][5].slice(16, transport[current][5].length);
+}
+
+let threeLine = document.getElementById("three-line");
+
+threeLine.onclick = function () {
+  document.getElementById("b-menu").classList.toggle("show");
+  threeLine.className != "triangle"
+    ? (threeLine.className = "triangle")
+    : (threeLine.className = "three-line");
 };

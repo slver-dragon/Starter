@@ -15,17 +15,29 @@
   </head>
   <body>
     <header>
-      <div class="h-container">
+      <div class="h-container" id="start">
         <div class="wrapper-top">
           <p class="logo">MOVEE</p>
           <ul class="head-menu">
-            <li><a href="#">Цены</a></li>
-            <li><a href="#">Автопарк</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#price">Цены</a></li>
+            <li><a href="#auto">Автопарк</a></li>
+            <li><a href="#review">Отзывы</a></li>
+            <li><a href="#contact">Контакты</a></li>
           </ul>
           <a class="phone" href="tel:+375299991213">8(029)-999-12-13</a>
-          <span class="b-menu"></span>
+          <div>
+            <span id="three-line" class="three-line">
+              <i></i>
+              <i></i>
+              <i></i>
+            </span>
+            <ul id="b-menu" class="b-menu">
+              <li><a href="#price">Цены</a></li>
+              <li><a href="#auto">Автопарк</a></li>
+              <li><a href="#review">Отзывы</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+          </div>
         </div>
         <div class="wrapper-mid">
           <div class="wrapper-mid-title">
@@ -98,11 +110,11 @@
           </div>
         </div>
       </div>
-      <div class="prices">
+      <div class="prices" id="price">
         <h2>Цены</h2>
         <h3>Фиксированная стоимость на переезд под ключ</h3>
         <div class="offer">
-          <div class="offer-element">
+          <div class="offer-element" id="offer-element-1">
             <span class="flat-type">1-комнатная кв-ра</span>
             <pre>
     1 фургон    
@@ -112,7 +124,7 @@
             <span class="offer-sum">70 руб.</span>
             <button class="offer-button">Заказать</button>
           </div>
-          <div class="offer-element offer-element-mob">
+          <div class="offer-element offer-element-mob" id="offer-element-2">
             <span class="flat-type">2-комнатная кв-ра</span>
             <pre>
 1 газель - 3 метра
@@ -122,7 +134,7 @@
             <span class="offer-sum">100 руб.</span>
             <button class="offer-button">Заказать</button>
           </div>
-          <div class="offer-element">
+          <div class="offer-element" id="offer-element-3">
             <span class="flat-type">3-комнатная кв-ра</span>
             <pre>
 1 газель - 4 метра
@@ -135,29 +147,30 @@
         </div>
         <button class="offer-allprices">Все цены</button>
       </div>
-      <div class="transport">
+      <div class="transport" id="auto">
         <h2>Автопарк</h2>
         <h3>10 видов автомобилей от 800 кг до 10 тонн</h3>
-        <div class="transport-menu">
-          <span class="car-type-active" id="gazel">Газели</span>
-          <span class="car-type" id="kabluk">Каблуки</span>
-          <span class="car-type" id="gruzov">Грузовики</span>
+        <div class="transport-menu" id="transport-menu">
+          <span class="car-type car-type-active" id="auto-1">Газели</span>
+          <span class="car-type" id="auto-2">Каблуки</span>
+          <span class="car-type" id="auto-3">Грузовики</span>
         </div>
         <div class="transport-lister">
           <button class="element-back" id="elementBack">&lt;</button>
           <div class="transport-element">
             <img
               class="transport-picture-mob"
-              src="img/gazel_mob.png"
-              alt="Газели"
+              id="transport-picture-mob"
+              src="img/gazel-mob.png"
+              alt="Транспорт"
             />
-            <p class="auto-description">Газель 3 метра / 1,5 тонны</p>
-            <div class="transport-choise">
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
-              <span class="choiser-element"></span>
+            <p class="auto-description" id="auto-description">
+              Газель 3 метра / 1,5 тонны
+            </p>
+            <div class="transport-choise" id="transport-choise">
+              <span class="choiser-element" id="auto-mob-1"></span>
+              <span class="choiser-element" id="auto-mob-2"></span>
+              <span class="choiser-element" id="auto-mob-3"></span>
             </div>
             <div class="transport-description">
               <span class="auto-type" id="transport-1">Газель 3 метра</span>
@@ -169,17 +182,17 @@
               </ul>
               <button class="transport-button">Заказать</button>
             </div>
-            <img
-              class="transport-picture"
-              id="transport-picture"
-              src="img/gazel.png"
-              alt="Газели"
-            />
           </div>
+          <img
+            class="transport-picture"
+            id="transport-picture"
+            src="img/gazel.png"
+            alt="Транспорт"
+          />
           <button class="element-forward" id="elementForward">&gt;</button>
         </div>
       </div>
-      <div class="reviews">
+      <div class="reviews" id="review">
         <div class="all-reviews">
           <h2>Отзывы</h2>
           <div class="reviews-container">
@@ -328,7 +341,8 @@
               <input
                 type="button"
                 class="hider-button hider-button-active"
-                id="hider-button" value=" "
+                id="hider-button"
+                value=""
               />
             </div>
             <div class="addition-services" id="addition-service">
@@ -382,10 +396,10 @@
       <div class="map-desk">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1225.6895103002962!2d23.695868771999574!3d52.091033282192356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2z0YPQuy4g0JHRg9C00ZHQvdC90L7Qs9C-IDY0LCDQkdGA0LXRgdGC!5e0!3m2!1sru!2sby!4v1620113489197!5m2!1sru!2sby"
-          width="1920"
+          width="100%"
           height="666"
           style="border: 0"
-          allowfullscreen=""
+          allowfullscreen
           loading="lazy"
         ></iframe>
         <div class="inform-desk">
@@ -398,16 +412,16 @@
             </ul>
             <div class="info-social">
               <a href="http://www.youtube.com"
-                ><img src="/img/youtube.png" alt="youtube.com"
+                ><img src="img/youtube.png" alt="youtube.com"
               /></a>
               <a href="http://www.vk.com"
-                ><img src="/img/vk.png" alt="vk.com"
+                ><img src="img/vk.png" alt="vk.com"
               /></a>
               <a href="http://www.facebook.com"
-                ><img src="/img/facebook.png" alt="facebook.com"
+                ><img src="img/facebook.png" alt="facebook.com"
               /></a>
               <a href="http://www.instagram.com"
-                ><img src="/img/instagram.png" alt="instagram.com"
+                ><img src="img/instagram.png" alt="instagram.com"
               /></a>
             </div>
           </div>
@@ -416,7 +430,7 @@
       <div class="map-mob">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1225.6895103002962!2d23.695868771999574!3d52.091033282192356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2z0YPQuy4g0JHRg9C00ZHQvdC90L7Qs9C-IDY0LCDQkdGA0LXRgdGC!5e0!3m2!1sru!2sby!4v1620113489197!5m2!1sru!2sby"
-          width="320"
+          width="100%"
           height="524"
           style="border: 0"
           allowfullscreen=""
@@ -430,32 +444,32 @@
       </div>
     </main>
     <footer>
-      <div class="f-container">
+      <div class="f-container" id="contact">
         <div class="footer-main">
           <span class="logo">MOVEE</span>
           <a href="#">Политика конфиденциальнности</a>
           <a href="#">Соглашение на обработку персональных данных</a>
         </div>
         <div class="footer-menu">
-          <a href="#">Главная</a>
-          <a href="#">Цены</a>
-          <a href="#">Автопарк</a>
-          <a href="#">Отзывы</a>
-          <a href="#">Контакты</a>
+          <a href="#start">Главная</a>
+          <a href="#price">Цены</a>
+          <a href="#auto">Автопарк</a>
+          <a href="#review">Отзывы</a>
+          <a href="#contact">Контакты</a>
         </div>
         <div class="footer-socnet">
           <div class="social">
             <a href="http://www.youtube.com"
-              ><img src="/img/youtube.png" alt="youtube.com"
+              ><img src="img/youtube.png" alt="youtube.com"
             /></a>
             <a href="http://www.vk.com"
-              ><img src="/img/vk.png" alt="vk.com"
+              ><img src="img/vk.png" alt="vk.com"
             /></a>
             <a href="http://www.facebook.com"
-              ><img src="/img/facebook.png" alt="facebook.com"
+              ><img src="img/facebook.png" alt="facebook.com"
             /></a>
             <a href="http://www.instagram.com"
-              ><img src="/img/instagram.png" alt="instagram.com"
+              ><img src="img/instagram.png" alt="instagram.com"
             /></a>
           </div>
           <a class="e-letter" href="mailto:hello@movee.ru">hello@movee.ru</a>
@@ -464,12 +478,12 @@
             <a
               onclick="ShareVK('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')"
             >
-              <img src="/img/vkx2.png" alt="#"
+              <img src="img/vkx2.png" alt="#"
             /></a>
             <a
               onclick="ShareFB('127.0.0.1:5500/index.html#', 'MOVEE', '', 'Здесь должно быть описание')"
             >
-              <img src="/img/facebookx2.png" alt="#"
+              <img src="img/facebookx2.png" alt="#"
             /></a>
           </div>
         </div>
@@ -480,6 +494,6 @@
         </div>
       </div>
     </footer>
-    <script src="/scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@ header {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   min-height: 40.625rem;
-  width: 82rem;
+  width: 81.625rem;
   position: relative;
 }
 
@@ -115,16 +115,17 @@ li {
 }
 
 .pict-man {
-  width: 23.8125rem;
+  width: 30%;
   z-index: 1;
   position: absolute;
-  right: 25%;
+  right: 30%;
   bottom: 0%;
 }
 
 .pict-car {
   position: absolute;
-  right: -8%;
+  width: 40%;
+  left: 60%;
   top: 26%;
 }
 
@@ -135,7 +136,7 @@ li {
 }
 
 .phone-call:hover {
-  content: url(/img/phone_hover.png);
+  content: url(../img/phone_hover.png);
 }
 
 main {
@@ -167,7 +168,7 @@ main {
 
 .work-list-element {
   display: flex;
-  width: 40%;
+  width: 45%;
   margin-top: 3.8125rem;
 }
 
@@ -230,9 +231,12 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border: 0.0625rem solid #fed100;
   margin: 0rem 0.5rem;
-  width: 15%;
+  width: 20%;
+}
+
+.offer-element:hover {
+  border: 0.0625rem solid #fed100;
 }
 
 .flat-type {
@@ -276,7 +280,7 @@ main {
 .transport {
   display: flex;
   flex-direction: column;
-  width: 44%;
+  width: 100%;
   margin: 6.375rem auto 0rem;
 }
 
@@ -304,22 +308,20 @@ main {
 
 .transport-lister {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .transport-element {
   display: flex;
-  justify-content: space-between;
 }
 
 .car-type-active {
-  padding: 1.422% 7.451%;
   border: 0.0625rem solid #fed100;
-  margin-top: 5%;
 }
 
 .car-type {
   padding: 1.422% 7.451%;
-  border: 0.0625rem solid #fff;
   margin-top: 5%;
 }
 
@@ -383,6 +385,8 @@ main {
 
 .transport-picture {
   display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .transport-picture-mob,
@@ -402,7 +406,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 48%;
+  width: 70%;
 }
 
 .all-reviews h2 {
@@ -523,6 +527,7 @@ main {
   height: 0.75rem;
   width: 0.75rem;
   transform: rotate(-0.125turn);
+  background: none;
 }
 
 .hider-button-active {
@@ -531,6 +536,7 @@ main {
   height: 0.75rem;
   width: 0.75rem;
   transform: rotate(0.375turn);
+  background: none;
 }
 
 .select-region,
@@ -584,11 +590,11 @@ main {
   left: 0.0625rem;
   top: 0rem;
   transition: background 0.3s ease;
-  background: url(/img/radio.png) 0 0 no-repeat;
+  background: url(../img/radio.png) 0 0 no-repeat;
 }
 
 .another_radio input[type="radio"]:checked + span:before {
-  background-image: url(/img/radio-mrk.png);
+  background-image: url(../img/radio-mrk.png);
 }
 
 .another_radio span:hover:before {
@@ -642,11 +648,11 @@ main {
   left: 0.0625rem;
   top: 0rem;
   transition: background 0.3s ease;
-  background: url(/img/checkbox.png) 0 0 no-repeat;
+  background: url(../img/checkbox.png) 0 0 no-repeat;
 }
 
 .another_checkbox input[type="checkbox"]:checked + span:before {
-  background-image: url(/img/checkbox-mrk.png);
+  background-image: url(../img/checkbox-mrk.png);
 }
 
 .another_checkbox span:hover:before {
@@ -734,6 +740,7 @@ main {
 .map-desk {
   position: relative;
   margin: 6.5rem auto 0rem;
+  width: 100%;
 }
 
 .inform-desk {
@@ -877,7 +884,7 @@ footer {
   color: #000;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 980px) {
   .h-container {
     width: 20rem;
     min-height: 37.5rem;
@@ -897,21 +904,45 @@ footer {
   }
 
   .b-menu {
-    display: flex;
-    position: relative;
-    width: 2.75rem;
-    height: 1.1875rem;
-    margin: 0.5rem;
-    border-top: 0.125rem solid #000;
-    border-bottom: 0.125rem solid #000;
+    display: none;
   }
 
-  .b-menu:before {
-    content: "";
+  .b-menu a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .three-line {
+    display: inline-block;
+    position: relative;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  .three-line i {
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    margin: 0.25rem auto;
+    background: #222;
+  }
+
+  .triangle {
+    margin-right: 4.5rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 1.5rem solid #222;
+    border-top: 0.75rem solid transparent;
+    border-bottom: 0.75rem solid transparent;
+  }
+
+  .show {
+    display: block;
     position: absolute;
-    top: 0.5625rem;
-    width: 100%;
-    border-top: 0.125rem solid #000;
+    left: 75%;
+    top: 1%;
   }
 
   .wrapper-mid {
@@ -938,7 +969,7 @@ footer {
   }
 
   .wrapper-mid-button {
-    padding: 1rem 6.891rem;
+    padding: 1rem 34%;
     display: flex;
     justify-content: center;
     width: 92%;
@@ -1078,7 +1109,7 @@ footer {
     font-weight: 500;
     background-color: #fed100;
     color: #333333;
-    padding: 1.125rem 6.891rem;
+    padding: 5% 34%;
     display: flex;
     justify-content: center;
     margin: 1.1rem auto 0.875rem;
@@ -1131,15 +1162,14 @@ footer {
 
   .car-type-active {
     padding: 0%;
-    border-top: #fed100;
-    border-left: #fed100;
-    border-right: #fed100;
+    border-top: #fff;
+    border-left: #fff;
+    border-right: #fff;
     margin-top: 5%;
   }
 
   .car-type {
     padding: 0%;
-    border: none;
     margin-top: 5%;
   }
 
@@ -1197,7 +1227,7 @@ footer {
   .transport-button {
     background-color: #fed100;
     color: #333333;
-    padding: 1.125rem 6.891rem;
+    padding: 5% 34%;
     display: flex;
     justify-content: center;
     margin: 0rem 0.25rem 2.8125rem;
